@@ -1,6 +1,10 @@
 # CMake
-cmake-build-*/
-build
+**/cmake-build-*/
+**/build
 
 # CLion
-.idea
+**/.idea
+
+# Visual Studio
+**/Debug
+**/Release
