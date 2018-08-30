@@ -2,8 +2,14 @@
 
 SC_MODULE (ModuleDouble) {
   sc_event eventA, eventB, eventAack, eventBack;
+  enum State {
+    Default,
+    AwaitingEventA,
+    AwaitingEventB
+  } state;
 
   SC_CTOR (ModuleDouble) {
+    state = State::Default;
     SC_THREAD(threadA);
     SC_THREAD(threadB);
     SC_METHOD(methodA);
@@ -18,25 +24,29 @@ SC_MODULE (ModuleDouble) {
 
   void threadB(void) {
     while (1) {
-      wait(2, SC_MS);
       eventB.notify();
       wait(2, SC_MS, eventBack);
     }
   }
 
   void methodA(void) {
-    next_trigger(eventA);
-    cout << sc_time_stamp() << ": Event A raised." << endl;
-
-    eventAack.notify();
-    cout << sc_time_stamp() << ": Event Aack notified." << endl;
-
-    next_trigger(eventB);
-    cout << sc_time_stamp() << ": Event B raised." << endl;
-
-    eventBack.notify();
-    cout << sc_time_stamp() << ": Event Back notified." << endl;
-
-    next_trigger(eventA);
+    switch (state) {
+      case State::Default:
+        next_trigger(eventA);
+        state = State::AwaitingEventA;
+        break;
+      case State::AwaitingEventA:
+        cout << sc_time_stamp() << ": Event A raised." << endl;
+        eventAack.notify();
+        next_trigger(eventB);
+        state = State::AwaitingEventB;
+        break;
+      case State::AwaitingEventB:
+        cout << sc_time_stamp() << ": Event B raised." << endl;
+        eventBack.notify();
+        next_trigger(eventA);
+        state = State::AwaitingEventA;
+        break;
+    }
   }
 };
