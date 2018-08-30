@@ -9,6 +9,10 @@
 **/Debug
 **/Release
 
-
 # Eclipse
 **/.metadata
+**/.settings
+**/.cache-main
+**/.scala_dependencies
+**/.worksheet
+
