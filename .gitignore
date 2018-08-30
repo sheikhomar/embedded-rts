@@ -8,3 +8,7 @@
 # Visual Studio
 **/Debug
 **/Release
+
+
+# Eclipse
+**/.metadata
