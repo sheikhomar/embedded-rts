@@ -16,21 +16,21 @@ typedef struct
 } TCPHeader;
 
 SC_MODULE (Producer) {
-//public: sc_port<sc_fifo_out_if<TCPHeader* >, 0> out;
-public: sc_port<sc_fifo_out_if<TCPHeader* > > out1;
-public: sc_port<sc_fifo_out_if<TCPHeader* > > out2;
-
+public: sc_port<sc_fifo_out_if<TCPHeader* >, 0> out;
+public:
   SC_CTOR (Producer) {
     SC_THREAD(producerThread);
   }
 
+private:
   void producerThread(void) {
     TCPHeader header;
     while (1) {
       wait(rand() % (10 - 2) + 2, SC_MS);
       header.SequenceNumber++;
-      out1->write(&header);
-      out2->write(&header);
+      for (int i = 0; i < out.size(); ++i) {
+        out[i]->write(&header);
+      }
     }
   }
 };
@@ -61,13 +61,12 @@ SC_MODULE (Top) {
   SC_CTOR (Top) :
       consumer1("Consumer1"),
       consumer2("Consumer2"),
-
       producer("Producer"),
       queue1("queue1"),
       queue2("queue2")
     {
-    producer.out1(queue1);
-    producer.out2(queue2);
+    producer.out(queue1);
+    producer.out(queue2);
     consumer1.in(queue1);
     consumer2.in(queue2);
   }
