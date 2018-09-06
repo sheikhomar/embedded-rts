@@ -21,17 +21,28 @@ public:
 private:
   void sourceThread(void) {
     uint i = 0;
-    sc_uint<DATA_BITS> array[] = {4, 7, 4, 1, 5, 7};
+    sc_uint<DATA_BITS> array[] = {4, 7, 9, 1, 5, 7};
     while (1) {
-      while (ready.posedge()) {
+      wait(ready.posedge_event());
+      while (ready.read()) {
+        cout << sc_time_stamp() << " [Source]: Ready is 1, waiting for one clock cycle" << endl;
         wait(clock.negedge_event());
         wait(clock.posedge_event());
+
+        cout << sc_time_stamp() << " [Source]: Set valid=1" << endl;
         valid->write(true);
 
-        data.write(i++ % 6);
+        sc_uint<DATA_BITS> packet = array[i++ % 6];
+        cout << sc_time_stamp() << " [Source]: Set data=" << packet << endl;
+        data.write(packet);
       }
+
+      cout << sc_time_stamp() << " [Source]: Set valid=0" << endl;
       valid->write(false);
+
+      cout << sc_time_stamp() << " [Source]: Waiting for ready" << endl;
       wait(ready.posedge_event());
+      cout << sc_time_stamp() << " [Source]: Ready is set to 1" << endl;
     }
   }
 };
@@ -64,22 +75,28 @@ private:
 
         sc_uint<DATA_BITS > packet = data->read();
 
+        cout << sc_time_stamp() << " [Sink]: Received data=" << packet << endl;
+
         saveData(packet);
       }
     };
 
     while (1) {
       wait(clock.posedge_event());
+
+      cout << sc_time_stamp() << " [Sink]: Set Ready=1" << endl;
       ready->write(true);
+
       wait(valid.posedge_event());
 
-      wait(clock.posedge_event());
+      uint loopNum = 2;
 
-      uint loopNum = rand() % 4 + 1;
-
+      cout << sc_time_stamp() << " [Sink]: Reading data..." << endl;
       readData(loopNum);
 
       wait(clock.posedge_event());
+
+      cout << sc_time_stamp() << " [Sink]: Set Ready=0" << endl;
       ready->write(false);
     }
   }
