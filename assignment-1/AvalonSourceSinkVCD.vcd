@@ -1,0 +1,145 @@
+$date
+     Sep 10, 2018       12:14:07
+$end
+
+$version
+ SystemC 2.3.1-Accellera --- Oct 20 2014 22:06:05
+$end
+
+$timescale
+     1 ns
+$end
+
+$scope module SystemC $end
+$var wire    1  aaaaa  clock       $end
+$var wire    1  aaaab  ready       $end
+$var wire    1  aaaac  valid       $end
+$var wire   16  aaaad  data [15:0]  $end
+$var wire    2  aaaae  error [1:0]  $end
+$var wire    4  aaaaf  channel [3:0]  $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+1aaaaa
+1aaaab
+1aaaac
+b1 aaaad
+b0 aaaae
+b0 aaaaf
+$end
+
+#10
+0aaaaa
+
+#20
+1aaaaa
+0aaaab
+0aaaac
+
+#30
+0aaaaa
+
+#40
+1aaaaa
+1aaaab
+
+#50
+0aaaaa
+
+#60
+1aaaaa
+1aaaac
+b10 aaaad
+
+#70
+0aaaaa
+
+#80
+1aaaaa
+0aaaab
+0aaaac
+
+#90
+0aaaaa
+
+#100
+1aaaaa
+1aaaab
+
+#110
+0aaaaa
+
+#120
+1aaaaa
+1aaaac
+b11 aaaad
+
+#130
+0aaaaa
+
+#140
+1aaaaa
+0aaaab
+0aaaac
+
+#150
+0aaaaa
+
+#160
+1aaaaa
+1aaaab
+
+#170
+0aaaaa
+
+#180
+1aaaaa
+1aaaac
+b100 aaaad
+
+#190
+0aaaaa
+
+#200
+1aaaaa
+0aaaab
+0aaaac
+
+#210
+0aaaaa
+
+#220
+1aaaaa
+1aaaab
+
+#230
+0aaaaa
+
+#240
+1aaaaa
+1aaaac
+b101 aaaad
+
+#250
+0aaaaa
+
+#260
+1aaaaa
+0aaaab
+0aaaac
+
+#270
+0aaaaa
+
+#280
+1aaaaa
+1aaaab
+
+#290
+0aaaaa
+
