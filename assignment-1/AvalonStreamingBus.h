@@ -9,140 +9,162 @@
 
 SC_MODULE (Source) {
 public:
-  sc_in<bool> ready;
-  sc_out<bool> valid;
-  sc_in<bool> clock;
-  sc_out<sc_uint<DATA_BITS > > data;
+
+  sc_in_clk clock; // Clock
+  sc_in<bool> ready; // Ready signal
+  sc_out<bool> valid; // Valid signal
+  sc_out<sc_uint<DATA_BITS> > data;
+  sc_out<sc_uint<CHANNEL_BITS> > channel;
+  sc_out<sc_uint<ERROR_BITS> > error;
 
   SC_CTOR (Source) {
     SC_THREAD(sourceThread);
   }
 
 private:
-  void sourceThread(void) {
-    uint i = 0;
-    sc_uint<DATA_BITS> array[] = {4, 7, 9, 1, 5, 7};
-    while (1) {
-      wait(ready.posedge_event());
-      while (ready.read()) {
-        cout << sc_time_stamp() << " [Source]: Ready is 1, waiting for one clock cycle" << endl;
-        wait(clock.negedge_event());
-        wait(clock.posedge_event());
+	void sourceThread(void) {
+		uint i = 0;
+		sc_uint<DATA_BITS> values[] = { 1,2,3,4,5 };
+		while (1) {
+			// Output sample data on positive edge of clock
+			while (ready.read() == false)
+				wait(clock.posedge_event());
 
-        cout << sc_time_stamp() << " [Source]: Set valid=1" << endl;
-        valid->write(true);
+			// Wait for another positive edge of clock
+			// wait(clock.posedge_event());
 
-        sc_uint<DATA_BITS> packet = array[i++ % 6];
-        cout << sc_time_stamp() << " [Source]: Set data=" << packet << endl;
-        data.write(packet);
-      }
+			// Write on the channels
+			cout << sc_time_stamp() << " [Source] Send packet: " << values[i] << endl;
+			data.write(values[i++ % 5]);
+			channel.write(0); // Channel number
+			error.write(0);   // Error
 
-      cout << sc_time_stamp() << " [Source]: Set valid=0" << endl;
-      valid->write(false);
+			// Signal valid new data
+			valid.write(true);
 
-      cout << sc_time_stamp() << " [Source]: Waiting for ready" << endl;
-      wait(ready.posedge_event());
-      cout << sc_time_stamp() << " [Source]: Ready is set to 1" << endl;
-    }
-  }
+			// Set valid=0 on positive edge of clock
+			wait(clock.posedge_event());
+
+			valid.write(false);
+
+			// Wait for one clock cycle.
+			wait(clock.posedge_event());
+		}
+	}
 };
 
 SC_MODULE (Sink) {
 public:
   sc_out<bool> ready;
   sc_in<bool> valid;
-  sc_in<bool> clock;
+  sc_in_clk clock;
   sc_in<sc_uint<DATA_BITS > > data;
+  sc_in<sc_uint<ERROR_BITS > > error;
+  sc_in<sc_uint<CHANNEL_BITS > > channel;
+  char outputFileName[100];
 
-  SC_CTOR (Sink)
-  {
+  SC_CTOR (Sink) {
+    prepareOutputFile();
     SC_THREAD(sinkThread);
   }
 
 private:
+  void prepareOutputFile() {
+    time_t t = time(0);
+    struct tm* now = localtime(&t);
+    strftime(outputFileName, 100, "%Y.%m.%d.%H.%M.%S-avalon-streaming-but-output.txt", now);
+  }
+
+  void saveToFile(sc_uint<DATA_BITS >& packet) {
+    FILE* outFile = fopen(outputFileName, "a");
+    fprintf(outFile, "%d\n", (int)packet);
+    fclose(outFile);
+  }
+
   void sinkThread(void) {
-
-    auto saveData = [](sc_uint<DATA_BITS >& packet) {
-      FILE* fp_data = fopen("output.txt","w");
-      fprintf(fp_data, "%8.0f\n", &packet);
-      fclose(fp_data);
-    };
-
-    auto readData = [&](uint loopNum){
-      for (int i = 0; i < loopNum; ++i) {
-        // Ensure that the data is on the channel
-        wait(clock.negedge_event());
-
-        sc_uint<DATA_BITS > packet = data->read();
-
-        cout << sc_time_stamp() << " [Sink]: Received data=" << packet << endl;
-
-        saveData(packet);
-      }
-    };
+    cout << sc_time_stamp() << " [Sink] Thread started." << endl;
 
     while (1) {
+      // Signal that the sink is ready
+      ready.write(true);
+
+      // Wait for valid signal
+      while (valid.read() == false) {
+        wait(clock.posedge_event());
+      }
+
+      // Signal that the sink is busy
+      ready.write(false);
+
+      sc_uint<DATA_BITS > packet = data.read();
+      cout << sc_time_stamp() << " [Sink] Received packet: " << packet << endl;
+
+      saveToFile(packet);
+
+      // Wait for one clock cycle
       wait(clock.posedge_event());
-
-      cout << sc_time_stamp() << " [Sink]: Set Ready=1" << endl;
-      ready->write(true);
-
-      wait(valid.posedge_event());
-
-      uint loopNum = 2;
-
-      cout << sc_time_stamp() << " [Sink]: Reading data..." << endl;
-      readData(loopNum);
-
-      wait(clock.posedge_event());
-
-      cout << sc_time_stamp() << " [Sink]: Set Ready=0" << endl;
-      ready->write(false);
     }
   }
 };
 
 SC_MODULE (Top) {
-  Source* source;
-  Sink* sink;
+public:
+  Source source;
+  Sink sink;
+
   sc_clock clock;
-  sc_trace_file *tf;
   sc_signal<bool> ready, valid;
   sc_signal<sc_uint<DATA_BITS > > data;
+  sc_signal<sc_uint<ERROR_BITS > > error;
+  sc_signal<sc_uint<CHANNEL_BITS > > channel;
+
+  sc_trace_file *tf;
 
   SC_CTOR (Top) :
-    clock("clock", sc_time(CLK_PERIOD, SC_NS)),
-    ready("ready"),
-    valid("valid"),
-    data("data")
+          source("source"),
+          sink("sink"),
+          clock("clock", sc_time(CLK_PERIOD, SC_NS)),
+          ready("ready"),
+          valid("valid"),
+          data("data"),
+          error("error"),
+          channel("channel")
   {
 
-    source = new Source("Source");
-    sink = new Sink("Sink");
+    // Connect source signals
+    source.clock(clock);
+    source.ready(ready);
+    source.valid(valid);
+    source.data(data);
+    source.error(error);
+    source.channel(channel);
 
-    source->clock(clock);
-    source->ready(ready);
-    source->valid(valid);
-    source->data(data);
-
-    sink->clock(clock);
-    sink->ready(ready);
-    sink->valid(valid);
-    sink->data(data);
+    // Connect sink signals
+    sink.clock(clock);
+    sink.ready(ready);
+    sink.valid(valid);
+    sink.data(data);
+    sink.error(error);
+    sink.channel(channel);
 
     // Create VCD wave form file used for signal timing analysis
-    tf = sc_create_vcd_trace_file("WaveForm");
+    tf = sc_create_vcd_trace_file("AvalonSourceSinkVCD");
+    if(!tf) {
+      cout << "Unable to create trace file!" << endl;
+      exit(-1);
+    }
+
     tf->set_time_unit(1, SC_NS);
+    sc_trace(tf, clock, "clock");
     sc_trace(tf, ready, "ready");
     sc_trace(tf, valid, "valid");
-    sc_trace(tf, clock, "clock");
-    sc_trace(tf, source->data, "data");
+    sc_trace(tf, data, "data");
+    sc_trace(tf, error, "error");
+    sc_trace(tf, channel, "channel");
   }
 
-  ~Top()
-  {
+  ~Top() {
     sc_close_vcd_trace_file(tf);
-    delete source;
-    delete sink;
+    cout << "Trace file created successfully." << endl;
   }
 };
