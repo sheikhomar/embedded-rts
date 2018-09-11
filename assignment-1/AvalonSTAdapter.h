@@ -43,9 +43,6 @@ public:
       while (ready.read() == false)
         wait(clock.posedge_event());
 
-      // Wait for another positive edge of clock
-      wait(clock.posedge_event());
-
       // Write on the channels
       cout << sc_time_stamp() << " [Adapter] Send packet: " << value << endl;
       data.write(value);
