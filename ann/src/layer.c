@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 #include "layer.h"
 #include "neuron.h"
@@ -24,6 +25,7 @@ void Layer_ctor(
   self->name = name;
   self->numNeurons = numNeurons;
   self->inputSize = inputSize;
+  self->activation = activation;
 
   /* Allocate memory for output value for each neuron */
   self->output = (float *)malloc(self->numNeurons * sizeof(float));
@@ -53,6 +55,14 @@ void Layer_compute(Layer *const self, Input *const input) {
     Neuron *neuron = &(self->neurons[i]);
     float *output = &(self->output[i]);
     Neuron_compute(neuron, input, output);
+  }
+
+  if (self->activation == Activation_SoftMax) {
+    float sumOfExp = 0.0;
+    for (i = 0; i < self->numNeurons; ++i)
+      sumOfExp += exp(self->output[i]);
+    for (i = 0; i < self->numNeurons; ++i)
+      self->output[i] = exp(self->output[i]) / sumOfExp;
   }
 }
 

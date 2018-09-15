@@ -38,3 +38,6 @@ set(TEST_SOURCE_FILES
 
 add_executable(ann src/main.c ${SOURCE_FILES})
 add_executable(ann_tests src/tests/runner.c ${SOURCE_FILES} ${TEST_SOURCE_FILES})
+
+target_link_libraries(ann m)
+target_link_libraries(ann_tests m)

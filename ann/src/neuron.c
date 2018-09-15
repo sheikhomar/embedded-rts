@@ -41,5 +41,11 @@ void Neuron_compute(
 
   if (self->activation == Activation_ReLU) {
     *output = (sum < 0) ? 0 : sum;
+  } else if (self->activation == Activation_SoftMax) {
+    /* Just pass the sum to the Layer since the softmax
+     * needs the outputs of all neurons in the layer. */
+    *output = sum;
+  } else {
+    assertTrue(false, "Unknown activation function.");
   }
 }

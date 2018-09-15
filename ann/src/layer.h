@@ -11,6 +11,7 @@ typedef struct {
   unsigned int inputSize;
   Neuron *neurons;
   float *output;
+  enum Activation activation;
   bool __initialised;
 } Layer;
 
