@@ -28,13 +28,14 @@ set(SOURCE_FILES
         src/input.c
         src/neuron.c
         src/layer.c
+        src/neural_network.c
         )
 
 set(TEST_SOURCE_FILES
         src/tests/test_helper.h
         src/tests/neuron_tests.h
         src/tests/layer_tests.h
-        )
+        src/tests/neural_network_tests.h)
 
 add_executable(ann src/main.c ${SOURCE_FILES})
 add_executable(ann_tests src/tests/runner.c ${SOURCE_FILES} ${TEST_SOURCE_FILES})
