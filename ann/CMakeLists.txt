@@ -23,8 +23,18 @@ elseif(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_GNUCXX)
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Werror")
 endif()
 
+set(SOURCE_FILES
+        src/asserts.c
+        src/input.c
+        src/neuron.c
+        src/layer.c
+        )
 
-set(SOURCE_FILES src/neuron.c src/input.c src/asserts.c)
+set(TEST_SOURCE_FILES
+        src/tests/test_helper.h
+        src/tests/neuron_tests.h
+        src/tests/layer_tests.h
+        )
 
 add_executable(ann src/main.c ${SOURCE_FILES})
-add_executable(ann_tests src/tests/runner.c ${SOURCE_FILES} src/tests/neuron_tests.h src/tests/test_helper.h)
+add_executable(ann_tests src/tests/runner.c ${SOURCE_FILES} ${TEST_SOURCE_FILES})

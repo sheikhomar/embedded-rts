@@ -20,7 +20,7 @@ void assertTrue(bool truthExpr, char *const msg) {
 
 void assertEquals(unsigned int expected, unsigned int actual, char *const msg) {
   if (expected != actual) {
+    printf(" Expected %d but was %d.\n", expected, actual);
     Asserts_assertFail(msg);
-    printf(" Expected %d but was %d", expected, actual);
   }
 }
