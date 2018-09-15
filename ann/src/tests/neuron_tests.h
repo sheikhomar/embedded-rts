@@ -7,9 +7,10 @@
 
 TEST should_compute_correctly() {
 
+
   Neuron neuron;
-  float weights[] = { 0.2, 0.3, 0.4 };
-  Neuron_ctor(&neuron, weights, 3, Activation_ReLU);
+  float weights[] = { 1, 0.2, 0.3, 0.4 };
+  Neuron_ctor(&neuron, weights, 4, Activation_ReLU);
 
   Input input;
   float inputData[] = { -0.3, 0.5, .03 };
@@ -18,7 +19,7 @@ TEST should_compute_correctly() {
   float output;
   Neuron_compute(&neuron, &input, &output);
 
-  ASSERT_EQ_FLOAT(0.102, output);
+  ASSERT_EQ_FLOAT(1.102, output);
 
   PASS(); // Must end with a call to PASS or FAIL
 }

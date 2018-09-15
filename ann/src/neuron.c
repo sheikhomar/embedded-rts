@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "neuron.h"
 #include "asserts.h"
 
@@ -27,18 +28,18 @@ void Neuron_compute(
   assertNotNull(self, "Neuron is a NULL pointer.");
   assertTrue(self->initialised, "Neuron is not initialised.");
   assertNotNull(input, "Input is a NULL pointer");
-  assertEquals(self->size, input->size, "The size of input and the neuron does not match.");
+  assertEquals(self->size-1, input->size, "The size of input and the neuron does not match. The first entry in the weights array is the bias term.");
+
+
+  /* The first entry in the weights array is the bias */
+  float sum = self->weights[0];
 
   unsigned int i;
-  float sum = 0;
-  for (i = 0; i < self->size; ++i) {
-    sum += self->weights[i] * input->data[i];
+  for (i = 1; i < self->size; ++i) {
+    sum += self->weights[i] * input->data[i-1];
   }
 
   if (self->activation == Activation_ReLU) {
     *output = (sum < 0) ? 0 : sum;
-
-  } else if (self->activation == Activation_SoftMax) {
-
   }
 }
