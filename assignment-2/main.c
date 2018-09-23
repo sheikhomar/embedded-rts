@@ -2,6 +2,7 @@
 #include "xgpio.h"
 
 #include "led_ip.h"
+#include "matrix_ip.h"
 #include "xscutimer.h"
 #include "xscugic.h"
 #include "matrix.h"
@@ -25,6 +26,15 @@ void initTimer(XScuTimer *timer) {
     XScuTimer_LoadTimer(timer, ONE_SECOND);
 }
 
+void copyDipStateToLed(XGpio *dip) {
+    // Read the state of the DIP switches
+    u32 dipState = XGpio_DiscreteRead(dip, 1);
+    xil_printf("The state of the DIP switches: %x\r\n", dipState);
+
+    // Copy DIP switches value to the led_ip device
+    LED_IP_mWriteReg(XPAR_LED_IP_S_AXI_BASEADDR, 0, dipState);
+}
+
 void runLedCounting(XScuTimer *timer) {
     u32 ledVal = 0;
 
@@ -34,7 +44,7 @@ void runLedCounting(XScuTimer *timer) {
     XScuTimer_Start(timer);
 
     while (ledVal < 16) {
-        // Busy-wait until timer value reaches zero
+        // Busy-wait until timer counter reaches zero
         while (XScuTimer_IsExpired(timer) == FALSE);
 
         // Interrupt status must be cleared since
@@ -47,8 +57,10 @@ void runLedCounting(XScuTimer *timer) {
         // Next LED value
         ledVal++;
 
-        // Restart the timer
+        // Restart the timer manually since we have not enabled
+        // auto reload via XScuTimer_EnableAutoReload
         XScuTimer_RestartTimer(timer);
+
     }
 
     // We are done
@@ -56,61 +68,34 @@ void runLedCounting(XScuTimer *timer) {
 }
 
 int main(void) {
-   XGpio dip, push;
+    XGpio dip, push;
+    XGpio_Initialize(&dip, XPAR_SWITCHES_DEVICE_ID);
+    XGpio_SetDataDirection(&dip, 1, 0xffffffff);
+    XGpio_Initialize(&push, XPAR_BUTTONS_DEVICE_ID);
+    XGpio_SetDataDirection(&push, 1, 0xffffffff);
 
-   int psb_check, dip_check;
+    XScuTimer timer;
+    initTimer(&timer);
 
-   xil_printf("-- Start of the Program --\r\n");
-
-   XGpio_Initialize(&dip, XPAR_SWITCHES_DEVICE_ID);
-   XGpio_SetDataDirection(&dip, 1, 0xffffffff);
-
-   XGpio_Initialize(&push, XPAR_BUTTONS_DEVICE_ID);
-   XGpio_SetDataDirection(&push, 1, 0xffffffff);
-
-   XScuTimer timer;
-   initTimer(&timer);
-
-   char8 userInput;
-   u8 isRunning = TRUE;
-
-
-   while (isRunning) {
-       xil_printf("Please choice: 1 (SW->Leds), 2 (Timer->Leds), 3 (Matrix), 4 (Exit)\r\n");
-       xil_printf("# ");
-
-       userInput = inbyte();
-       xil_printf("%c\r\n", userInput);
-
-        switch (userInput) {
-            case '1':
-                psb_check = XGpio_DiscreteRead(&push, 1);
-                xil_printf("Push Buttons Status %x\r\n", psb_check);
-                dip_check = XGpio_DiscreteRead(&dip, 1);
-                xil_printf("DIP Switch Status %x\r\n", dip_check);
-
-                // Copy DIP switches value to the led_ip device
-                LED_IP_mWriteReg(XPAR_LED_IP_S_AXI_BASEADDR, 0, dip_check);
-                break;
-
-            case '2':
-                runLedCounting(&timer);
-                break;
-
-            case '3':
-                runMatrixMultiplication(&timer);
-                break;
-
-            case '4':
-                xil_printf("Are you sure? Formatting hard drive...\r\n");
-                isRunning = FALSE;
-                break;
-            default:
-                xil_printf("Invalid command. Try again.\r\n");
-                break;
+    xil_printf("-- Start of the Program --\r\n");
+    u8 isRunning = TRUE;
+    while (isRunning) {
+        xil_printf("Please choose: 1 (SW->Leds), 2 (Timer->Leds), 3 (Matrix), 4 (Exit)\r\n");
+        xil_printf("# ");
+        char8 userInput = inbyte();
+        xil_printf("%c\r\n", userInput);
+        if (userInput == '1') {
+           copyDipStateToLed(&dip);
+        } else if (userInput == '2') {
+           runLedCounting(&timer);
+        } else if (userInput == '3') {
+           runMatrixMultiplication(&timer);
+        } else if (userInput == '4') {
+           isRunning = FALSE;
+        } else {
+           xil_printf("Invalid command. Try again.\r\n");
         }
         xil_printf("\r\n\r\n");
-   }
-
-   xil_printf("Program terminated!\r\n");
+    }
+    xil_printf("Program terminated!\r\n");
 }
