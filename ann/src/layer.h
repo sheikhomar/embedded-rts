@@ -18,13 +18,12 @@ typedef struct {
 void Layer_ctor(
         Layer *const self,
         char *const name,
-        float *const weights,
-        unsigned int numNeurons,
         unsigned int inputSize,
+        Neuron *const neurons,
+        unsigned int numNeurons,
+        float *const outputArray,
         enum Activation activation);
 
 void Layer_compute(Layer *const self, Input *const input);
-
-void Layer_dtor(Layer *const self);
 
 #endif //ANN_LAYER_H

@@ -9,37 +9,41 @@
 void Layer_ctor(
         Layer *const self,
         char *const name,
-        float *const weights,
-        unsigned int numNeurons,
         unsigned int inputSize,
+        Neuron *const neurons,
+        unsigned int numNeurons,
+        float *const outputArray,
         enum Activation activation) {
 
   assertNotNull(self, "Layer is a NULL pointer.");
   assertNotNull(name, "Name is a NULL pointer.");
-  assertNotNull(weights, "Weights is a NULL porinter.");
+  assertNotNull(neurons, "Neurons cannot be a NULL pointer.");
+  assertNotNull(outputArray, "OutputArray cannot be a NULL pointer.");
   assertTrue(numNeurons > 0, "Number of neurons must be larger than zero.");
   assertTrue(inputSize > 0, "Input size must be larger than zero.");
   assertTrue(activation == Activation_ReLU || activation == Activation_SoftMax,
              "Unknown activation function.");
 
+  Neuron *firstNeuron = &(neurons[0]);
+  assertTrue(firstNeuron->activation == activation, "Neuron activation does not match layer activation.");
+
+  unsigned int i;
+  for (i = 0; i < numNeurons; ++i) {
+    assertEquals(0, outputArray[i], "Output array must be initialised with zeros.");
+
+    if (i != 0) {
+      Neuron *neuron = &(neurons[i]);
+      assertEquals(firstNeuron->size, neuron->size, "Neuron size mismatch.");
+      assertEquals(firstNeuron->activation, neuron->activation, "Neuron activation mismatch.");
+    }
+  }
+
   self->name = name;
   self->numNeurons = numNeurons;
   self->inputSize = inputSize;
   self->activation = activation;
-
-  /* Allocate memory for output value for each neuron */
-  self->output = (float *)malloc(self->numNeurons * sizeof(float));
-
-  /* Allocate memory for neurons */
-  self->neurons = (Neuron*)malloc(self->numNeurons * sizeof(Neuron));
-
-  unsigned int i;
-  for (i = 0; i < self->numNeurons; ++i) {
-    Neuron *neuron = &(self->neurons[i]);
-    float *neuronWeights = weights + (i* (self->inputSize+1));
-    Neuron_ctor(neuron, neuronWeights, self->inputSize+1, activation);
-  }
-
+  self->output = outputArray;
+  self->neurons = neurons;
   self->__initialised = true;
 }
 
@@ -64,12 +68,4 @@ void Layer_compute(Layer *const self, Input *const input) {
     for (i = 0; i < self->numNeurons; ++i)
       self->output[i] = exp(self->output[i]) / sumOfExp;
   }
-}
-
-void Layer_dtor(Layer *const self) {
-  assertNotNull(self, "Layer cannot be a NULL pointer.");
-  assertTrue(self->__initialised, "Layer must be initialised.");
-
-  free(self->neurons);
-  free(self->output);
 }

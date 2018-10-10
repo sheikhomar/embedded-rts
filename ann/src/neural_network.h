@@ -10,10 +10,9 @@
 
 typedef struct {
   Layer *layers;
-  unsigned int numHiddenLayers;
+  unsigned int numLayers;
   unsigned int inputSize;
   unsigned int outputSize;
-  unsigned int __nextLayerIndex;
   bool __initialised;
 } NeuralNetwork;
 
@@ -21,17 +20,8 @@ void NeuralNetwork_ctor(
         NeuralNetwork *const self,
         unsigned int inputSize,
         unsigned int outputSize,
-        unsigned int numHiddenLayers);
-
-void NeuralNetwork_addHiddenLayer(
-        NeuralNetwork *const self,
-        char *const layerName,
-        float *const weights,
-        unsigned int numNeurons);
-
-void NeuralNetwork_addOutputLayer(
-        NeuralNetwork *const self,
-        float *const weights);
+        Layer *const layers,
+        unsigned int numLayers);
 
 float* NeuralNetwork_compute(
         NeuralNetwork *const self,
