@@ -23,8 +23,8 @@ Layer layers[2];
 Neuron hiddenNeurons[32];
 
 // Configure neuron[0] for layer "hidden"
-unsigned int hiddenNeuron0NumWeights = 785;
-float hiddenNeuron0Weights[785] = {
+Size hiddenNeuron0NumWeights = 785;
+Decimal hiddenNeuron0Weights[785] = {
    -0.018487755209207535 // This is the bias
   ,  0.06551922857761383, -0.03823046386241913, 0.0059176101349294186
   , -0.01489335112273693,  0.09532109647989273,  0.03709006682038307
@@ -292,8 +292,8 @@ float hiddenNeuron0Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[0]), hiddenNeuron0Weights, hiddenNeuron0NumWeights, Activation_ReLU);
 
 // Configure neuron[1] for layer "hidden"
-unsigned int hiddenNeuron1NumWeights = 785;
-float hiddenNeuron1Weights[785] = {
+Size hiddenNeuron1NumWeights = 785;
+Decimal hiddenNeuron1Weights[785] = {
    0.026486126706004143 // This is the bias
   , -0.04397272318601608, -0.05873246490955353, -0.056595079600811005
   ,   -0.088971346616745, -0.08402316272258759, -0.03525210916996002
@@ -561,8 +561,8 @@ float hiddenNeuron1Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[1]), hiddenNeuron1Weights, hiddenNeuron1NumWeights, Activation_ReLU);
 
 // Configure neuron[2] for layer "hidden"
-unsigned int hiddenNeuron2NumWeights = 785;
-float hiddenNeuron2Weights[785] = {
+Size hiddenNeuron2NumWeights = 785;
+Decimal hiddenNeuron2Weights[785] = {
    -0.009658466093242168 // This is the bias
   ,   0.0634603202342987,  0.01933269388973713, -0.041672978550195694
   ,  0.08145904541015625, -0.021359900012612343, 0.015479038469493389
@@ -830,8 +830,8 @@ float hiddenNeuron2Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[2]), hiddenNeuron2Weights, hiddenNeuron2NumWeights, Activation_ReLU);
 
 // Configure neuron[3] for layer "hidden"
-unsigned int hiddenNeuron3NumWeights = 785;
-float hiddenNeuron3Weights[785] = {
+Size hiddenNeuron3NumWeights = 785;
+Decimal hiddenNeuron3Weights[785] = {
    -0.03846590965986252 // This is the bias
   ,   0.0356382355093956, 0.005765407811850309, -0.03249106556177139
   ,  0.04788919538259506,  0.10854024440050125,  0.03536836802959442
@@ -1099,8 +1099,8 @@ float hiddenNeuron3Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[3]), hiddenNeuron3Weights, hiddenNeuron3NumWeights, Activation_ReLU);
 
 // Configure neuron[4] for layer "hidden"
-unsigned int hiddenNeuron4NumWeights = 785;
-float hiddenNeuron4Weights[785] = {
+Size hiddenNeuron4NumWeights = 785;
+Decimal hiddenNeuron4Weights[785] = {
    -0.008136357180774212 // This is the bias
   , -0.010739668272435665, 0.008274233900010586, -0.019784318283200264
   , -0.05828426405787468,  0.08304198831319809,  -0.0267923753708601
@@ -1368,8 +1368,8 @@ float hiddenNeuron4Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[4]), hiddenNeuron4Weights, hiddenNeuron4NumWeights, Activation_ReLU);
 
 // Configure neuron[5] for layer "hidden"
-unsigned int hiddenNeuron5NumWeights = 785;
-float hiddenNeuron5Weights[785] = {
+Size hiddenNeuron5NumWeights = 785;
+Decimal hiddenNeuron5Weights[785] = {
    0.011562434956431389 // This is the bias
   , 0.010566141456365585, -0.08256092667579651, -0.042137108743190765
   , -0.005818759091198444, -0.06355196237564087, 0.019356459379196167
@@ -1637,8 +1637,8 @@ float hiddenNeuron5Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[5]), hiddenNeuron5Weights, hiddenNeuron5NumWeights, Activation_ReLU);
 
 // Configure neuron[6] for layer "hidden"
-unsigned int hiddenNeuron6NumWeights = 785;
-float hiddenNeuron6Weights[785] = {
+Size hiddenNeuron6NumWeights = 785;
+Decimal hiddenNeuron6Weights[785] = {
    -0.037277139723300934 // This is the bias
   , -0.016026126220822334, -0.007818524725735188, 0.025406574830412865
   ,  0.07863810658454895,  0.02162407524883747,  0.05951304733753204
@@ -1906,8 +1906,8 @@ float hiddenNeuron6Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[6]), hiddenNeuron6Weights, hiddenNeuron6NumWeights, Activation_ReLU);
 
 // Configure neuron[7] for layer "hidden"
-unsigned int hiddenNeuron7NumWeights = 785;
-float hiddenNeuron7Weights[785] = {
+Size hiddenNeuron7NumWeights = 785;
+Decimal hiddenNeuron7Weights[785] = {
    -0.011538294143974781 // This is the bias
   , 0.032361384481191635, 0.011378317140042782, 0.014544476754963398
   , -0.04957456886768341, 0.0026738664600998163, -0.06439007818698883
@@ -2175,8 +2175,8 @@ float hiddenNeuron7Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[7]), hiddenNeuron7Weights, hiddenNeuron7NumWeights, Activation_ReLU);
 
 // Configure neuron[8] for layer "hidden"
-unsigned int hiddenNeuron8NumWeights = 785;
-float hiddenNeuron8Weights[785] = {
+Size hiddenNeuron8NumWeights = 785;
+Decimal hiddenNeuron8Weights[785] = {
    -0.02983410470187664 // This is the bias
   , -0.04196234047412872, 0.040919505059719086,  0.07503489404916763
   , -0.04809492081403732,  0.06339878588914871,   0.0596877858042717
@@ -2444,8 +2444,8 @@ float hiddenNeuron8Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[8]), hiddenNeuron8Weights, hiddenNeuron8NumWeights, Activation_ReLU);
 
 // Configure neuron[9] for layer "hidden"
-unsigned int hiddenNeuron9NumWeights = 785;
-float hiddenNeuron9Weights[785] = {
+Size hiddenNeuron9NumWeights = 785;
+Decimal hiddenNeuron9Weights[785] = {
    0.010993573814630508 // This is the bias
   , -0.027262508869171143, 0.0017477909568697214,  0.05168683081865311
   ,  0.06698571145534515, -0.009221355430781841, -0.02870769053697586
@@ -2713,8 +2713,8 @@ float hiddenNeuron9Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[9]), hiddenNeuron9Weights, hiddenNeuron9NumWeights, Activation_ReLU);
 
 // Configure neuron[10] for layer "hidden"
-unsigned int hiddenNeuron10NumWeights = 785;
-float hiddenNeuron10Weights[785] = {
+Size hiddenNeuron10NumWeights = 785;
+Decimal hiddenNeuron10Weights[785] = {
    0.0073262909427285194 // This is the bias
   , 0.062291063368320465, -0.04872911423444748, 8.027929288800806e-05
   , -0.02834809012711048,  0.02973419986665249, -0.0031783387530595064
@@ -2982,8 +2982,8 @@ float hiddenNeuron10Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[10]), hiddenNeuron10Weights, hiddenNeuron10NumWeights, Activation_ReLU);
 
 // Configure neuron[11] for layer "hidden"
-unsigned int hiddenNeuron11NumWeights = 785;
-float hiddenNeuron11Weights[785] = {
+Size hiddenNeuron11NumWeights = 785;
+Decimal hiddenNeuron11Weights[785] = {
    -0.013584911823272705 // This is the bias
   ,  0.09458833187818527,  0.06280937790870667, 0.006362309213727713
   ,  0.08288247138261795,  0.02268156409263611, 0.020800668746232986
@@ -3251,8 +3251,8 @@ float hiddenNeuron11Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[11]), hiddenNeuron11Weights, hiddenNeuron11NumWeights, Activation_ReLU);
 
 // Configure neuron[12] for layer "hidden"
-unsigned int hiddenNeuron12NumWeights = 785;
-float hiddenNeuron12Weights[785] = {
+Size hiddenNeuron12NumWeights = 785;
+Decimal hiddenNeuron12Weights[785] = {
    -0.0003798833640757948 // This is the bias
   , -0.07263470441102982, -0.004009143449366093,  0.04615055024623871
   ,  0.06735556572675705, 0.032189805060625076, 0.060953110456466675
@@ -3520,8 +3520,8 @@ float hiddenNeuron12Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[12]), hiddenNeuron12Weights, hiddenNeuron12NumWeights, Activation_ReLU);
 
 // Configure neuron[13] for layer "hidden"
-unsigned int hiddenNeuron13NumWeights = 785;
-float hiddenNeuron13Weights[785] = {
+Size hiddenNeuron13NumWeights = 785;
+Decimal hiddenNeuron13Weights[785] = {
    -0.01275523193180561 // This is the bias
   , 0.015537993982434273,  0.04903872311115265, 0.0005390351288951933
   ,  -0.0669638141989708,  0.08760513365268707,  0.05371861159801483
@@ -3789,8 +3789,8 @@ float hiddenNeuron13Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[13]), hiddenNeuron13Weights, hiddenNeuron13NumWeights, Activation_ReLU);
 
 // Configure neuron[14] for layer "hidden"
-unsigned int hiddenNeuron14NumWeights = 785;
-float hiddenNeuron14Weights[785] = {
+Size hiddenNeuron14NumWeights = 785;
+Decimal hiddenNeuron14Weights[785] = {
    -0.012688864022493362 // This is the bias
   , -0.04097279906272888,  -0.0370040237903595,  0.06589066982269287
   , -0.05831335484981537,  0.08117496222257614, -0.04760003834962845
@@ -4058,8 +4058,8 @@ float hiddenNeuron14Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[14]), hiddenNeuron14Weights, hiddenNeuron14NumWeights, Activation_ReLU);
 
 // Configure neuron[15] for layer "hidden"
-unsigned int hiddenNeuron15NumWeights = 785;
-float hiddenNeuron15Weights[785] = {
+Size hiddenNeuron15NumWeights = 785;
+Decimal hiddenNeuron15Weights[785] = {
    -0.002011215081438422 // This is the bias
   ,  -0.0471944659948349, 0.040907829999923706, 0.0005381468217819929
   ,  0.06438533961772919,  0.07454729825258255, -0.02501472271978855
@@ -4327,8 +4327,8 @@ float hiddenNeuron15Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[15]), hiddenNeuron15Weights, hiddenNeuron15NumWeights, Activation_ReLU);
 
 // Configure neuron[16] for layer "hidden"
-unsigned int hiddenNeuron16NumWeights = 785;
-float hiddenNeuron16Weights[785] = {
+Size hiddenNeuron16NumWeights = 785;
+Decimal hiddenNeuron16Weights[785] = {
    0.007986491546034813 // This is the bias
   , -0.05008956044912338, -0.0004883650690317154, -0.04267137497663498
   ,  -0.0333586186170578, -0.05822627991437912,  0.07478569447994232
@@ -4596,8 +4596,8 @@ float hiddenNeuron16Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[16]), hiddenNeuron16Weights, hiddenNeuron16NumWeights, Activation_ReLU);
 
 // Configure neuron[17] for layer "hidden"
-unsigned int hiddenNeuron17NumWeights = 785;
-float hiddenNeuron17Weights[785] = {
+Size hiddenNeuron17NumWeights = 785;
+Decimal hiddenNeuron17Weights[785] = {
    -0.0192940104752779 // This is the bias
   , 0.022078203037381172,  0.01019569393247366, -0.006423942744731903
   , 0.020551735535264015, 0.012983371503651142,  0.01802513562142849
@@ -4865,8 +4865,8 @@ float hiddenNeuron17Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[17]), hiddenNeuron17Weights, hiddenNeuron17NumWeights, Activation_ReLU);
 
 // Configure neuron[18] for layer "hidden"
-unsigned int hiddenNeuron18NumWeights = 785;
-float hiddenNeuron18Weights[785] = {
+Size hiddenNeuron18NumWeights = 785;
+Decimal hiddenNeuron18Weights[785] = {
    0.009495480917394161 // This is the bias
   , -0.010023963637650013, -0.04800698533654213,  0.05896908417344093
   , 0.031786106526851654, -0.06919470429420471, -0.006243675481528044
@@ -5134,8 +5134,8 @@ float hiddenNeuron18Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[18]), hiddenNeuron18Weights, hiddenNeuron18NumWeights, Activation_ReLU);
 
 // Configure neuron[19] for layer "hidden"
-unsigned int hiddenNeuron19NumWeights = 785;
-float hiddenNeuron19Weights[785] = {
+Size hiddenNeuron19NumWeights = 785;
+Decimal hiddenNeuron19Weights[785] = {
    -0.0003533907874953002 // This is the bias
   ,  -0.0435224249958992,  0.01338743232190609,  0.05439441651105881
   ,  0.05024873465299606,  0.04310799390077591,  0.03421663120388985
@@ -5403,8 +5403,8 @@ float hiddenNeuron19Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[19]), hiddenNeuron19Weights, hiddenNeuron19NumWeights, Activation_ReLU);
 
 // Configure neuron[20] for layer "hidden"
-unsigned int hiddenNeuron20NumWeights = 785;
-float hiddenNeuron20Weights[785] = {
+Size hiddenNeuron20NumWeights = 785;
+Decimal hiddenNeuron20Weights[785] = {
    -0.0033664354123175144 // This is the bias
   , -0.06267190724611282, 0.018877770751714706,  -0.0771103948354721
   , -0.08049951493740082, -0.04340587183833122,  -0.0700579360127449
@@ -5672,8 +5672,8 @@ float hiddenNeuron20Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[20]), hiddenNeuron20Weights, hiddenNeuron20NumWeights, Activation_ReLU);
 
 // Configure neuron[21] for layer "hidden"
-unsigned int hiddenNeuron21NumWeights = 785;
-float hiddenNeuron21Weights[785] = {
+Size hiddenNeuron21NumWeights = 785;
+Decimal hiddenNeuron21Weights[785] = {
    0.0078029693104326725 // This is the bias
   , -0.060985490679740906, 0.040334828197956085, -0.0056899250485002995
   , -0.013938572257757187, -0.01862148568034172, -0.08506625890731812
@@ -5941,8 +5941,8 @@ float hiddenNeuron21Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[21]), hiddenNeuron21Weights, hiddenNeuron21NumWeights, Activation_ReLU);
 
 // Configure neuron[22] for layer "hidden"
-unsigned int hiddenNeuron22NumWeights = 785;
-float hiddenNeuron22Weights[785] = {
+Size hiddenNeuron22NumWeights = 785;
+Decimal hiddenNeuron22Weights[785] = {
    -0.006883671507239342 // This is the bias
   ,  0.05405837669968605, -0.07082757353782654, 0.012076904065907001
   , -0.009660034440457821,  0.03851326182484627, -0.028125843033194542
@@ -6210,8 +6210,8 @@ float hiddenNeuron22Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[22]), hiddenNeuron22Weights, hiddenNeuron22NumWeights, Activation_ReLU);
 
 // Configure neuron[23] for layer "hidden"
-unsigned int hiddenNeuron23NumWeights = 785;
-float hiddenNeuron23Weights[785] = {
+Size hiddenNeuron23NumWeights = 785;
+Decimal hiddenNeuron23Weights[785] = {
    -0.008972336538136005 // This is the bias
   ,  0.05475793778896332, -0.0033710235729813576, -0.07016162574291229
   , -0.07587210834026337,  0.04394063353538513,  0.04099838435649872
@@ -6479,8 +6479,8 @@ float hiddenNeuron23Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[23]), hiddenNeuron23Weights, hiddenNeuron23NumWeights, Activation_ReLU);
 
 // Configure neuron[24] for layer "hidden"
-unsigned int hiddenNeuron24NumWeights = 785;
-float hiddenNeuron24Weights[785] = {
+Size hiddenNeuron24NumWeights = 785;
+Decimal hiddenNeuron24Weights[785] = {
    0.012306748889386654 // This is the bias
   , -0.023114381358027458,  0.01111390721052885, 0.015331744216382504
   , -0.06666184216737747,  0.03447337448596954, 0.025626065209507942
@@ -6748,8 +6748,8 @@ float hiddenNeuron24Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[24]), hiddenNeuron24Weights, hiddenNeuron24NumWeights, Activation_ReLU);
 
 // Configure neuron[25] for layer "hidden"
-unsigned int hiddenNeuron25NumWeights = 785;
-float hiddenNeuron25Weights[785] = {
+Size hiddenNeuron25NumWeights = 785;
+Decimal hiddenNeuron25Weights[785] = {
    -0.00024043250596150756 // This is the bias
   , 0.036534957587718964,  0.07412191480398178,  0.08115746825933456
   , 0.046738311648368835, -0.07591772824525833,  0.08068301528692245
@@ -7017,8 +7017,8 @@ float hiddenNeuron25Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[25]), hiddenNeuron25Weights, hiddenNeuron25NumWeights, Activation_ReLU);
 
 // Configure neuron[26] for layer "hidden"
-unsigned int hiddenNeuron26NumWeights = 785;
-float hiddenNeuron26Weights[785] = {
+Size hiddenNeuron26NumWeights = 785;
+Decimal hiddenNeuron26Weights[785] = {
    -0.005176089238375425 // This is the bias
   , 0.009892505593597889, -0.05601738393306732, -0.03221172094345093
   , 0.049023933708667755, 0.013219120912253857, -0.01959841325879097
@@ -7286,8 +7286,8 @@ float hiddenNeuron26Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[26]), hiddenNeuron26Weights, hiddenNeuron26NumWeights, Activation_ReLU);
 
 // Configure neuron[27] for layer "hidden"
-unsigned int hiddenNeuron27NumWeights = 785;
-float hiddenNeuron27Weights[785] = {
+Size hiddenNeuron27NumWeights = 785;
+Decimal hiddenNeuron27Weights[785] = {
    0.03396514058113098 // This is the bias
   ,  -0.0598372220993042, -0.09388028830289841,  0.04510080814361572
   , -0.02897774986922741, -0.012152609415352345, -0.06498818844556808
@@ -7555,8 +7555,8 @@ float hiddenNeuron27Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[27]), hiddenNeuron27Weights, hiddenNeuron27NumWeights, Activation_ReLU);
 
 // Configure neuron[28] for layer "hidden"
-unsigned int hiddenNeuron28NumWeights = 785;
-float hiddenNeuron28Weights[785] = {
+Size hiddenNeuron28NumWeights = 785;
+Decimal hiddenNeuron28Weights[785] = {
    0.012046121060848236 // This is the bias
   ,   0.0509425513446331, 0.004650095943361521, 0.012142417952418327
   , -0.007061647716909647, -0.04892915114760399,  0.05630582198500633
@@ -7824,8 +7824,8 @@ float hiddenNeuron28Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[28]), hiddenNeuron28Weights, hiddenNeuron28NumWeights, Activation_ReLU);
 
 // Configure neuron[29] for layer "hidden"
-unsigned int hiddenNeuron29NumWeights = 785;
-float hiddenNeuron29Weights[785] = {
+Size hiddenNeuron29NumWeights = 785;
+Decimal hiddenNeuron29Weights[785] = {
    -0.0010493630543351173 // This is the bias
   ,  0.06940766423940659, -2.4903856683522463e-05, -0.04248623922467232
   ,   0.0717596784234047, -0.004242870956659317, -0.026105938479304314
@@ -8093,8 +8093,8 @@ float hiddenNeuron29Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[29]), hiddenNeuron29Weights, hiddenNeuron29NumWeights, Activation_ReLU);
 
 // Configure neuron[30] for layer "hidden"
-unsigned int hiddenNeuron30NumWeights = 785;
-float hiddenNeuron30Weights[785] = {
+Size hiddenNeuron30NumWeights = 785;
+Decimal hiddenNeuron30Weights[785] = {
    -0.006743922829627991 // This is the bias
   ,  0.05043205991387367,  0.04788414016366005, -0.006121567916125059
   ,  0.03395625948905945,  0.09166724234819412, -0.007253660820424557
@@ -8362,8 +8362,8 @@ float hiddenNeuron30Weights[785] = {
 Neuron_ctor(&(hiddenNeurons[30]), hiddenNeuron30Weights, hiddenNeuron30NumWeights, Activation_ReLU);
 
 // Configure neuron[31] for layer "hidden"
-unsigned int hiddenNeuron31NumWeights = 785;
-float hiddenNeuron31Weights[785] = {
+Size hiddenNeuron31NumWeights = 785;
+Decimal hiddenNeuron31Weights[785] = {
    -0.0021022623404860497 // This is the bias
   ,  0.04229729622602463, 0.007855331525206566, -0.07428443431854248
   , -0.04407699778676033, -0.07980003952980042, -0.013289101421833038
@@ -8632,9 +8632,9 @@ Neuron_ctor(&(hiddenNeurons[31]), hiddenNeuron31Weights, hiddenNeuron31NumWeight
 
 
 char * hiddenName = "hidden";
-unsigned int hiddenInputSize = 784;
-unsigned int hiddenNumNeurons = 32;
-float hiddenLayerOutput[32] = { 0 };
+Size hiddenInputSize = 784;
+Size hiddenNumNeurons = 32;
+Decimal hiddenLayerOutput[32] = { 0 };
 Layer_ctor(&(layers[0]), hiddenName, hiddenInputSize, hiddenNeurons, hiddenNumNeurons, hiddenLayerOutput, Activation_ReLU);
 
 
@@ -8645,8 +8645,8 @@ Layer_ctor(&(layers[0]), hiddenName, hiddenInputSize, hiddenNeurons, hiddenNumNe
 Neuron outputNeurons[10];
 
 // Configure neuron[0] for layer "output"
-unsigned int outputNeuron0NumWeights = 33;
-float outputNeuron0Weights[33] = {
+Size outputNeuron0NumWeights = 33;
+Decimal outputNeuron0Weights[33] = {
    -0.08163866400718689 // This is the bias
   , -0.18280909955501556,  0.16411013901233673, 0.019605131819844246
   ,  0.11730580031871796,   0.3515659272670746,   0.4328378736972809
@@ -8663,8 +8663,8 @@ float outputNeuron0Weights[33] = {
 Neuron_ctor(&(outputNeurons[0]), outputNeuron0Weights, outputNeuron0NumWeights, Activation_SoftMax);
 
 // Configure neuron[1] for layer "output"
-unsigned int outputNeuron1NumWeights = 33;
-float outputNeuron1Weights[33] = {
+Size outputNeuron1NumWeights = 33;
+Decimal outputNeuron1Weights[33] = {
    0.038408923894166946 // This is the bias
   , -0.17656482756137848,  -0.6745352149009705,  0.15205760300159454
   ,  0.36726999282836914, -0.15850457549095154,  0.23507286608219147
@@ -8681,8 +8681,8 @@ float outputNeuron1Weights[33] = {
 Neuron_ctor(&(outputNeurons[1]), outputNeuron1Weights, outputNeuron1NumWeights, Activation_SoftMax);
 
 // Configure neuron[2] for layer "output"
-unsigned int outputNeuron2NumWeights = 33;
-float outputNeuron2Weights[33] = {
+Size outputNeuron2NumWeights = 33;
+Decimal outputNeuron2Weights[33] = {
    -0.08718673884868622 // This is the bias
   , -0.24362431466579437,  -0.1191432997584343,  0.31724241375923157
   ,   -1.171489953994751,  0.24889346957206726,   0.5859636664390564
@@ -8699,8 +8699,8 @@ float outputNeuron2Weights[33] = {
 Neuron_ctor(&(outputNeurons[2]), outputNeuron2Weights, outputNeuron2NumWeights, Activation_SoftMax);
 
 // Configure neuron[3] for layer "output"
-unsigned int outputNeuron3NumWeights = 33;
-float outputNeuron3Weights[33] = {
+Size outputNeuron3NumWeights = 33;
+Decimal outputNeuron3Weights[33] = {
    -0.044647712260484695 // This is the bias
   ,   0.2360934466123581,  0.34337520599365234,   0.3579743802547455
   ,  -0.3943803608417511,   0.7060480117797852,  0.18742913007736206
@@ -8717,8 +8717,8 @@ float outputNeuron3Weights[33] = {
 Neuron_ctor(&(outputNeurons[3]), outputNeuron3Weights, outputNeuron3NumWeights, Activation_SoftMax);
 
 // Configure neuron[4] for layer "output"
-unsigned int outputNeuron4NumWeights = 33;
-float outputNeuron4Weights[33] = {
+Size outputNeuron4NumWeights = 33;
+Decimal outputNeuron4Weights[33] = {
    -0.042791713029146194 // This is the bias
   ,  0.14387236535549164,  -0.5229623317718506, -0.35277387499809265
   ,  0.11225055158138275,  -1.0291661024093628, -0.32043084502220154
@@ -8735,8 +8735,8 @@ float outputNeuron4Weights[33] = {
 Neuron_ctor(&(outputNeurons[4]), outputNeuron4Weights, outputNeuron4NumWeights, Activation_SoftMax);
 
 // Configure neuron[5] for layer "output"
-unsigned int outputNeuron5NumWeights = 33;
-float outputNeuron5Weights[33] = {
+Size outputNeuron5NumWeights = 33;
+Decimal outputNeuron5Weights[33] = {
    0.03735535964369774 // This is the bias
   ,  -0.2636720836162567,   0.4250594973564148,  0.12697695195674896
   ,   0.4727134704589844,   0.9371715188026428,   0.5312008857727051
@@ -8753,8 +8753,8 @@ float outputNeuron5Weights[33] = {
 Neuron_ctor(&(outputNeurons[5]), outputNeuron5Weights, outputNeuron5NumWeights, Activation_SoftMax);
 
 // Configure neuron[6] for layer "output"
-unsigned int outputNeuron6NumWeights = 33;
-float outputNeuron6Weights[33] = {
+Size outputNeuron6NumWeights = 33;
+Decimal outputNeuron6Weights[33] = {
    -0.05414445698261261 // This is the bias
   , -0.05471210181713104,  -1.0337800979614258,  0.19853927195072174
   , -0.006970190908759832,   0.5925498008728027, -0.13451920449733734
@@ -8771,8 +8771,8 @@ float outputNeuron6Weights[33] = {
 Neuron_ctor(&(outputNeurons[6]), outputNeuron6Weights, outputNeuron6NumWeights, Activation_SoftMax);
 
 // Configure neuron[7] for layer "output"
-unsigned int outputNeuron7NumWeights = 33;
-float outputNeuron7Weights[33] = {
+Size outputNeuron7NumWeights = 33;
+Decimal outputNeuron7Weights[33] = {
    -0.02767982706427574 // This is the bias
   , -0.31907981634140015,  0.37847521901130676,  -0.1794607937335968
   ,  0.10820788145065308, -0.06607295572757721, 0.005631542298942804
@@ -8789,8 +8789,8 @@ float outputNeuron7Weights[33] = {
 Neuron_ctor(&(outputNeurons[7]), outputNeuron7Weights, outputNeuron7NumWeights, Activation_SoftMax);
 
 // Configure neuron[8] for layer "output"
-unsigned int outputNeuron8NumWeights = 33;
-float outputNeuron8Weights[33] = {
+Size outputNeuron8NumWeights = 33;
+Decimal outputNeuron8Weights[33] = {
    0.08010337501764297 // This is the bias
   ,   0.3042539954185486,  0.19355079531669617, -0.011164105497300625
   ,  -0.4244837164878845,   0.3017726242542267,  -0.9838098287582397
@@ -8807,8 +8807,8 @@ float outputNeuron8Weights[33] = {
 Neuron_ctor(&(outputNeurons[8]), outputNeuron8Weights, outputNeuron8NumWeights, Activation_SoftMax);
 
 // Configure neuron[9] for layer "output"
-unsigned int outputNeuron9NumWeights = 33;
-float outputNeuron9Weights[33] = {
+Size outputNeuron9NumWeights = 33;
+Decimal outputNeuron9Weights[33] = {
    0.18222425878047943 // This is the bias
   ,   0.1352321058511734,   0.3782814145088196, -0.11528459936380386
   ,   0.3478154242038727,  -0.6349301338195801,  0.02627398446202278
@@ -8826,14 +8826,14 @@ Neuron_ctor(&(outputNeurons[9]), outputNeuron9Weights, outputNeuron9NumWeights, 
 
 
 char * outputName = "output";
-unsigned int outputInputSize = 32;
-unsigned int outputNumNeurons = 10;
-float outputLayerOutput[10] = { 0 };
+Size outputInputSize = 32;
+Size outputNumNeurons = 10;
+Decimal outputLayerOutput[10] = { 0 };
 Layer_ctor(&(layers[1]), outputName, outputInputSize, outputNeurons, outputNumNeurons, outputLayerOutput, Activation_SoftMax);
 
-unsigned int inputSize = 784;
-unsigned int outputSize = 10;
-unsigned int numLayers = 2;
+Size inputSize = 784;
+Size outputSize = 10;
+Size numLayers = 2;
 NeuralNetwork nn;
 NeuralNetwork_ctor(&nn, inputSize, outputSize, layers, numLayers);
 

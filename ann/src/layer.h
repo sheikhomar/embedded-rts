@@ -1,16 +1,15 @@
 #ifndef ANN_LAYER_H
 #define ANN_LAYER_H
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "types.h"
 #include "neuron.h"
 
 typedef struct {
   char *name;
-  unsigned int numNeurons;
-  unsigned int inputSize;
+  Size numNeurons;
+  Size inputSize;
   Neuron *neurons;
-  float *output;
+  Decimal *output;
   enum Activation activation;
   bool __initialised;
 } Layer;
@@ -18,10 +17,10 @@ typedef struct {
 void Layer_ctor(
         Layer *const self,
         char *const name,
-        unsigned int inputSize,
+		Size inputSize,
         Neuron *const neurons,
-        unsigned int numNeurons,
-        float *const outputArray,
+		Size numNeurons,
+        Decimal *const outputArray,
         enum Activation activation);
 
 void Layer_compute(Layer *const self, Input *const input);

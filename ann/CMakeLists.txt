@@ -23,8 +23,6 @@ elseif(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_GNUCXX)
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Werror")
 endif()
 
-configure_file(src/data/test_data.csv test_data.csv COPYONLY)
-
 set(SOURCE_FILES
         src/asserts.c
         src/input.c

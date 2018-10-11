@@ -1,29 +1,25 @@
 #ifndef ANN_NEURAL_NETWORK_H
 #define ANN_NEURAL_NETWORK_H
 
-#include <stdbool.h>
-#include <stdio.h>
+#include "types.h"
 #include "layer.h"
-#include "neuron.h"
-#include "layer.h"
-#include "asserts.h"
 
 typedef struct {
   Layer *layers;
-  unsigned int numLayers;
-  unsigned int inputSize;
-  unsigned int outputSize;
+  Size numLayers;
+  Size inputSize;
+  Size outputSize;
   bool __initialised;
 } NeuralNetwork;
 
 void NeuralNetwork_ctor(
         NeuralNetwork *const self,
-        unsigned int inputSize,
-        unsigned int outputSize,
+		Size inputSize,
+		Size outputSize,
         Layer *const layers,
-        unsigned int numLayers);
+		Size numLayers);
 
-float* NeuralNetwork_compute(
+Decimal* NeuralNetwork_compute(
         NeuralNetwork *const self,
         Input *const input);
 
