@@ -1,5 +1,16 @@
 import os
 
+def write_data_file(x, y, file_name=''):
+    f = open(os.path.join('gen', file_name) ,'w')
+    for i in range(len(y)):
+        f.write('{}'.format(y[i]))
+        f.write(',')
+        for j in range(len(x[i])):
+            f.write('{}'.format(x[i][j]))
+            f.write(',')
+        f.write('\n')
+    f.close
+
 def write_model(model, file_name='model.h'):
     f = open(os.path.join('gen', file_name) ,'w')
 
