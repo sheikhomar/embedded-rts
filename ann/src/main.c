@@ -2,12 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
+#include <unistd.h>
 #include "neuron.h"
 #include "neural_network.h"
 
 #define MAX_DIMENSIONS 784
+#define RESULTS_FILE_NAME "results.csv"
 
-void printData(int label, float data[MAX_DIMENSIONS]) {
+void printData(float data[MAX_DIMENSIONS], unsigned int label) {
   unsigned int i;
 
   printf("Label: %d  ", label);
@@ -23,19 +25,11 @@ void printData(int label, float data[MAX_DIMENSIONS]) {
 int predict(float data[MAX_DIMENSIONS], unsigned int label) {
   #include "models/nn_3_layers_32_neurons.h"
 
-  FILE * fp;
-
-  fp = fopen("result.csv", "w");
-  if (fp == NULL) {
-    printf("Opening file 'result.csv' failed!\n");
-    return -1;
-  }
 
   Input input;
   Input_ctor(&input, data, MAX_DIMENSIONS);
   float *result = NeuralNetwork_compute(&nn, &input);
 
-  // outputSize
   unsigned int i, predictedLabel = 0;
   float maxValue = 0.0;
   for (i = 0; i < outputSize; i++) {
@@ -47,10 +41,23 @@ int predict(float data[MAX_DIMENSIONS], unsigned int label) {
 
   printf("True label: %d  Predicted label: %d \n", label, predictedLabel);
 
+
+  FILE * fp;
+  fp = fopen(RESULTS_FILE_NAME, "a");
+  if (fp == NULL) {
+    printf("Opening file '%s' failed!\n", RESULTS_FILE_NAME);
+    return -1;
+  }
+  fprintf(fp, "%d,%d\n", label, predictedLabel);
+  fclose(fp);
+
   return 0;
 }
 
-int parseTestData() {
+int predictLabelsForTestData() {
+  // Remove old file
+  unlink(RESULTS_FILE_NAME);
+
   FILE * fp;
   char * line = NULL;
   size_t len = 0;
@@ -81,7 +88,7 @@ int parseTestData() {
       data[i] = atof(field);
     }
 
-    //printData(label, data);
+    //printData(data, label);
     result = predict(data, label);
     assert(result == 0);
   }
@@ -90,10 +97,14 @@ int parseTestData() {
   if (line)
     free(line);
 
+
+
   return 0;
 }
 
 int main() {
-  printf("Hello, World!\n");
-  return parseTestData();
+
+
+  printf("Predict labels for test data!\n");
+  return predictLabelsForTestData();
 }
