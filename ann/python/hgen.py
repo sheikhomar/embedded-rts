@@ -1,7 +1,17 @@
 import os
+import zipfile
 
-def write_data_file(x, y, file_name=''):
-    f = open(os.path.join('gen', file_name) ,'w')
+def write_compressed_data_file(x, y, zip_path):
+    csv_path = 'test_data.csv'
+    write_data_file(x, y, csv_path)
+
+    with zipfile.ZipFile(zip_path, mode='w', compression=zipfile.ZIP_DEFLATED) as zip_file:
+        zip_file.write(csv_path)
+
+    os.remove(csv_path)
+
+def write_data_file(x, y, file_name):
+    f = open(file_name ,'w')
     for i in range(len(y)):
         f.write('{}'.format(y[i]))
         f.write(',')

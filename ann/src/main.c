@@ -65,7 +65,7 @@ int predictLabelsForTestData() {
 
   fp = fopen("test_data.csv", "r");
   if (fp == NULL) {
-    printf("File open failed!\n");
+    printf("File open failed! Did you unzip the test_data.zip file?\n");
     return -1;
   }
 
@@ -96,8 +96,6 @@ int predictLabelsForTestData() {
   fclose(fp);
   if (line)
     free(line);
-
-
 
   return 0;
 }
