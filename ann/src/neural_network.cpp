@@ -1,4 +1,6 @@
 #include "neural_network.h"
+#include "asserts.h"
+#include <stdio.h>
 
 void NeuralNetwork_sanityChecks(NeuralNetwork *const self) {
   assertNotNull(self, "Neural network cannot be a NULL pointer.");
@@ -13,11 +15,11 @@ void NeuralNetwork_sanityChecks(NeuralNetwork *const self) {
 }
 
 void NeuralNetwork_ctor(
-        NeuralNetwork *const self,
-        unsigned int inputSize,
-        unsigned int outputSize,
+        NeuralNetwork *  self,
+		Size inputSize,
+		Size outputSize,
         Layer *const layers,
-        unsigned int numLayers) {
+		Size numLayers) {
 
   assertNotNull(self, "Neural network cannot be null.");
 
@@ -31,7 +33,7 @@ void NeuralNetwork_ctor(
   NeuralNetwork_sanityChecks(self);
 }
 
-float* NeuralNetwork_compute(
+Decimal* NeuralNetwork_compute(
         NeuralNetwork *const self,
         Input *const input) {
 
@@ -44,9 +46,9 @@ float* NeuralNetwork_compute(
   Input_ctor(&nextInput, input->data, input->size);
 
   /* Exclude the last layer, which is the output layer */
-  unsigned int numHiddenLayers = self->numLayers - 1;
+  Size numHiddenLayers = self->numLayers - 1;
 
-  unsigned int i;
+  Size i;
   for (i = 0; i < numHiddenLayers; ++i) {
     Layer *layer = &(self->layers[i]);
     Layer_compute(layer, &nextInput);

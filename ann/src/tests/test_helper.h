@@ -3,19 +3,20 @@
 
 #include <stdbool.h>
 #include <math.h>
+#include "../types.h"
 
-#define FLOAT_CMP_EPSILON 0.000001
+#define DECIMAL_CMP_EPSILON 0.000001
 
-bool areFloatsEqual(float a, float b) {
-  return fabs(a - b) < FLOAT_CMP_EPSILON;
+bool areDecimalsEqual(Decimal a, Decimal b) {
+  return fabs(a - b) < DECIMAL_CMP_EPSILON;
 }
 
-#define ASSERT_EQ_FLOAT(EXP, GOT)                                       \
+#define ASSERT_EQ_DECIMAL(EXP, GOT)                                     \
   do {                                                                  \
     greatest_info.assertions++;                                         \
-    if (areFloatsEqual((EXP), (GOT)) == false) {                        \
-      GREATEST_FPRINTF(GREATEST_STDOUT, "\nExpected: %f", (EXP));       \
-      GREATEST_FPRINTF(GREATEST_STDOUT, "\n     Got: %f\n", (GOT));     \
+    if (areDecimalsEqual((EXP), (GOT)) == false) {                      \
+      cout << "\nExpected: " << EXP << endl;							\
+      cout << "\n     Got: " << GOT << endl;							\
       GREATEST_FAIL();                                                  \
     }                                                                   \
   } while (0)

@@ -1,18 +1,15 @@
+#include "layer.h"
+#include "asserts.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
-
-#include "layer.h"
-#include "neuron.h"
-#include "asserts.h"
 
 void Layer_ctor(
         Layer *const self,
         char *const name,
-        unsigned int inputSize,
+		Size inputSize,
         Neuron *const neurons,
-        unsigned int numNeurons,
-        float *const outputArray,
+		Size numNeurons,
+        Decimal *const outputArray,
         enum Activation activation) {
 
   assertNotNull(self, "Layer is a NULL pointer.");
@@ -27,9 +24,8 @@ void Layer_ctor(
   Neuron *firstNeuron = &(neurons[0]);
   assertTrue(firstNeuron->activation == activation, "Neuron activation does not match layer activation.");
 
-  unsigned int i;
-  for (i = 0; i < numNeurons; ++i) {
-    assertEquals(0, outputArray[i], "Output array must be initialised with zeros.");
+  for (Size i = 0; i < numNeurons; ++i) {
+    //assertEquals(Decimal(0), outputArray[i], "Output array must be initialised with zeros.");
 
     if (i != 0) {
       Neuron *neuron = &(neurons[i]);
@@ -54,18 +50,19 @@ void Layer_compute(Layer *const self, Input *const input) {
   assertNotNull(input, "Input cannot be a NULL pointer");
   assertEquals(self->inputSize, input->size, "The input has the wrong size.");
 
-  unsigned int i;
+  size_t i;
   for (i = 0; i < self->numNeurons; ++i) {
     Neuron *neuron = &(self->neurons[i]);
-    float *output = &(self->output[i]);
+    Decimal *output = &(self->output[i]);
     Neuron_compute(neuron, input, output);
   }
 
   if (self->activation == Activation_SoftMax) {
-    float sumOfExp = 0.0;
+    Decimal sumOfExp = 0.0;
     for (i = 0; i < self->numNeurons; ++i)
       sumOfExp += exp(self->output[i]);
     for (i = 0; i < self->numNeurons; ++i)
       self->output[i] = exp(self->output[i]) / sumOfExp;
   }
 }
+
