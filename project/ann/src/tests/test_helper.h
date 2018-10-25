@@ -5,7 +5,7 @@
 #include <math.h>
 #include "../types.h"
 
-#define DECIMAL_CMP_EPSILON 0.000001
+#define DECIMAL_CMP_EPSILON 0.0001
 
 bool areDecimalsEqual(Decimal a, Decimal b) {
   return fabs(a - b) < DECIMAL_CMP_EPSILON;
