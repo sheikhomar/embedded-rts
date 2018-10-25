@@ -1,5 +1,6 @@
 #include "layer.h"
 #include "asserts.h"
+#include "maths.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -60,9 +61,9 @@ void Layer_compute(Layer *const self, Input *const input) {
   if (self->activation == Activation_SoftMax) {
     Decimal sumOfExp = 0.0;
     for (i = 0; i < self->numNeurons; ++i)
-      sumOfExp += exp(self->output[i]);
+      sumOfExp = sumOfExp + expApprox(self->output[i]);
     for (i = 0; i < self->numNeurons; ++i)
-      self->output[i] = exp(self->output[i]) / sumOfExp;
+      self->output[i] = expApprox(self->output[i]) / sumOfExp;
   }
 }
 

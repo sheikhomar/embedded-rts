@@ -3,7 +3,7 @@
 
 #include "types.h"
 
-#define DO_ASSERT true
+#define DO_ASSERT false
 
 void Asserts_assertFail(const char* msg);
 

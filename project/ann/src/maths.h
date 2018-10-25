@@ -1,6 +1,6 @@
 #include "types.h"
 
-Decimal exp(Decimal x);
+Decimal expApprox(Decimal x);
 
 /* Returns approximate value of e^x
  * using sum of first n terms of Taylor Series */

@@ -1,6 +1,6 @@
 #include "maths.h"
 
-Decimal exp(Decimal x) {
+Decimal expApprox(Decimal x) {
   return expApprox(5,x);
 }
 
