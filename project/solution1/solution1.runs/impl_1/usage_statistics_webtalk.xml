@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Thu Oct 25 11:57:49 2018'>
+<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Sat Oct 27 07:41:08 2018'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
-  <keyValuePair key="build_version" value="1909853" description="" />
-  <keyValuePair key="date_generated" value="Thu Oct 25 11:57:49 2018" description="" />
+  <keyValuePair key="build_version" value="1957588" description="" />
+  <keyValuePair key="date_generated" value="Sat Oct 27 07:41:08 2018" description="" />
   <keyValuePair key="os_platform" value="WIN64" description="" />
-  <keyValuePair key="product_version" value="Vivado v2017.2 (64-bit)" description="" />
+  <keyValuePair key="product_version" value="Vivado v2017.2.1 (64-bit)" description="" />
   <keyValuePair key="project_id" value="aa94086248af4f90aef7c2a17c89b3de" description="" />
-  <keyValuePair key="project_iteration" value="1" description="" />
-  <keyValuePair key="random_id" value="765414cdb65d5ffc8fa29e9723cd6853" description="" />
-  <keyValuePair key="registration_id" value="765414cdb65d5ffc8fa29e9723cd6853" description="" />
+  <keyValuePair key="project_iteration" value="2" description="" />
+  <keyValuePair key="random_id" value="d342b4d74e215b1c88d8ea878331e906" description="" />
+  <keyValuePair key="registration_id" value="d342b4d74e215b1c88d8ea878331e906" description="" />
   <keyValuePair key="route_design" value="TRUE" description="" />
   <keyValuePair key="target_device" value="xc7z010" description="" />
   <keyValuePair key="target_family" value="zynq" description="" />
@@ -19,8 +19,8 @@
   <keyValuePair key="tool_flow" value="Vivado" description="" />
  </section>
  <section name="user_environment" level="1" order="2" description="">
-  <keyValuePair key="cpu_name" value="Intel(R) Core(TM) i7-4500U CPU @ 1.80GHz" description="" />
-  <keyValuePair key="cpu_speed" value="2394 MHz" description="" />
+  <keyValuePair key="cpu_name" value="Intel(R) Core(TM) i7-2700K CPU @ 3.50GHz" description="" />
+  <keyValuePair key="cpu_speed" value="3511 MHz" description="" />
   <keyValuePair key="os_name" value="Microsoft Windows 8 or later , 64-bit" description="" />
   <keyValuePair key="os_release" value="major release  (build 9200)" description="" />
   <keyValuePair key="system_ram" value="8.000 GB" description="" />
@@ -657,7 +657,7 @@
    <keyValuePair key="output_load" value="5.000000" description="" />
    <keyValuePair key="output_toggle" value="12.500000" description="" />
    <keyValuePair key="package" value="clg400" description="" />
-   <keyValuePair key="pct_clock_constrained" value="1.000000" description="" />
+   <keyValuePair key="pct_clock_constrained" value="2.000000" description="" />
    <keyValuePair key="pct_inputs_defined" value="0" description="" />
    <keyValuePair key="platform" value="nt64" description="" />
    <keyValuePair key="process" value="typical" description="" />
@@ -748,7 +748,7 @@
    <keyValuePair key="vccpll_static_current" value="0.003000" description="" />
    <keyValuePair key="vccpll_total_current" value="0.018291" description="" />
    <keyValuePair key="vccpll_voltage" value="1.800000" description="" />
-   <keyValuePair key="version" value="2017.2" description="" />
+   <keyValuePair key="version" value="2017.2.1" description="" />
   </section>
  </section>
  <section name="report_utilization" level="1" order="7" description="">
@@ -1053,10 +1053,10 @@
    <keyValuePair key="-verilog_define" value="default::[not_specified]" description="" />
   </section>
   <section name="usage" level="2" order="2" description="">
-   <keyValuePair key="elapsed" value="00:00:35s" description="" />
+   <keyValuePair key="elapsed" value="00:00:44s" description="" />
    <keyValuePair key="hls_ip" value="0" description="" />
-   <keyValuePair key="memory_gain" value="374.504MB" description="" />
-   <keyValuePair key="memory_peak" value="632.469MB" description="" />
+   <keyValuePair key="memory_gain" value="376.105MB" description="" />
+   <keyValuePair key="memory_peak" value="645.652MB" description="" />
   </section>
  </section>
  <section name="unisim_transformation" level="1" order="10" description="">
@@ -1110,14 +1110,17 @@
    <keyValuePair key="createblockdesign" value="1" description="" />
    <keyValuePair key="createtophdl" value="1" description="" />
    <keyValuePair key="customizersbblock" value="5" description="" />
+   <keyValuePair key="newexporthardware" value="1" description="" />
+   <keyValuePair key="newlaunchhardware" value="1" description="" />
    <keyValuePair key="newproject" value="1" description="" />
+   <keyValuePair key="openproject" value="1" description="" />
    <keyValuePair key="regeneratersblayout" value="5" description="" />
-   <keyValuePair key="runbitgen" value="1" description="" />
+   <keyValuePair key="runbitgen" value="2" description="" />
    <keyValuePair key="saversbdesign" value="1" description="" />
    <keyValuePair key="validatersbdesign" value="1" description="" />
   </section>
   <section name="other_data" level="2" order="2" description="">
-   <keyValuePair key="guimode" value="1" description="" />
+   <keyValuePair key="guimode" value="2" description="" />
   </section>
   <section name="project_data" level="2" order="3" description="">
    <keyValuePair key="constraintsetcount" value="1" description="" />

@@ -51,18 +51,18 @@ set rc [catch {
   set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/Lukas/Desktop/embedded-rts/project/solution1/solution1.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Lukas/Desktop/embedded-rts/project/solution1/solution1.xpr [current_project]
-  set_property ip_output_repo C:/Users/Lukas/Desktop/embedded-rts/project/solution1/solution1.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/code/embedded-rts/project/solution1/solution1.cache/wt [current_project]
+  set_property parent.project_path C:/code/embedded-rts/project/solution1/solution1.xpr [current_project]
+  set_property ip_output_repo C:/code/embedded-rts/project/solution1/solution1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet C:/Users/Lukas/Desktop/embedded-rts/project/solution1/solution1.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet C:/code/embedded-rts/project/solution1/solution1.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -suppress
   set_param project.isImplRun true
-  add_files C:/Users/Lukas/Desktop/embedded-rts/project/solution1/solution1.srcs/sources_1/bd/design_1/design_1.bd
-  set_property is_locked true [get_files C:/Users/Lukas/Desktop/embedded-rts/project/solution1/solution1.srcs/sources_1/bd/design_1/design_1.bd]
+  add_files C:/code/embedded-rts/project/solution1/solution1.srcs/sources_1/bd/design_1/design_1.bd
+  set_property is_locked true [get_files C:/code/embedded-rts/project/solution1/solution1.srcs/sources_1/bd/design_1/design_1.bd]
   set_param project.isImplRun false
-  read_xdc C:/Users/Lukas/Desktop/embedded-rts/project/solution1/solution1.srcs/constrs_1/imports/lab1/lab1_zybo.xdc
+  read_xdc C:/code/embedded-rts/project/solution1/solution1.srcs/constrs_1/imports/lab1/lab1_zybo.xdc
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7z010clg400-1
   set_param project.isImplRun false
