@@ -30,6 +30,7 @@ def write_model(model, file_name='model.h'):
     f.write('/**\n')
     model.summary(print_fn=lambda line: f.write(' * {}\n'.format(line)))
     f.write(' **/\n\n')
+    initialisers = []
 
     for layer_index, layer in enumerate(model.layers):
         layerName = layer.name
@@ -60,22 +61,14 @@ def write_model(model, file_name='model.h'):
                     if (j+1) % 3 == 0:
                         f.write('\n  ')
                 f.write('\n};\n')
-                f.write('Neuron_ctor(&({0}Neurons[{1}]), {0}Neuron{1}Weights, {0}Neuron{1}NumWeights, {2});\n'.format(layerName, unit, act_func))
+                initialisers.append('Neuron_ctor(&({0}Neurons[{1}]), {0}Neuron{1}Weights, {0}Neuron{1}NumWeights, {2});\n'.format(layerName, unit, act_func))
 
             f.write('\n\n')
             f.write('char * {0}Name = "{0}";\n'.format(layerName));
             f.write('unsigned int {0}InputSize = {1};\n'.format(layerName, numWeights))
             f.write('unsigned int {0}NumNeurons = {1};\n'.format(layerName, numUnits))
             f.write('float {0}LayerOutput[{1}] = {{ 0 }};\n'.format(layerName, numUnits));
-            f.write('Layer_ctor(');
-            f.write('&(layers[{0}]),'.format(layer_index - 1));
-            f.write(' {0}Name,'.format(layerName));
-            f.write(' {0}InputSize,'.format(layerName));
-            f.write(' {0}Neurons,'.format(layerName));
-            f.write(' {0}NumNeurons,'.format(layerName));
-            f.write(' {0}LayerOutput,'.format(layerName));
-            f.write(' {0}'.format(act_func));
-            f.write(');\n\n');
+            initialisers.append('Layer_ctor(&(layers[{0}]), {1}Name, {1}InputSize,{1}Neurons,{1}NumNeurons,{1}LayerOutput,{2});\n\n'.format(layer_index - 1, layerName, act_func));
 
     input_size = model.layers[0].input_shape[1]
     output_size = model.layers[-1].output_shape[1]
@@ -84,7 +77,14 @@ def write_model(model, file_name='model.h'):
     f.write('unsigned int outputSize = {0};\n'.format(output_size))
     f.write('unsigned int numLayers = {0};\n'.format(num_layers))
     f.write('NeuralNetwork nn;\n')
-    f.write('NeuralNetwork_ctor(&nn, inputSize, outputSize, layers, numLayers);\n\n')
+    
+    f.write('void initialiseNetwork() {\n')
+    for item in initialisers:
+        f.write('  ')
+        f.write(item)
+    f.write('  NeuralNetwork_ctor(&nn, inputSize, outputSize, layers, numLayers);\n')
+    f.write('}\n')
+    
     f.close()
 
 

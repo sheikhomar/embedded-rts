@@ -289,7 +289,6 @@ float hiddenNeuron0Weights[785] = {
   , -0.04854436218738556, -0.03033284842967987, -0.04842318594455719
   ,  0.03224317356944084
 };
-Neuron_ctor(&(hiddenNeurons[0]), hiddenNeuron0Weights, hiddenNeuron0NumWeights, Activation_ReLU);
 
 // Configure neuron[1] for layer "hidden"
 unsigned int hiddenNeuron1NumWeights = 785;
@@ -558,7 +557,6 @@ float hiddenNeuron1Weights[785] = {
   , -0.009713651612401009, 0.019883470609784126, 0.005905617494136095
   ,  0.00440859142690897
 };
-Neuron_ctor(&(hiddenNeurons[1]), hiddenNeuron1Weights, hiddenNeuron1NumWeights, Activation_ReLU);
 
 // Configure neuron[2] for layer "hidden"
 unsigned int hiddenNeuron2NumWeights = 785;
@@ -827,7 +825,6 @@ float hiddenNeuron2Weights[785] = {
   ,  0.05641897767782211, -0.05661400407552719,  0.03253234922885895
   ,  0.00886811688542366
 };
-Neuron_ctor(&(hiddenNeurons[2]), hiddenNeuron2Weights, hiddenNeuron2NumWeights, Activation_ReLU);
 
 // Configure neuron[3] for layer "hidden"
 unsigned int hiddenNeuron3NumWeights = 785;
@@ -1096,7 +1093,6 @@ float hiddenNeuron3Weights[785] = {
   ,  0.08150217682123184,  0.07853247970342636,   0.0267429668456316
   ,  0.05139383673667908
 };
-Neuron_ctor(&(hiddenNeurons[3]), hiddenNeuron3Weights, hiddenNeuron3NumWeights, Activation_ReLU);
 
 // Configure neuron[4] for layer "hidden"
 unsigned int hiddenNeuron4NumWeights = 785;
@@ -1365,7 +1361,6 @@ float hiddenNeuron4Weights[785] = {
   , -0.0003033304528798908, -0.048795025795698166, -0.04951915517449379
   , -0.03636432811617851
 };
-Neuron_ctor(&(hiddenNeurons[4]), hiddenNeuron4Weights, hiddenNeuron4NumWeights, Activation_ReLU);
 
 // Configure neuron[5] for layer "hidden"
 unsigned int hiddenNeuron5NumWeights = 785;
@@ -1634,7 +1629,6 @@ float hiddenNeuron5Weights[785] = {
   , -0.05510012060403824, -0.06268340349197388, 0.012743376195430756
   ,  0.06022156774997711
 };
-Neuron_ctor(&(hiddenNeurons[5]), hiddenNeuron5Weights, hiddenNeuron5NumWeights, Activation_ReLU);
 
 // Configure neuron[6] for layer "hidden"
 unsigned int hiddenNeuron6NumWeights = 785;
@@ -1903,7 +1897,6 @@ float hiddenNeuron6Weights[785] = {
   ,  0.03240571171045303,  0.10495899617671967, 0.005399310030043125
   ,  0.09671317040920258
 };
-Neuron_ctor(&(hiddenNeurons[6]), hiddenNeuron6Weights, hiddenNeuron6NumWeights, Activation_ReLU);
 
 // Configure neuron[7] for layer "hidden"
 unsigned int hiddenNeuron7NumWeights = 785;
@@ -2172,7 +2165,6 @@ float hiddenNeuron7Weights[785] = {
   , 0.060212984681129456, 0.015840822830796242, -0.017422359436750412
   , -0.009768002666532993
 };
-Neuron_ctor(&(hiddenNeurons[7]), hiddenNeuron7Weights, hiddenNeuron7NumWeights, Activation_ReLU);
 
 // Configure neuron[8] for layer "hidden"
 unsigned int hiddenNeuron8NumWeights = 785;
@@ -2441,7 +2433,6 @@ float hiddenNeuron8Weights[785] = {
   ,  0.07525251060724258,  0.04144532233476639,   0.0037940195761621
   , -0.00243336521089077
 };
-Neuron_ctor(&(hiddenNeurons[8]), hiddenNeuron8Weights, hiddenNeuron8NumWeights, Activation_ReLU);
 
 // Configure neuron[9] for layer "hidden"
 unsigned int hiddenNeuron9NumWeights = 785;
@@ -2710,7 +2701,6 @@ float hiddenNeuron9Weights[785] = {
   , 0.024451464414596558,  -0.0923696905374527, -0.07148228585720062
   , -0.020008176565170288
 };
-Neuron_ctor(&(hiddenNeurons[9]), hiddenNeuron9Weights, hiddenNeuron9NumWeights, Activation_ReLU);
 
 // Configure neuron[10] for layer "hidden"
 unsigned int hiddenNeuron10NumWeights = 785;
@@ -2979,7 +2969,6 @@ float hiddenNeuron10Weights[785] = {
   ,  -0.0871102437376976,  0.05289173871278763, 0.030708851292729378
   , -0.06766171008348465
 };
-Neuron_ctor(&(hiddenNeurons[10]), hiddenNeuron10Weights, hiddenNeuron10NumWeights, Activation_ReLU);
 
 // Configure neuron[11] for layer "hidden"
 unsigned int hiddenNeuron11NumWeights = 785;
@@ -3248,7 +3237,6 @@ float hiddenNeuron11Weights[785] = {
   , -0.05262831225991249,  0.03253844380378723,  0.05306177958846092
   , 0.028705250471830368
 };
-Neuron_ctor(&(hiddenNeurons[11]), hiddenNeuron11Weights, hiddenNeuron11NumWeights, Activation_ReLU);
 
 // Configure neuron[12] for layer "hidden"
 unsigned int hiddenNeuron12NumWeights = 785;
@@ -3517,7 +3505,6 @@ float hiddenNeuron12Weights[785] = {
   , 0.032773569226264954,  0.07377833873033524, 0.056099146604537964
   , 0.006371744908392429
 };
-Neuron_ctor(&(hiddenNeurons[12]), hiddenNeuron12Weights, hiddenNeuron12NumWeights, Activation_ReLU);
 
 // Configure neuron[13] for layer "hidden"
 unsigned int hiddenNeuron13NumWeights = 785;
@@ -3786,7 +3773,6 @@ float hiddenNeuron13Weights[785] = {
   , -0.07268572598695755, -0.034209076315164566, -0.06392989307641983
   , 0.030365386977791786
 };
-Neuron_ctor(&(hiddenNeurons[13]), hiddenNeuron13Weights, hiddenNeuron13NumWeights, Activation_ReLU);
 
 // Configure neuron[14] for layer "hidden"
 unsigned int hiddenNeuron14NumWeights = 785;
@@ -4055,7 +4041,6 @@ float hiddenNeuron14Weights[785] = {
   ,  0.08861086517572403, -0.01604728028178215, -0.019038494676351547
   , -0.010919330641627312
 };
-Neuron_ctor(&(hiddenNeurons[14]), hiddenNeuron14Weights, hiddenNeuron14NumWeights, Activation_ReLU);
 
 // Configure neuron[15] for layer "hidden"
 unsigned int hiddenNeuron15NumWeights = 785;
@@ -4324,7 +4309,6 @@ float hiddenNeuron15Weights[785] = {
   , -0.017210138961672783, -0.01937207393348217,  0.04782310873270035
   , -0.07192309200763702
 };
-Neuron_ctor(&(hiddenNeurons[15]), hiddenNeuron15Weights, hiddenNeuron15NumWeights, Activation_ReLU);
 
 // Configure neuron[16] for layer "hidden"
 unsigned int hiddenNeuron16NumWeights = 785;
@@ -4593,7 +4577,6 @@ float hiddenNeuron16Weights[785] = {
   ,  0.05879037082195282, -0.041251666843891144,  0.03106878511607647
   , -0.05392616242170334
 };
-Neuron_ctor(&(hiddenNeurons[16]), hiddenNeuron16Weights, hiddenNeuron16NumWeights, Activation_ReLU);
 
 // Configure neuron[17] for layer "hidden"
 unsigned int hiddenNeuron17NumWeights = 785;
@@ -4862,7 +4845,6 @@ float hiddenNeuron17Weights[785] = {
   , -0.010552377440035343, -0.019485952332615852,  0.06251125037670135
   , -0.06625933945178986
 };
-Neuron_ctor(&(hiddenNeurons[17]), hiddenNeuron17Weights, hiddenNeuron17NumWeights, Activation_ReLU);
 
 // Configure neuron[18] for layer "hidden"
 unsigned int hiddenNeuron18NumWeights = 785;
@@ -5131,7 +5113,6 @@ float hiddenNeuron18Weights[785] = {
   , -0.06287699937820435, -0.07700549066066742, 0.061088528484106064
   , 0.013476612977683544
 };
-Neuron_ctor(&(hiddenNeurons[18]), hiddenNeuron18Weights, hiddenNeuron18NumWeights, Activation_ReLU);
 
 // Configure neuron[19] for layer "hidden"
 unsigned int hiddenNeuron19NumWeights = 785;
@@ -5400,7 +5381,6 @@ float hiddenNeuron19Weights[785] = {
   , -0.05100754648447037, -0.03437267243862152, -0.022226771339774132
   ,  0.06526432931423187
 };
-Neuron_ctor(&(hiddenNeurons[19]), hiddenNeuron19Weights, hiddenNeuron19NumWeights, Activation_ReLU);
 
 // Configure neuron[20] for layer "hidden"
 unsigned int hiddenNeuron20NumWeights = 785;
@@ -5669,7 +5649,6 @@ float hiddenNeuron20Weights[785] = {
   ,  0.08122144639492035, -0.07771294564008713,   0.0204295851290226
   ,  0.06898368895053864
 };
-Neuron_ctor(&(hiddenNeurons[20]), hiddenNeuron20Weights, hiddenNeuron20NumWeights, Activation_ReLU);
 
 // Configure neuron[21] for layer "hidden"
 unsigned int hiddenNeuron21NumWeights = 785;
@@ -5938,7 +5917,6 @@ float hiddenNeuron21Weights[785] = {
   , -0.06432786583900452, 0.050477541983127594, -0.053080372512340546
   ,  0.04808332771062851
 };
-Neuron_ctor(&(hiddenNeurons[21]), hiddenNeuron21Weights, hiddenNeuron21NumWeights, Activation_ReLU);
 
 // Configure neuron[22] for layer "hidden"
 unsigned int hiddenNeuron22NumWeights = 785;
@@ -6207,7 +6185,6 @@ float hiddenNeuron22Weights[785] = {
   , -0.07213783264160156, -0.03815731778740883,  0.08560101687908173
   , -0.02670043148100376
 };
-Neuron_ctor(&(hiddenNeurons[22]), hiddenNeuron22Weights, hiddenNeuron22NumWeights, Activation_ReLU);
 
 // Configure neuron[23] for layer "hidden"
 unsigned int hiddenNeuron23NumWeights = 785;
@@ -6476,7 +6453,6 @@ float hiddenNeuron23Weights[785] = {
   ,  0.07558025419712067, -0.037604544311761856, 0.022505169734358788
   , -0.03681832179427147
 };
-Neuron_ctor(&(hiddenNeurons[23]), hiddenNeuron23Weights, hiddenNeuron23NumWeights, Activation_ReLU);
 
 // Configure neuron[24] for layer "hidden"
 unsigned int hiddenNeuron24NumWeights = 785;
@@ -6745,7 +6721,6 @@ float hiddenNeuron24Weights[785] = {
   , 0.035060107707977295, -0.04502490907907486,  0.06737444549798965
   ,  0.05625802278518677
 };
-Neuron_ctor(&(hiddenNeurons[24]), hiddenNeuron24Weights, hiddenNeuron24NumWeights, Activation_ReLU);
 
 // Configure neuron[25] for layer "hidden"
 unsigned int hiddenNeuron25NumWeights = 785;
@@ -7014,7 +6989,6 @@ float hiddenNeuron25Weights[785] = {
   ,  0.05061040818691254, -0.07063951343297958, -0.07774526625871658
   , -0.035485975444316864
 };
-Neuron_ctor(&(hiddenNeurons[25]), hiddenNeuron25Weights, hiddenNeuron25NumWeights, Activation_ReLU);
 
 // Configure neuron[26] for layer "hidden"
 unsigned int hiddenNeuron26NumWeights = 785;
@@ -7283,7 +7257,6 @@ float hiddenNeuron26Weights[785] = {
   , -0.009340516291558743, -0.016626618802547455,  0.07628534734249115
   ,  0.08330386877059937
 };
-Neuron_ctor(&(hiddenNeurons[26]), hiddenNeuron26Weights, hiddenNeuron26NumWeights, Activation_ReLU);
 
 // Configure neuron[27] for layer "hidden"
 unsigned int hiddenNeuron27NumWeights = 785;
@@ -7552,7 +7525,6 @@ float hiddenNeuron27Weights[785] = {
   , -0.010211619548499584, 0.026142427697777748, 0.004094919189810753
   , -0.09443450719118118
 };
-Neuron_ctor(&(hiddenNeurons[27]), hiddenNeuron27Weights, hiddenNeuron27NumWeights, Activation_ReLU);
 
 // Configure neuron[28] for layer "hidden"
 unsigned int hiddenNeuron28NumWeights = 785;
@@ -7821,7 +7793,6 @@ float hiddenNeuron28Weights[785] = {
   ,  0.02199598029255867, -0.04005958512425423, -0.08949578553438187
   ,  0.01994875818490982
 };
-Neuron_ctor(&(hiddenNeurons[28]), hiddenNeuron28Weights, hiddenNeuron28NumWeights, Activation_ReLU);
 
 // Configure neuron[29] for layer "hidden"
 unsigned int hiddenNeuron29NumWeights = 785;
@@ -8090,7 +8061,6 @@ float hiddenNeuron29Weights[785] = {
   , -0.06600493937730789, -0.041184451431035995, -0.030055595561861992
   , -0.008855820633471012
 };
-Neuron_ctor(&(hiddenNeurons[29]), hiddenNeuron29Weights, hiddenNeuron29NumWeights, Activation_ReLU);
 
 // Configure neuron[30] for layer "hidden"
 unsigned int hiddenNeuron30NumWeights = 785;
@@ -8359,7 +8329,6 @@ float hiddenNeuron30Weights[785] = {
   , -0.04590519145131111, 0.018913989886641502, -0.03689444065093994
   , -0.041845399886369705
 };
-Neuron_ctor(&(hiddenNeurons[30]), hiddenNeuron30Weights, hiddenNeuron30NumWeights, Activation_ReLU);
 
 // Configure neuron[31] for layer "hidden"
 unsigned int hiddenNeuron31NumWeights = 785;
@@ -8628,15 +8597,12 @@ float hiddenNeuron31Weights[785] = {
   , 0.006282326299697161, -0.01780017279088497,  -0.0545881912112236
   ,   0.0838937759399414
 };
-Neuron_ctor(&(hiddenNeurons[31]), hiddenNeuron31Weights, hiddenNeuron31NumWeights, Activation_ReLU);
 
 
 char * hiddenName = "hidden";
 unsigned int hiddenInputSize = 784;
 unsigned int hiddenNumNeurons = 32;
 float hiddenLayerOutput[32] = { 0 };
-Layer_ctor(&(layers[0]), hiddenName, hiddenInputSize, hiddenNeurons, hiddenNumNeurons, hiddenLayerOutput, Activation_ReLU);
-
 
 
 /* Configuring layer: "output" */
@@ -8660,7 +8626,6 @@ float outputNeuron0Weights[33] = {
   ,  -0.3785332143306732,   0.5948299169540405, -0.14811238646507263
   , -0.04087269306182861,  0.14951485395431519
 };
-Neuron_ctor(&(outputNeurons[0]), outputNeuron0Weights, outputNeuron0NumWeights, Activation_SoftMax);
 
 // Configure neuron[1] for layer "output"
 unsigned int outputNeuron1NumWeights = 33;
@@ -8678,7 +8643,6 @@ float outputNeuron1Weights[33] = {
   ,   0.3562154769897461,  -0.5170034766197205,  0.03235688433051109
   ,  0.36410874128341675,   0.1149916723370552
 };
-Neuron_ctor(&(outputNeurons[1]), outputNeuron1Weights, outputNeuron1NumWeights, Activation_SoftMax);
 
 // Configure neuron[2] for layer "output"
 unsigned int outputNeuron2NumWeights = 33;
@@ -8696,7 +8660,6 @@ float outputNeuron2Weights[33] = {
   ,  -0.3182384967803955, -0.11963468790054321,   0.9235557317733765
   , -0.0028494102880358696,   0.2449028491973877
 };
-Neuron_ctor(&(outputNeurons[2]), outputNeuron2Weights, outputNeuron2NumWeights, Activation_SoftMax);
 
 // Configure neuron[3] for layer "output"
 unsigned int outputNeuron3NumWeights = 33;
@@ -8714,7 +8677,6 @@ float outputNeuron3Weights[33] = {
   ,  0.36112645268440247,  -0.3554942011833191, -0.11928411573171616
   ,  -0.3698770999908447, -0.25985831022262573
 };
-Neuron_ctor(&(outputNeurons[3]), outputNeuron3Weights, outputNeuron3NumWeights, Activation_SoftMax);
 
 // Configure neuron[4] for layer "output"
 unsigned int outputNeuron4NumWeights = 33;
@@ -8732,7 +8694,6 @@ float outputNeuron4Weights[33] = {
   , -0.42917129397392273,    0.411169171333313,  0.29186302423477173
   ,  0.11751044541597366,   0.2409496307373047
 };
-Neuron_ctor(&(outputNeurons[4]), outputNeuron4Weights, outputNeuron4NumWeights, Activation_SoftMax);
 
 // Configure neuron[5] for layer "output"
 unsigned int outputNeuron5NumWeights = 33;
@@ -8750,7 +8711,6 @@ float outputNeuron5Weights[33] = {
   ,  0.47735002636909485,  -0.4952382743358612, 0.009613151662051678
   ,   0.1253858208656311,  -0.2104329764842987
 };
-Neuron_ctor(&(outputNeurons[5]), outputNeuron5Weights, outputNeuron5NumWeights, Activation_SoftMax);
 
 // Configure neuron[6] for layer "output"
 unsigned int outputNeuron6NumWeights = 33;
@@ -8768,7 +8728,6 @@ float outputNeuron6Weights[33] = {
   ,   0.4218277931213379,   0.5608690977096558,  0.45520299673080444
   , -0.26899832487106323,  0.10214313864707947
 };
-Neuron_ctor(&(outputNeurons[6]), outputNeuron6Weights, outputNeuron6NumWeights, Activation_SoftMax);
 
 // Configure neuron[7] for layer "output"
 unsigned int outputNeuron7NumWeights = 33;
@@ -8786,7 +8745,6 @@ float outputNeuron7Weights[33] = {
   ,  -0.6414356231689453,  -0.2653745710849762, -0.40027594566345215
   ,   0.2973109781742096, 0.006694763898849487
 };
-Neuron_ctor(&(outputNeurons[7]), outputNeuron7Weights, outputNeuron7NumWeights, Activation_SoftMax);
 
 // Configure neuron[8] for layer "output"
 unsigned int outputNeuron8NumWeights = 33;
@@ -8804,7 +8762,6 @@ float outputNeuron8Weights[33] = {
   ,   0.6796227693557739,  0.23981022834777832,  -0.5791074633598328
   , -0.32748913764953613, -0.11388156563043594
 };
-Neuron_ctor(&(outputNeurons[8]), outputNeuron8Weights, outputNeuron8NumWeights, Activation_SoftMax);
 
 // Configure neuron[9] for layer "output"
 unsigned int outputNeuron9NumWeights = 33;
@@ -8822,18 +8779,62 @@ float outputNeuron9Weights[33] = {
   ,  -0.4262566566467285,   0.1841573268175125, -0.49063804745674133
   , -0.16899237036705017, -0.29812127351760864
 };
-Neuron_ctor(&(outputNeurons[9]), outputNeuron9Weights, outputNeuron9NumWeights, Activation_SoftMax);
 
 
 char * outputName = "output";
 unsigned int outputInputSize = 32;
 unsigned int outputNumNeurons = 10;
 float outputLayerOutput[10] = { 0 };
-Layer_ctor(&(layers[1]), outputName, outputInputSize, outputNeurons, outputNumNeurons, outputLayerOutput, Activation_SoftMax);
-
 unsigned int inputSize = 784;
 unsigned int outputSize = 10;
 unsigned int numLayers = 2;
 NeuralNetwork nn;
-NeuralNetwork_ctor(&nn, inputSize, outputSize, layers, numLayers);
+void initialiseNetwork() {
+  Neuron_ctor(&(hiddenNeurons[0]), hiddenNeuron0Weights, hiddenNeuron0NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[1]), hiddenNeuron1Weights, hiddenNeuron1NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[2]), hiddenNeuron2Weights, hiddenNeuron2NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[3]), hiddenNeuron3Weights, hiddenNeuron3NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[4]), hiddenNeuron4Weights, hiddenNeuron4NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[5]), hiddenNeuron5Weights, hiddenNeuron5NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[6]), hiddenNeuron6Weights, hiddenNeuron6NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[7]), hiddenNeuron7Weights, hiddenNeuron7NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[8]), hiddenNeuron8Weights, hiddenNeuron8NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[9]), hiddenNeuron9Weights, hiddenNeuron9NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[10]), hiddenNeuron10Weights, hiddenNeuron10NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[11]), hiddenNeuron11Weights, hiddenNeuron11NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[12]), hiddenNeuron12Weights, hiddenNeuron12NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[13]), hiddenNeuron13Weights, hiddenNeuron13NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[14]), hiddenNeuron14Weights, hiddenNeuron14NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[15]), hiddenNeuron15Weights, hiddenNeuron15NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[16]), hiddenNeuron16Weights, hiddenNeuron16NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[17]), hiddenNeuron17Weights, hiddenNeuron17NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[18]), hiddenNeuron18Weights, hiddenNeuron18NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[19]), hiddenNeuron19Weights, hiddenNeuron19NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[20]), hiddenNeuron20Weights, hiddenNeuron20NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[21]), hiddenNeuron21Weights, hiddenNeuron21NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[22]), hiddenNeuron22Weights, hiddenNeuron22NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[23]), hiddenNeuron23Weights, hiddenNeuron23NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[24]), hiddenNeuron24Weights, hiddenNeuron24NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[25]), hiddenNeuron25Weights, hiddenNeuron25NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[26]), hiddenNeuron26Weights, hiddenNeuron26NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[27]), hiddenNeuron27Weights, hiddenNeuron27NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[28]), hiddenNeuron28Weights, hiddenNeuron28NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[29]), hiddenNeuron29Weights, hiddenNeuron29NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[30]), hiddenNeuron30Weights, hiddenNeuron30NumWeights, Activation_ReLU);
+  Neuron_ctor(&(hiddenNeurons[31]), hiddenNeuron31Weights, hiddenNeuron31NumWeights, Activation_ReLU);
+  Layer_ctor(&(layers[0]), hiddenName, hiddenInputSize,hiddenNeurons,hiddenNumNeurons,hiddenLayerOutput,Activation_ReLU);
 
+  Neuron_ctor(&(outputNeurons[0]), outputNeuron0Weights, outputNeuron0NumWeights, Activation_SoftMax);
+  Neuron_ctor(&(outputNeurons[1]), outputNeuron1Weights, outputNeuron1NumWeights, Activation_SoftMax);
+  Neuron_ctor(&(outputNeurons[2]), outputNeuron2Weights, outputNeuron2NumWeights, Activation_SoftMax);
+  Neuron_ctor(&(outputNeurons[3]), outputNeuron3Weights, outputNeuron3NumWeights, Activation_SoftMax);
+  Neuron_ctor(&(outputNeurons[4]), outputNeuron4Weights, outputNeuron4NumWeights, Activation_SoftMax);
+  Neuron_ctor(&(outputNeurons[5]), outputNeuron5Weights, outputNeuron5NumWeights, Activation_SoftMax);
+  Neuron_ctor(&(outputNeurons[6]), outputNeuron6Weights, outputNeuron6NumWeights, Activation_SoftMax);
+  Neuron_ctor(&(outputNeurons[7]), outputNeuron7Weights, outputNeuron7NumWeights, Activation_SoftMax);
+  Neuron_ctor(&(outputNeurons[8]), outputNeuron8Weights, outputNeuron8NumWeights, Activation_SoftMax);
+  Neuron_ctor(&(outputNeurons[9]), outputNeuron9Weights, outputNeuron9NumWeights, Activation_SoftMax);
+  Layer_ctor(&(layers[1]), outputName, outputInputSize,outputNeurons,outputNumNeurons,outputLayerOutput,Activation_SoftMax);
+
+  NeuralNetwork_ctor(&nn, inputSize, outputSize, layers, numLayers);
+}
