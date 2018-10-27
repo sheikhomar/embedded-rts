@@ -1,7 +1,5 @@
 #include "xparameters.h"
 #include "xgpio.h"
-
-
 #include "xscutimer.h"
 #include "xscugic.h"
 #include "neuron.h"
@@ -10,9 +8,11 @@
 #include "nn_3_layers_32_neurons.h"
 #include "ten_digits.h"
 
+#define TIMER_START_VALUE 325000000
+
 void runSimpleNN() {
     #include "nn_simple_1.h"
-	float inputData[] = {1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    float inputData[] = {1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     Input input;
     Input_ctor(&input, inputData, 10);
     float *result = NeuralNetwork_compute(&nn, &input);
@@ -25,21 +25,70 @@ void runSimpleNN() {
     xil_printf("Result[4]=0.%d  Expected: 0.211979926",     (int)(result[4] * 1000));
 }
 
+size_t getPrediction(float networkOutput[10]) {
+    size_t predicted = 42;
+    float prevResult = 0;
+    for (size_t i = 0; i < 10; i++) {
+        if (networkOutput[i] > prevResult) {
+            prevResult = networkOutput[i];
+            predicted = i;
+        }
+    }
+    return predicted;
+}
+
 void runLargeNN() {
-	Input input;
-	for (size_t inputIndex = 0; inputIndex < n_input; inputIndex++) {
-		Input_ctor(&input, inputs[inputIndex], n_dimensions);
-		float *result = NeuralNetwork_compute(&nn, &input);
-		size_t predicted = 0;
-		float prevResult = 0;
-		for (size_t resultIndex = 0; resultIndex < 10; resultIndex++) {
-			if (result[resultIndex] > prevResult) {
-				prevResult = result[resultIndex];
-				predicted = resultIndex;
-			}
-		}
-		xil_printf("Digit %d, prediction=%d\r\n", inputIndex, predicted);
-	}
+    Input input;
+    for (size_t inputIndex = 0; inputIndex < n_input; inputIndex++) {
+        Input_ctor(&input, inputs[inputIndex], n_dimensions);
+        float *result = NeuralNetwork_compute(&nn, &input);
+
+        xil_printf("Digit %d, prediction=%d\r\n", inputIndex, getPrediction(result));
+    }
+}
+
+void runBenchmarkTenDigits(XScuTimer *timer) {
+    Input input;
+    for (size_t inputIndex = 0; inputIndex < n_input; inputIndex++) {
+        Input_ctor(&input, inputs[inputIndex], n_dimensions);
+
+        XScuTimer_LoadTimer(timer, TIMER_START_VALUE);
+        XScuTimer_Start(timer);
+        u32 startCount = XScuTimer_GetCounterValue(timer);
+
+        float *output = NeuralNetwork_compute(&nn, &input);
+
+        u32 endCount = XScuTimer_GetCounterValue(timer);
+        XScuTimer_Stop(timer);
+        u32 clockCyclesElapsed = startCount - endCount;
+
+        xil_printf("  Input='Digit %d', Prediction='Digit %d', TimerClockCycles=%d\r\n",
+                inputIndex,
+                getPrediction(output),
+                clockCyclesElapsed);
+    }
+}
+
+void runBenchmark(XScuTimer *timer, size_t numIterations) {
+    xil_printf("Running benchmark...\r\n");
+
+    for (size_t iteration = 0; iteration < numIterations; iteration++) {
+        xil_printf("Iteration %d/%d...\r\n", iteration+1, numIterations);
+        runBenchmarkTenDigits(timer);
+    }
+}
+
+void initTimer(XScuTimer *timer) {
+    // Look up the the config information for the timer
+    XScuTimer_Config *timerConfig =
+    XScuTimer_LookupConfig (XPAR_PS7_SCUTIMER_0_DEVICE_ID);
+
+    // Initialise the timer using the config information
+    u32 status = XScuTimer_CfgInitialize(timer, timerConfig, timerConfig->BaseAddr);
+    if (status != XST_SUCCESS) {
+        xil_printf("XScuTimer_CfgInitialize failed\r\n");
+        return;
+    }
 }
 
 int main(void) {
@@ -50,10 +99,13 @@ int main(void) {
 
     initialiseNetwork();
 
+    XScuTimer timer;
+    initTimer(&timer);
+
     xil_printf("-- Start of the Program --\r\n");
     u8 isRunning = TRUE;
     while (isRunning) {
-        xil_printf("Please choose: 1 (Show DIP state), 2 (Simple NN), 3 (MNIST NN) 4 (Exit)\r\n");
+        xil_printf("Please choose: 1 (Show DIP state), 2 (Simple NN), 3 (MNIST NN), 4 (Benchmark), 9 (Exit)\r\n");
         xil_printf("# ");
         char8 userInput = inbyte();
         xil_printf("%c\r\n", userInput);
@@ -66,6 +118,8 @@ int main(void) {
         } else if (userInput == '3') {
             runLargeNN();
         } else if (userInput == '4') {
+            runBenchmark(&timer, 20);
+        } else if (userInput == '9') {
            isRunning = FALSE;
         } else {
            xil_printf("Invalid command. Try again.\r\n");
@@ -74,5 +128,5 @@ int main(void) {
     }
     xil_printf("Program terminated!\r\n");
 
-	return 0;
+    return 0;
 }

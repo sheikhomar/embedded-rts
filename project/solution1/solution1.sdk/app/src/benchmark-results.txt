@@ -1,0 +1,230 @@
+-- Start of the Program --
+Please choose: 1 (Show DIP state), 2 (Simple NN), 3 (MNIST NN), 4 (Benchmark), 9
+ (Exit)
+# 4
+Running benchmark...
+Iteration 1/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=468554
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=467022
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467177
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467244
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467188
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467286
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467098
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467083
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467222
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467231
+Iteration 2/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=467339
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=467101
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467140
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467298
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467145
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467187
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467185
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467181
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467228
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467082
+Iteration 3/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=467219
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=467001
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467125
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467130
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467226
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467224
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467177
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467197
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467220
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467167
+Iteration 4/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=467329
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=467113
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467112
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467256
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467177
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467234
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467179
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467201
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467225
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467095
+Iteration 5/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=467235
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=467158
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467130
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467281
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467062
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467204
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467088
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467141
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467268
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467053
+Iteration 6/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=467271
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=467073
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467163
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467230
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467165
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467173
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467168
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467146
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467184
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467128
+Iteration 7/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=467253
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=467074
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467189
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467268
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467190
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467248
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467135
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467135
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467262
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467117
+Iteration 8/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=467311
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=467104
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467111
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467451
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467121
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467234
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467106
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467181
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467292
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467072
+Iteration 9/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=467287
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=467115
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467131
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467220
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467079
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467371
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467175
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467082
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467154
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467100
+Iteration 10/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=467361
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=467155
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467148
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467200
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467187
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467345
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467147
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467080
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467177
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467143
+Iteration 11/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=467262
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=467072
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467165
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467342
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467122
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467213
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467108
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467174
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467103
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467140
+Iteration 12/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=467358
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=467082
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467189
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467225
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467096
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467235
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467078
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467132
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467167
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467102
+Iteration 13/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=467334
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=467051
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467139
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467265
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467116
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467261
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467113
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467097
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467280
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467133
+Iteration 14/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=467344
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=467160
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467199
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467329
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467146
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467315
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467131
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467199
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467302
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467110
+Iteration 15/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=467306
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=466953
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467136
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467225
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467098
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467263
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467047
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467181
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467348
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467125
+Iteration 16/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=467384
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=467139
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467077
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467239
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467159
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467265
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467134
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467231
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467194
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467019
+Iteration 17/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=467225
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=467079
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467051
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467291
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467085
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467218
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467108
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467130
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467202
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467083
+Iteration 18/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=467329
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=467246
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467089
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467276
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467164
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467120
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467174
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467184
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467162
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467109
+Iteration 19/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=467250
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=467074
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467093
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467295
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467181
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467210
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467132
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467215
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467273
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467112
+Iteration 20/20...
+  Input='Digit 0', Prediction='Digit 0', TimerClockCycles=467278
+  Input='Digit 1', Prediction='Digit 1', TimerClockCycles=467113
+  Input='Digit 2', Prediction='Digit 2', TimerClockCycles=467166
+  Input='Digit 3', Prediction='Digit 3', TimerClockCycles=467254
+  Input='Digit 4', Prediction='Digit 4', TimerClockCycles=467151
+  Input='Digit 5', Prediction='Digit 5', TimerClockCycles=467388
+  Input='Digit 6', Prediction='Digit 6', TimerClockCycles=467117
+  Input='Digit 7', Prediction='Digit 1', TimerClockCycles=467023
+  Input='Digit 8', Prediction='Digit 8', TimerClockCycles=467188
+  Input='Digit 9', Prediction='Digit 9', TimerClockCycles=467178
+
+
+Please choose: 1 (Show DIP state), 2 (Simple NN), 3 (MNIST NN), 4 (Benchmark), 9
+ (Exit)
+# 
