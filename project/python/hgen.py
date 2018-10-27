@@ -85,8 +85,7 @@ def write_model(model, file_name='model.h'):
     f.write('unsigned int numLayers = {0};\n'.format(num_layers))
     f.write('NeuralNetwork nn;\n')
     f.write('NeuralNetwork_ctor(&nn, inputSize, outputSize, layers, numLayers);\n\n')
-
-    f.close
+    f.close()
 
 
 if __name__ == '__main__':
