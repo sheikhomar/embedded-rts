@@ -10,6 +10,10 @@
 
 #define TIMER_START_VALUE 325000000
 
+u64 timerSum = 0;
+u32 timerMin = 0-1;
+u32 timerMax = 0;
+
 void runSimpleNN() {
     #include "nn_simple_1.h"
     float inputData[] = {1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -49,33 +53,54 @@ void runLargeNN() {
 
 void runBenchmarkTenDigits(XScuTimer *timer) {
     Input input;
+    u32 startCount,
+		endCount,
+		clockCyclesElapsed;
+    float *output;
+
+    XScuTimer_LoadTimer(timer, TIMER_START_VALUE);
+
     for (size_t inputIndex = 0; inputIndex < n_input; inputIndex++) {
         Input_ctor(&input, inputs[inputIndex], n_dimensions);
 
-        XScuTimer_LoadTimer(timer, TIMER_START_VALUE);
         XScuTimer_Start(timer);
-        u32 startCount = XScuTimer_GetCounterValue(timer);
+        startCount = XScuTimer_GetCounterValue(timer);
 
-        float *output = NeuralNetwork_compute(&nn, &input);
+        output = NeuralNetwork_compute(&nn, &input);
 
-        u32 endCount = XScuTimer_GetCounterValue(timer);
+        endCount = XScuTimer_GetCounterValue(timer);
         XScuTimer_Stop(timer);
-        u32 clockCyclesElapsed = startCount - endCount;
+        clockCyclesElapsed = startCount - endCount;
 
         xil_printf("  Input='Digit %d', Prediction='Digit %d', TimerClockCycles=%d\r\n",
                 inputIndex,
                 getPrediction(output),
                 clockCyclesElapsed);
+
+        timerSum += clockCyclesElapsed;
+        if (clockCyclesElapsed < timerMin) timerMin = clockCyclesElapsed;
+        if (clockCyclesElapsed > timerMax) timerMax = clockCyclesElapsed;
     }
 }
 
 void runBenchmark(XScuTimer *timer, size_t numIterations) {
+	timerSum = 0;
+	timerMin = 0-1;
+	timerMax = 0;
+
     xil_printf("Running benchmark...\r\n");
 
     for (size_t iteration = 0; iteration < numIterations; iteration++) {
         xil_printf("Iteration %d/%d...\r\n", iteration+1, numIterations);
         runBenchmarkTenDigits(timer);
     }
+
+    u32 timerMean = timerSum/(numIterations*n_input);
+
+    xil_printf("\nTotal TimerClockCycles Min=%d, Mean=%d, Max=%d\r\n",
+                    timerMin,
+                    timerMean,
+                    timerMax);
 }
 
 void initTimer(XScuTimer *timer) {
