@@ -1,0 +1,25 @@
+# CMake
+**/cmake-build-*/
+**/build
+
+# CLion
+**/.idea
+
+# Visual Studio
+**/Debug
+**/Release
+
+# Eclipse
+**/.metadata
+**/.settings
+**/.cache-main
+**/.scala_dependencies
+**/.worksheet
+
+# Python
+**/.ipynb_checkpoints
+**/__pycache__
+
+# Log files
+**/*.log
+**/webtalk
