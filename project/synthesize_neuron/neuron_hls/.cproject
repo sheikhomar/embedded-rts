@@ -29,6 +29,7 @@
 									<listOptionValue builtIn="false" value="C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/include"/>
+									<listOptionValue builtIn="false" value="C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron"/>
 									<listOptionValue builtIn="false" value="C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/include/etc"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.1593278530" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
@@ -46,6 +47,7 @@
 									<listOptionValue builtIn="false" value="C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/include"/>
+									<listOptionValue builtIn="false" value="C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron"/>
 									<listOptionValue builtIn="false" value="C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/include/etc"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1520688547" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
@@ -79,7 +81,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="solution1|solution2|solution3|solution4|solution5|solution6|solution7|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="solution3|solution4|solution5|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -113,6 +115,7 @@
 									<listOptionValue builtIn="false" value="C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/include"/>
+									<listOptionValue builtIn="false" value="C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron"/>
 									<listOptionValue builtIn="false" value="C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/include/etc"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1414044015" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
@@ -125,6 +128,7 @@
 									<listOptionValue builtIn="false" value="C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/include"/>
+									<listOptionValue builtIn="false" value="C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron"/>
 									<listOptionValue builtIn="false" value="C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/include/etc"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1539143028" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
@@ -153,7 +157,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="solution1|solution2|solution3|solution4|solution5|solution6|solution7|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="solution3|solution4|solution5|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

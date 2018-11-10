@@ -37,16 +37,6 @@
 			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/.apc/.tb</location>
 		</link>
 		<link>
-			<name>solution1/constraints</name>
-			<type>2</type>
-			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution1/.tcls</location>
-		</link>
-		<link>
-			<name>solution2/constraints</name>
-			<type>2</type>
-			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution2/.tcls</location>
-		</link>
-		<link>
 			<name>solution3/constraints</name>
 			<type>2</type>
 			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution3/.tcls</location>
@@ -60,16 +50,6 @@
 			<name>solution5/constraints</name>
 			<type>2</type>
 			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution5/.tcls</location>
-		</link>
-		<link>
-			<name>solution6/constraints</name>
-			<type>2</type>
-			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution6/.tcls</location>
-		</link>
-		<link>
-			<name>solution7/constraints</name>
-			<type>2</type>
-			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution7/.tcls</location>
 		</link>
 		<link>
 			<name>source/asserts.cpp</name>
@@ -157,36 +137,6 @@
 			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/src/tests/test_helper.h</location>
 		</link>
 		<link>
-			<name>solution1/constraints/.xml.directive</name>
-			<type>1</type>
-			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution1/solution1.directive</location>
-		</link>
-		<link>
-			<name>solution1/constraints/directives.tcl</name>
-			<type>1</type>
-			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution1/directives.tcl</location>
-		</link>
-		<link>
-			<name>solution1/constraints/script.tcl</name>
-			<type>1</type>
-			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution1/script.tcl</location>
-		</link>
-		<link>
-			<name>solution2/constraints/.xml.directive</name>
-			<type>1</type>
-			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution2/solution2.directive</location>
-		</link>
-		<link>
-			<name>solution2/constraints/directives.tcl</name>
-			<type>1</type>
-			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution2/directives.tcl</location>
-		</link>
-		<link>
-			<name>solution2/constraints/script.tcl</name>
-			<type>1</type>
-			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution2/script.tcl</location>
-		</link>
-		<link>
 			<name>solution3/constraints/.xml.directive</name>
 			<type>1</type>
 			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution3/solution3.directive</location>
@@ -230,36 +180,6 @@
 			<name>solution5/constraints/script.tcl</name>
 			<type>1</type>
 			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution5/script.tcl</location>
-		</link>
-		<link>
-			<name>solution6/constraints/.xml.directive</name>
-			<type>1</type>
-			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution6/solution6.directive</location>
-		</link>
-		<link>
-			<name>solution6/constraints/directives.tcl</name>
-			<type>1</type>
-			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution6/directives.tcl</location>
-		</link>
-		<link>
-			<name>solution6/constraints/script.tcl</name>
-			<type>1</type>
-			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution6/script.tcl</location>
-		</link>
-		<link>
-			<name>solution7/constraints/.xml.directive</name>
-			<type>1</type>
-			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution7/solution7.directive</location>
-		</link>
-		<link>
-			<name>solution7/constraints/directives.tcl</name>
-			<type>1</type>
-			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution7/directives.tcl</location>
-		</link>
-		<link>
-			<name>solution7/constraints/script.tcl</name>
-			<type>1</type>
-			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution7/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

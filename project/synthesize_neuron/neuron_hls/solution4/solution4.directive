@@ -1,0 +1,33 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="neuronInitAndCompute3" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="weights" positionalBoolean="4"/>
+                <option name="bundle" value="neuron_io"/>
+            </pragma>
+        </directive>
+        <directive functionName="neuronInitAndCompute3" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="inputData" positionalBoolean="4"/>
+                <option name="bundle" value="neuron_io"/>
+            </pragma>
+        </directive>
+        <directive functionName="neuronInitAndCompute3" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="output" positionalBoolean="4"/>
+                <option name="bundle" value="neuron_io"/>
+            </pragma>
+        </directive>
+        <directive functionName="neuronInitAndCompute3" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+                <option name="bundle" value="neuron_io"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

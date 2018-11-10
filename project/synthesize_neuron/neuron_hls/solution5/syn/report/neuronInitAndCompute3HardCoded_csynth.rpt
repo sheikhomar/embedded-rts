@@ -1,0 +1,179 @@
+
+
+================================================================
+== Vivado HLS Report for 'neuronInitAndCompute3HardCoded'
+================================================================
+* Date:           Tue Nov  6 10:04:33 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        neuron_hls
+* Solution:       solution5
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      6.98|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   11|   11|   12|   12|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                       |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |       Loop Name       | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Neuron_compute_loop  |    9|    9|         8|          1|          1|     3|    yes   |
+        +-----------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|DSP              |        -|      -|      -|      -|
+|Expression       |        -|      -|    366|    301|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |        4|     16|    627|    494|
+|Memory           |        -|      -|      -|      -|
+|Multiplexer      |        -|      -|      -|     57|
+|Register         |        -|      -|    367|     32|
++-----------------+---------+-------+-------+-------+
+|Total            |        4|     16|   1360|    884|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |        3|     20|      3|      5|
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------------+-----------------------------------------------------+---------+-------+-----+-----+
+    |                        Instance                       |                        Module                       | BRAM_18K| DSP48E|  FF | LUT |
+    +-------------------------------------------------------+-----------------------------------------------------+---------+-------+-----+-----+
+    |neuronInitAndCompbkb_U0                                |neuronInitAndCompbkb                                 |        0|     16|  441|  256|
+    |neuronInitAndCompute3HardCoded_neuron_hard_io_s_axi_U  |neuronInitAndCompute3HardCoded_neuron_hard_io_s_axi  |        4|      0|  186|  238|
+    +-------------------------------------------------------+-----------------------------------------------------+---------+-------+-----+-----+
+    |Total                                                  |                                                     |        4|     16|  627|  494|
+    +-------------------------------------------------------+-----------------------------------------------------+---------+-------+-----+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------+----------+-------+-----+-----+------------+------------+
+    |          Variable Name          | Operation| DSP48E|  FF | LUT | Bitwidth P0| Bitwidth P1|
+    +---------------------------------+----------+-------+-----+-----+------------+------------+
+    |i_V_fu_145_p2                    |     +    |      0|   14|    9|           1|           3|
+    |p_Val2_2_fu_206_p2               |     +    |      0|  341|  117|         112|         112|
+    |tmp_8_i_i_fu_134_p2              |     +    |      0|   11|    8|           2|           2|
+    |exitcond_fu_124_p2               |   icmp   |      0|    0|    2|           3|           4|
+    |sel_tmp2_fu_156_p2               |   icmp   |      0|    0|    1|           2|           1|
+    |sel_tmp_fu_151_p2                |   icmp   |      0|    0|    1|           2|           3|
+    |tmp_fu_169_p2                    |    or    |      0|    0|    2|           1|           1|
+    |p_Val2_4_fu_234_p3               |  select  |      0|    0|   63|           1|           1|
+    |sel_tmp1_fu_161_p3               |  select  |      0|    0|   47|           1|          46|
+    |self_weights_V_load_s_fu_175_p3  |  select  |      0|    0|   47|           1|          47|
+    |ap_enable_pp0                    |    xor   |      0|    0|    2|           1|           2|
+    |ap_enable_reg_pp0_iter1          |    xor   |      0|    0|    2|           1|           2|
+    +---------------------------------+----------+-------+-----+-----+------------+------------+
+    |Total                            |          |      0|  366|  301|         128|         224|
+    +---------------------------------+----------+-------+-----+-----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  21|          4|    1|          4|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter7  |   9|          2|    1|          2|
+    |p_Val2_s_reg_101         |   9|          2|   64|        128|
+    |p_i_i_reg_113            |   9|          2|    3|          6|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  57|         12|   70|        142|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------+-----+----+-----+-----------+
+    |              Name             |  FF | LUT| Bits| Const Bits|
+    +-------------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                      |    3|   0|    3|          0|
+    |ap_enable_reg_pp0_iter0        |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1        |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2        |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3        |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4        |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5        |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6        |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7        |    1|   0|    1|          0|
+    |exitcond_reg_247               |    1|   0|    1|          0|
+    |inputData_V_load_reg_272       |   64|   0|   64|          0|
+    |p_Val2_1_reg_287               |  111|   0|  111|          0|
+    |p_Val2_s_reg_101               |   64|   0|   64|          0|
+    |p_i_i_reg_113                  |    3|   0|    3|          0|
+    |self_weights_V_load_s_reg_267  |   47|   0|   47|          0|
+    |tmp_3_reg_251                  |    2|   0|    2|          0|
+    |exitcond_reg_247               |   64|  32|    1|          0|
+    +-------------------------------+-----+----+-----+-----------+
+    |Total                          |  367|  32|  304|          0|
+    +-------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+--------------------------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |          Source Object         |    C Type    |
++------------------------------+-----+-----+------------+--------------------------------+--------------+
+|s_axi_neuron_hard_io_AWVALID  |  in |    1|    s_axi   |         neuron_hard_io         |    pointer   |
+|s_axi_neuron_hard_io_AWREADY  | out |    1|    s_axi   |         neuron_hard_io         |    pointer   |
+|s_axi_neuron_hard_io_AWADDR   |  in |    7|    s_axi   |         neuron_hard_io         |    pointer   |
+|s_axi_neuron_hard_io_WVALID   |  in |    1|    s_axi   |         neuron_hard_io         |    pointer   |
+|s_axi_neuron_hard_io_WREADY   | out |    1|    s_axi   |         neuron_hard_io         |    pointer   |
+|s_axi_neuron_hard_io_WDATA    |  in |   32|    s_axi   |         neuron_hard_io         |    pointer   |
+|s_axi_neuron_hard_io_WSTRB    |  in |    4|    s_axi   |         neuron_hard_io         |    pointer   |
+|s_axi_neuron_hard_io_ARVALID  |  in |    1|    s_axi   |         neuron_hard_io         |    pointer   |
+|s_axi_neuron_hard_io_ARREADY  | out |    1|    s_axi   |         neuron_hard_io         |    pointer   |
+|s_axi_neuron_hard_io_ARADDR   |  in |    7|    s_axi   |         neuron_hard_io         |    pointer   |
+|s_axi_neuron_hard_io_RVALID   | out |    1|    s_axi   |         neuron_hard_io         |    pointer   |
+|s_axi_neuron_hard_io_RREADY   |  in |    1|    s_axi   |         neuron_hard_io         |    pointer   |
+|s_axi_neuron_hard_io_RDATA    | out |   32|    s_axi   |         neuron_hard_io         |    pointer   |
+|s_axi_neuron_hard_io_RRESP    | out |    2|    s_axi   |         neuron_hard_io         |    pointer   |
+|s_axi_neuron_hard_io_BVALID   | out |    1|    s_axi   |         neuron_hard_io         |    pointer   |
+|s_axi_neuron_hard_io_BREADY   |  in |    1|    s_axi   |         neuron_hard_io         |    pointer   |
+|s_axi_neuron_hard_io_BRESP    | out |    2|    s_axi   |         neuron_hard_io         |    pointer   |
+|ap_clk                        |  in |    1| ap_ctrl_hs | neuronInitAndCompute3HardCoded | return value |
+|ap_rst_n                      |  in |    1| ap_ctrl_hs | neuronInitAndCompute3HardCoded | return value |
+|interrupt                     | out |    1| ap_ctrl_hs | neuronInitAndCompute3HardCoded | return value |
++------------------------------+-----+-----+------------+--------------------------------+--------------+
+
