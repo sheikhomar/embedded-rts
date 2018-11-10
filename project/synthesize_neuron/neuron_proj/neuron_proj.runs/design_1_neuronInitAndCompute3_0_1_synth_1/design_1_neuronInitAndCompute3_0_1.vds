@@ -1,0 +1,783 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Nov  5 20:50:07 2018
+# Process ID: 21672
+# Current directory: C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.runs/design_1_neuronInitAndCompute3_0_1_synth_1
+# Command line: vivado.exe -log design_1_neuronInitAndCompute3_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_neuronInitAndCompute3_0_1.tcl
+# Log file: C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.runs/design_1_neuronInitAndCompute3_0_1_synth_1/design_1_neuronInitAndCompute3_0_1.vds
+# Journal file: C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.runs/design_1_neuronInitAndCompute3_0_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_neuronInitAndCompute3_0_1.tcl -notrace
+Command: synth_design -top design_1_neuronInitAndCompute3_0_1 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 20376 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 305.234 ; gain = 76.848
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_neuronInitAndCompute3_0_1' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ip/design_1_neuronInitAndCompute3_0_1/synth/design_1_neuronInitAndCompute3_0_1.vhd:81]
+	Parameter C_S_AXI_NEURON_IO_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter C_S_AXI_NEURON_IO_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'neuronInitAndCompute3' declared at 'c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3.vhd:12' bound to instance 'U0' of component 'neuronInitAndCompute3' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ip/design_1_neuronInitAndCompute3_0_1/synth/design_1_neuronInitAndCompute3_0_1.vhd:140]
+INFO: [Synth 8-638] synthesizing module 'neuronInitAndCompute3' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3.vhd:40]
+	Parameter C_S_AXI_NEURON_IO_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter C_S_AXI_NEURON_IO_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3.vhd:80]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3.vhd:83]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3.vhd:94]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3.vhd:96]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3.vhd:102]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3.vhd:105]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3.vhd:109]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3.vhd:111]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'neuronInitAndCompute3_neuron_io_s_axi' declared at 'c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3_neuron_io_s_axi.vhd:12' bound to instance 'neuronInitAndCompute3_neuron_io_s_axi_U' of component 'neuronInitAndCompute3_neuron_io_s_axi' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3.vhd:186]
+INFO: [Synth 8-638] synthesizing module 'neuronInitAndCompute3_neuron_io_s_axi' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3_neuron_io_s_axi.vhd:91]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter BYTES bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 4 - type: integer 
+	Parameter AWIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'neuronInitAndCompute3_neuron_io_s_axi_ram' declared at 'c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3_neuron_io_s_axi.vhd:625' bound to instance 'int_weights_V' of component 'neuronInitAndCompute3_neuron_io_s_axi_ram' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3_neuron_io_s_axi.vhd:200]
+INFO: [Synth 8-638] synthesizing module 'neuronInitAndCompute3_neuron_io_s_axi_ram' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3_neuron_io_s_axi.vhd:648]
+	Parameter BYTES bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 4 - type: integer 
+	Parameter AWIDTH bound to: 2 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[0].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[0].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[2].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[2].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[3].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[3].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[4].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[4].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[5].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[5].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[6].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[6].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[7].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[7].mem_reg was removed. 
+INFO: [Synth 8-256] done synthesizing module 'neuronInitAndCompute3_neuron_io_s_axi_ram' (1#1) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3_neuron_io_s_axi.vhd:648]
+	Parameter BYTES bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+	Parameter AWIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'neuronInitAndCompute3_neuron_io_s_axi_ram' declared at 'c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3_neuron_io_s_axi.vhd:625' bound to instance 'int_inputData_V' of component 'neuronInitAndCompute3_neuron_io_s_axi_ram' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3_neuron_io_s_axi.vhd:221]
+INFO: [Synth 8-638] synthesizing module 'neuronInitAndCompute3_neuron_io_s_axi_ram__parameterized1' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3_neuron_io_s_axi.vhd:648]
+	Parameter BYTES bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+	Parameter AWIDTH bound to: 2 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[0].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[0].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[2].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[2].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[3].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[3].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[4].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[4].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[5].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[5].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[6].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[6].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[7].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[7].mem_reg was removed. 
+INFO: [Synth 8-256] done synthesizing module 'neuronInitAndCompute3_neuron_io_s_axi_ram__parameterized1' (1#1) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3_neuron_io_s_axi.vhd:648]
+WARNING: [Synth 8-6014] Unused sequential element int_inputData_V_address1_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3_neuron_io_s_axi.vhd:235]
+WARNING: [Synth 8-6014] Unused sequential element int_isr_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3_neuron_io_s_axi.vhd:357]
+WARNING: [Synth 8-6014] Unused sequential element int_isr_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3_neuron_io_s_axi.vhd:470]
+INFO: [Synth 8-256] done synthesizing module 'neuronInitAndCompute3_neuron_io_s_axi' (2#1) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3_neuron_io_s_axi.vhd:91]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 112 - type: integer 
+INFO: [Synth 8-3491] module 'neuronInitAndCompbkb' declared at 'c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:61' bound to instance 'neuronInitAndCompbkb_U0' of component 'neuronInitAndCompbkb' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3.vhd:225]
+INFO: [Synth 8-638] synthesizing module 'neuronInitAndCompbkb' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:77]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 112 - type: integer 
+INFO: [Synth 8-3491] module 'neuronInitAndCompbkb_MulnS_0' declared at 'c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:12' bound to instance 'neuronInitAndCompbkb_MulnS_0_U' of component 'neuronInitAndCompbkb_MulnS_0' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'neuronInitAndCompbkb_MulnS_0' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:21]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:23]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'neuronInitAndCompbkb_MulnS_0' (3#1) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'neuronInitAndCompbkb' (4#1) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:77]
+WARNING: [Synth 8-6014] Unused sequential element ap_ready_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3.vhd:213]
+WARNING: [Synth 8-6014] Unused sequential element output_V_ap_vld_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3.vhd:223]
+INFO: [Synth 8-256] done synthesizing module 'neuronInitAndCompute3' (5#1) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'design_1_neuronInitAndCompute3_0_1' (6#1) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ip/design_1_neuronInitAndCompute3_0_1/synth/design_1_neuronInitAndCompute3_0_1.vhd:81]
+WARNING: [Synth 8-3331] design neuronInitAndCompbkb has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 345.559 ; gain = 117.172
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 345.559 ; gain = 117.172
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ip/design_1_neuronInitAndCompute3_0_1/constraints/neuronInitAndCompute3_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ip/design_1_neuronInitAndCompute3_0_1/constraints/neuronInitAndCompute3_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.runs/design_1_neuronInitAndCompute3_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.runs/design_1_neuronInitAndCompute3_0_1_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.096 . Memory (MB): peak = 658.543 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 658.543 ; gain = 430.156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 658.543 ; gain = 430.156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.runs/design_1_neuronInitAndCompute3_0_1_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 658.543 ; gain = 430.156
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'int_inputData_V_shift_reg[0:0]' into 'int_weights_V_shift_reg[0:0]' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3_neuron_io_s_axi.vhd:370]
+WARNING: [Synth 8-6014] Unused sequential element int_inputData_V_shift_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3_neuron_io_s_axi.vhd:370]
+INFO: [Synth 8-5544] ROM "AWREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "WREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BVALID" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ARREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element int_weights_V_shift_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompute3_neuron_io_s_axi.vhd:368]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "exitcond_fu_125_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-3971] The signal gen_write[1].mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal gen_write[1].mem_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 658.543 ; gain = 430.156
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    112 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	              112 Bit    Registers := 4     
+	               64 Bit    Registers := 10    
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Multipliers : 
+	                64x64  Multipliers := 1     
++---RAMs : 
+	              256 Bit         RAMs := 1     
+	              192 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 57    
+	   2 Input     63 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	  11 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module neuronInitAndCompute3_neuron_io_s_axi_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
++---RAMs : 
+	              256 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 28    
+	   2 Input      8 Bit        Muxes := 2     
+Module neuronInitAndCompute3_neuron_io_s_axi_ram__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
++---RAMs : 
+	              192 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 28    
+	   2 Input      8 Bit        Muxes := 2     
+Module neuronInitAndCompute3_neuron_io_s_axi 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   5 Input      3 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+Module neuronInitAndCompbkb_MulnS_0 
+Detailed RTL Component Info : 
++---Registers : 
+	              112 Bit    Registers := 3     
+	               64 Bit    Registers := 2     
++---Multipliers : 
+	                64x64  Multipliers := 1     
+Module neuronInitAndCompute3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    112 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	              112 Bit    Registers := 1     
+	               64 Bit    Registers := 3     
+	               10 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     63 Bit        Muxes := 1     
+	  11 Input     10 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 16 [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:51]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:51]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:51]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:51]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:51]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:51]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:51]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/b_reg0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/a_reg0_reg was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ipshared/32ab/hdl/vhdl/neuronInitAndCompbkb.vhd:42]
+INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+DSP Report: Generating DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: register A is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: Generating DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: register A is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: Generating DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product, operation Mode is: (PCIN>>17)+(A2*B2)'.
+DSP Report: register B is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: register A is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: Generating DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg, operation Mode is: (PCIN+(A2*B2)')'.
+DSP Report: register B is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: register A is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: Generating DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: register A is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: Generating DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product, operation Mode is: (PCIN>>17)+(A2*B2)'.
+DSP Report: register B is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: register A is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: Generating DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg, operation Mode is: (PCIN+(A2*B2)')'.
+DSP Report: register B is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: register A is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: Generating DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: register A is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: Generating DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product, operation Mode is: PCIN+(A2*B2)'.
+DSP Report: register B is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: register A is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: Generating DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg, operation Mode is: (PCIN+(A2*B2)')'.
+DSP Report: register B is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: register A is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: Generating DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: register A is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: Generating DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product, operation Mode is: PCIN+(A2*B2)'.
+DSP Report: register B is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: register A is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: Generating DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg, operation Mode is: (PCIN+(A2*B2)')'.
+DSP Report: register B is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: register A is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: Generating DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: register A is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg.
+DSP Report: Generating DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product, operation Mode is: (PCIN>>17)+(A2*B2)'.
+DSP Report: register B is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: register A is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product.
+DSP Report: Generating DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg, operation Mode is: (PCIN+(A2*B2)')'.
+DSP Report: register B is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: register A is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: register neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff0_reg is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+DSP Report: operator neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/tmp_product is absorbed into DSP neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg.
+INFO: [Synth 8-3971] The signal neuronInitAndCompute3_neuron_io_s_axi_U/int_weights_V/gen_write[1].mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal neuronInitAndCompute3_neuron_io_s_axi_U/int_inputData_V/gen_write[1].mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\neuronInitAndCompute3_neuron_io_s_axi_U/int_output_V_reg[63] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\neuronInitAndCompute3_neuron_io_s_axi_U/rstate_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\neuronInitAndCompute3_neuron_io_s_axi_U/wstate_reg[2] )
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompute3_neuron_io_s_axi_U/wstate_reg[2]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompute3_neuron_io_s_axi_U/rstate_reg[2]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompute3_neuron_io_s_axi_U/int_output_V_reg[63]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[47]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[46]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[45]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[44]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[43]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[42]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[41]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[40]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[39]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[38]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[37]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[36]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[35]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[34]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[33]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[32]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[31]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[30]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[29]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[28]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[27]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[26]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[25]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[24]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[23]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[22]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[21]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[20]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[19]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[18]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[17]) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[47]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[46]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[45]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[44]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[43]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[42]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[41]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[40]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[39]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[38]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[37]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[36]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[35]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[34]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[33]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[32]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[31]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[30]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[29]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[28]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[27]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[26]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[25]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[24]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[23]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[22]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[21]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[20]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[19]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[18]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[17]__0) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[47]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[46]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[45]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[44]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[43]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[42]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[41]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[40]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[39]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[38]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[37]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[36]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[35]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[34]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[33]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[32]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[31]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[30]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[29]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[28]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[27]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[26]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[25]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[24]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[23]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[22]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[21]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[20]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[19]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[18]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[17]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[16]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[15]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[14]__1) is unused and will be removed from module neuronInitAndCompute3.
+WARNING: [Synth 8-3332] Sequential element (neuronInitAndCompbkb_U0/neuronInitAndCompbkb_MulnS_0_U/buff1_reg[13]__1) is unused and will be removed from module neuronInitAndCompute3.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 658.543 ; gain = 430.156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++-----------------------------------------------------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                | RTL Object           | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------------------------------------------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|neuronInitAndCompute3_neuron_io_s_axi_ram:                 | gen_write[1].mem_reg | 4 x 64(READ_FIRST)     | W | R | 4 x 64(READ_FIRST)     | W | R | Port A and B     | 0      | 2      | 
+|neuronInitAndCompute3_neuron_io_s_axi_ram__parameterized1: | gen_write[1].mem_reg | 4 x 64(READ_FIRST)     | W | R | 4 x 64(READ_FIRST)     | W | R | Port A and B     | 0      | 2      | 
++-----------------------------------------------------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping  Report (see note below)
++----------------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name           | DSP Mapping         | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|neuronInitAndCompute3 | (A2*B2)'            | 13     | 13     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|neuronInitAndCompute3 | (A2*B2)'            | 18     | 13     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|neuronInitAndCompute3 | (PCIN>>17)+(A2*B2)' | 18     | 13     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|neuronInitAndCompute3 | (PCIN+(A2*B2)')'    | 18     | 13     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|neuronInitAndCompute3 | (A2*B2)'            | 18     | 13     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|neuronInitAndCompute3 | (PCIN>>17)+(A2*B2)' | 18     | 13     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|neuronInitAndCompute3 | (PCIN+(A2*B2)')'    | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|neuronInitAndCompute3 | (A2*B2)'            | 18     | 13     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|neuronInitAndCompute3 | PCIN+(A2*B2)'       | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|neuronInitAndCompute3 | (PCIN+(A2*B2)')'    | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|neuronInitAndCompute3 | (A2*B2)'            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|neuronInitAndCompute3 | PCIN+(A2*B2)'       | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|neuronInitAndCompute3 | (PCIN+(A2*B2)')'    | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|neuronInitAndCompute3 | (A2*B2)'            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|neuronInitAndCompute3 | (PCIN>>17)+(A2*B2)' | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|neuronInitAndCompute3 | (PCIN+(A2*B2)')'    | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 1    | 
++----------------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 668.035 ; gain = 439.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 674.047 ; gain = 445.660
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance U0/neuronInitAndCompute3_neuron_io_s_axi_U/int_weights_V/gen_write[1].mem_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance U0/neuronInitAndCompute3_neuron_io_s_axi_U/int_weights_V/gen_write[1].mem_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance U0/neuronInitAndCompute3_neuron_io_s_axi_U/int_weights_V/gen_write[1].mem_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance U0/neuronInitAndCompute3_neuron_io_s_axi_U/int_weights_V/gen_write[1].mem_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance U0/neuronInitAndCompute3_neuron_io_s_axi_U/int_inputData_V/gen_write[1].mem_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance U0/neuronInitAndCompute3_neuron_io_s_axi_U/int_inputData_V/gen_write[1].mem_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance U0/neuronInitAndCompute3_neuron_io_s_axi_U/int_inputData_V/gen_write[1].mem_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance U0/neuronInitAndCompute3_neuron_io_s_axi_U/int_inputData_V/gen_write[1].mem_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 698.852 ; gain = 470.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 698.852 ; gain = 470.465
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 698.852 ; gain = 470.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 698.852 ; gain = 470.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 698.852 ; gain = 470.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 698.852 ; gain = 470.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 698.852 ; gain = 470.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    50|
+|2     |DSP48E1   |     6|
+|3     |DSP48E1_1 |    10|
+|4     |LUT1      |     5|
+|5     |LUT2      |   189|
+|6     |LUT3      |   192|
+|7     |LUT4      |    87|
+|8     |LUT5      |   262|
+|9     |LUT6      |    68|
+|10    |RAMB36E1  |     4|
+|11    |FDRE      |   748|
+|12    |FDSE      |     4|
++------+----------+------+
+
+Report Instance Areas: 
++------+--------------------------------------------+----------------------------------------------------------+------+
+|      |Instance                                    |Module                                                    |Cells |
++------+--------------------------------------------+----------------------------------------------------------+------+
+|1     |top                                         |                                                          |  1625|
+|2     |  U0                                        |neuronInitAndCompute3                                     |  1625|
+|3     |    neuronInitAndCompbkb_U0                 |neuronInitAndCompbkb                                      |   358|
+|4     |      neuronInitAndCompbkb_MulnS_0_U        |neuronInitAndCompbkb_MulnS_0                              |   358|
+|5     |    neuronInitAndCompute3_neuron_io_s_axi_U |neuronInitAndCompute3_neuron_io_s_axi                     |   643|
+|6     |      int_inputData_V                       |neuronInitAndCompute3_neuron_io_s_axi_ram__parameterized1 |   142|
+|7     |      int_weights_V                         |neuronInitAndCompute3_neuron_io_s_axi_ram                 |   263|
++------+--------------------------------------------+----------------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 698.852 ; gain = 470.465
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 283 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:47 . Memory (MB): peak = 698.852 ; gain = 157.480
+Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 698.852 ; gain = 470.465
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 70 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+65 Infos, 201 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 698.852 ; gain = 471.090
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.runs/design_1_neuronInitAndCompute3_0_1_synth_1/design_1_neuronInitAndCompute3_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ip/design_1_neuronInitAndCompute3_0_1/design_1_neuronInitAndCompute3_0_1.xci
+INFO: [Coretcl 2-1174] Renamed 6 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.runs/design_1_neuronInitAndCompute3_0_1_synth_1/design_1_neuronInitAndCompute3_0_1.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 698.852 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Nov  5 20:51:18 2018...
