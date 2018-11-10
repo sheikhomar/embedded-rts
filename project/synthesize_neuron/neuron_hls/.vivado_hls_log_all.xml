@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'." projectName="neuron_hls" solutionName="solution5" date="2018-11-06T10:02:59.343+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/null/null.lib'." projectName="neuron_hls" solutionName="solution5" date="2018-11-06T10:02:57.817+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'." projectName="neuron_hls" solutionName="solution4" date="2018-11-05T20:42:12.209+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/null/null.lib'." projectName="neuron_hls" solutionName="solution4" date="2018-11-05T20:42:11.598+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'." projectName="neuron_hls" solutionName="solution7" date="2018-11-05T19:30:38.370+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/null/null.lib'." projectName="neuron_hls" solutionName="solution7" date="2018-11-05T19:30:37.228+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'." projectName="neuron_hls" solutionName="solution6" date="2018-11-05T19:09:04.017+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/null/null.lib'." projectName="neuron_hls" solutionName="solution6" date="2018-11-05T19:09:03.594+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'." projectName="neuron_hls" solutionName="solution3" date="2018-11-01T17:39:12.979+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/null/null.lib'." projectName="neuron_hls" solutionName="solution3" date="2018-11-01T17:39:12.016+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'." projectName="neuron_hls" solutionName="solution5" date="2018-11-06T10:14:01.612+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/null/null.lib'." projectName="neuron_hls" solutionName="solution5" date="2018-11-06T10:14:01.134+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'." projectName="neuron_hls" solutionName="solution4" date="2018-11-05T20:44:30.633+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Users/Lukas/Documents/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/null/null.lib'." projectName="neuron_hls" solutionName="solution4" date="2018-11-05T20:44:30.233+0100" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
