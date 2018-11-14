@@ -7,17 +7,20 @@
 class State {
 private:
 	std::string _name;
+	int _errorNo;
 
 protected:
 	State(std::string name) {
 		_name = name;
 	}
 	void Debug(std::string msg) {
-		// TODO: Fix this!
+		printf("%s: %s\r\n", _name, msg);
 	}
 
 public:
 	std::string GetName() { return _name; }
+	int GetErrorNo() { return _errorNo; }
+	void SetErrorNo(int errorNo) { _errorNo = errorNo; }
 	virtual void Entered(Context* ctx) { }
 	virtual void Left(Context* ctx) { }
 	virtual void SelfTestOk(Context* ctx) {

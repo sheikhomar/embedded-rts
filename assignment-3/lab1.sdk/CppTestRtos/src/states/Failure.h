@@ -10,7 +10,7 @@ public:
 		return &instance;
 	}
 	void Entered(Context* ctx) {
-		Display(0); // TODO: Fix this
+		Display(GetErrorNo());
 	}
 	virtual void Restart(Context* ctx) {
 		ctx->Transition(PowerOnSelfTest::GetInstance());
@@ -20,8 +20,8 @@ public:
 	}
 private:
 	Failure() : State("Failure") { }
-	void Display(int ErrorNo) {
-		Debug("Failure");
+	void Display(int errorNo) {
+		printf("%s: ErrorNo=%d\r\n", GetName(), errorNo);
 	}
 };
 

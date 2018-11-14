@@ -1,6 +1,7 @@
 #include "PowerOnSelfTest.h"
 #include "Initializing.h"
 #include "Failure.h"
+#include "State.h"
 
 PowerOnSelfTest::PowerOnSelfTest() : State("PowerOnSelfTest") { }
 
@@ -13,7 +14,9 @@ void PowerOnSelfTest::SelfTestOk(Context* ctx) {
 }
 
 void PowerOnSelfTest::SelfTestFailed(Context* ctx, int ErrorNo) {
-	ctx->Transition(Failure::GetInstance());
+	State* state = Failure::GetInstance();
+	state->SetErrorNo(ErrorNo);
+	ctx->Transition(state);
 }
 
 void PowerOnSelfTest::SystemSelfTest() {

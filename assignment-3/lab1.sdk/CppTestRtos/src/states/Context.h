@@ -12,7 +12,7 @@ public:
 	void InvalidState(std::string stateName);
 	void Transition(class State* newState);
 	void TransitionToFinalState();
-	void SelftestOk();
+	void SelfTestOk();
 	void Initialized();
 	void Restart();
 	void Configure();
