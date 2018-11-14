@@ -1,10 +1,3 @@
-/*
- * Operational.h
- *
- *  Created on: 14 Nov 2018
- *      Author: omar
- */
-
 #ifndef SRC_STATES_OPERATIONAL_H_
 #define SRC_STATES_OPERATIONAL_H_
 
