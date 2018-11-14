@@ -16,4 +16,7 @@
 **/.cache-main
 **/.scala_dependencies
 **/.worksheet
+**/webtalk
+**/*.a
+**/*.log
 
