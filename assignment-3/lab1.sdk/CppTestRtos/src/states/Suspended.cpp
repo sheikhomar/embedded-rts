@@ -1,6 +1,6 @@
 #include "Suspended.h"
 #include "Ready.h"
-//#include "RealTimeLoop.h"
+#include "RealTimeLoop.h"
 
 Suspended::Suspended() : State("Suspended") { }
 
@@ -9,5 +9,5 @@ void Suspended::Stop(Context* ctx) {
 }
 
 void Suspended::Resume(Context* ctx) {
-	//ctx->Transition(RealTimeLoop::GetInstance());
+	ctx->Transition(RealTimeLoop::GetInstance());
 }
