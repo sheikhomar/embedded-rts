@@ -2,6 +2,7 @@
 #define SRC_STATE_H_
 
 #include <string>
+#include <iostream>
 #include "Context.h"
 
 class State {
@@ -14,7 +15,7 @@ protected:
 		_name = name;
 	}
 	void Debug(std::string msg) {
-		printf("%s: %s\r\n", _name, msg);
+		std::cout << _name << ": " << msg << std::endl;
 	}
 
 public:

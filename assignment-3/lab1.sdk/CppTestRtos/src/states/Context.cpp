@@ -1,22 +1,23 @@
 #include "Context.h"
 #include "State.h"
 #include "PowerOnSelfTest.h"
+#include <iostream>
 
 Context::Context() {
 	Transition(PowerOnSelfTest::GetInstance());
 }
 
 void Context::InvalidState(std::string stateName) {
-	printf("Entered an invalid state: %s \r\n", stateName);
+	std::cout << "Entered an invalid state: "<< stateName << std::endl;
 }
 
 void Context::Transition(State* newState) {
 	if (_currentState != 0) {
-		printf("Leaving state: %s\r\n", _currentState->GetName());
+		std::cout << "Leaving state: "<< _currentState->GetName() << std::endl;
 		_currentState->Left(this);
 	}
 
-	printf("Entering state: %s\r\n", _currentState->GetName());
+	std::cout << "Entering state: "<< _currentState->GetName() << std::endl;
 	_currentState = newState;
 	_currentState->Entered(this);
 }

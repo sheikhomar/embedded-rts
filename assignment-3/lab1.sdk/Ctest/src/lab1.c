@@ -10,7 +10,7 @@ int main (void)
 
       XGpio sw, led;
 	  int i, sw_check;
-	  int xStatus;
+	  int xStatus = 0;
 	
 	  xil_printf("-- Start of the Program --\r\n");
 
@@ -33,8 +33,9 @@ int main (void)
 	  {
 		  sw_check = XGpio_DiscreteRead(&sw, 1);
 		  XGpio_DiscreteWrite(&led, 1, sw_check);
-          if((sw_check & 0x0f)==0x0F)
+          if((sw_check & 0x0f)==0x0F) {
         	  break;
+          }
 		  for (i=0; i<9999999; i++); // delay loop
 	   }
 	  xil_printf("-- End of Program --\r\n");
