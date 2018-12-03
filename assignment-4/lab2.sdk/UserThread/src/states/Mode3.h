@@ -1,19 +1,19 @@
 #ifndef SRC_STATES_MODE3_H_
 #define SRC_STATES_MODE3_H_
 
-#include "RealTimeLoop.h"
-#include "Context.h"
+#include "ApplicationModeSetting.h"
+#include "AMSContext.h"
 
-class Mode3 : public RealTimeLoop {
+class Mode3 : public ApplicationModeSetting {
 public:
-	static State* GetInstance() {
+	static ApplicationModeSetting* GetInstance() {
 		static Mode3 instance;
 		return &instance;
 	}
-	void ChMode(Context* ctx);
+	void ChMode(AMSContext* ctx);
+	void EventX(AMSContext* ctx);
 private:
 	Mode3();
-	void ResponseM3EventX();
 };
 
 #endif /* SRC_STATES_MODE3_H_ */

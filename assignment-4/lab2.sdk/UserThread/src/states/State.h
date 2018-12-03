@@ -71,6 +71,12 @@ public:
 	virtual void EventY(Context* ctx) {
 		ctx->InvalidState("EventY");
 	}
+	virtual void RunRealTime(Context* ctx){
+		ctx->InvalidState("RunRealTime");
+	}
+	virtual void Simulate(Context* ctx){
+		ctx->InvalidState("Simulate");
+	}
 };
 
 #endif /* SRC_STATE_H_ */

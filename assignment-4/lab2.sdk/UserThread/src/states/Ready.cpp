@@ -1,6 +1,6 @@
 #include "Ready.h"
 #include "Configuration.h"
-#include "Mode1.h"
+#include "RealTimeLoop.h"
 
 Ready::Ready() : Operational("Ready") { }
 
@@ -9,5 +9,5 @@ void Ready::Configure(Context* ctx) {
 }
 
 void Ready::Start(Context* ctx) {
-	ctx->Transition(Mode1::GetInstance());
+	ctx->Transition(RealTimeLoop::GetInstance());
 }

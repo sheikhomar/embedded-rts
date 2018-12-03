@@ -25,9 +25,11 @@ public:
 	void Resume();
 	void SelfTestFailed(int ErrorNo);
 	void ConfigX();
-	void chMode();
-	void eventX();
-	void eventY();
+	void ChMode();
+	void EventX();
+	void EventY();
+	void RunRealTime();
+	void Simulate();
 };
 
 #endif /* SRC_CONTEXT_H_ */

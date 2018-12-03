@@ -8,7 +8,7 @@
 #ifndef SRC_USERTHREAD_H_
 #define SRC_USERTHREAD_H_
 
-#define N_COMMANDS 15
+#define N_COMMANDS 17
 
 #include <iostream>
 
@@ -28,8 +28,6 @@ public:
 
 	virtual void run()
 	{
-		printf("Hello World!\r\n");
-
 		EmbeddedSystemX system = EmbeddedSystemX("System1", 1);
 
 		ShowAvailableCommands();
@@ -52,9 +50,11 @@ public:
 			case  9: system.Resume(); break;
 			case 10: system.SelfTestFailed(42); break;
 			case 11: system.ConfigX(); break;
-			case 12: system.chMode(); break;
-			case 13: system.eventX(); break;
-			case 14: system.eventX(); break;
+			case 12: system.ChMode(); break;
+			case 13: system.EventX(); break;
+			case 14: system.EventY(); break;
+			case 15: system.RunRealTime(); break;
+			case 16: system.Simulate(); break;
 			default: ShowAvailableCommands();
 			}
 		}
@@ -74,9 +74,11 @@ private:
 		"Resume",
 		"SelfTestFailed",
 		"ConfigX",
-		"chMode",
-		"eventX",
-		"eventY"
+		"ChMode",
+		"EventX",
+		"EventY",
+		"RunRealTime",
+		"Simulate"
 	};
 
 	void ShowAvailableCommands() {

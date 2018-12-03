@@ -1,11 +1,10 @@
 #include "Context.h"
 #include "State.h"
 #include "PowerOnSelfTest.h"
-#include "Mode1.h"
 #include <iostream>
 
 Context::Context() : _currentState(nullptr) {
-	Transition(Mode1::GetInstance());
+	Transition(PowerOnSelfTest::GetInstance());
 }
 
 Context::~Context() {
@@ -44,6 +43,8 @@ void Context::Suspend() { _currentState->Suspend(this); }
 void Context::Resume() { _currentState->Resume(this); }
 void Context::SelfTestFailed(int ErrorNo) { _currentState->SelfTestFailed(this, ErrorNo); }
 void Context::ConfigX() { _currentState->ConfigX(this); }
-void Context::chMode() { _currentState->ChMode(this); }
-void Context::eventX() { _currentState->EventX(this); }
-void Context::eventY() { _currentState->EventY(this); }
+void Context::ChMode() { _currentState->ChMode(this); }
+void Context::EventX() { _currentState->EventX(this); }
+void Context::EventY() { _currentState->EventY(this); }
+void Context::RunRealTime(){_currentState->RunRealTime(this); }
+void Context::Simulate(){_currentState->Simulate(this); }

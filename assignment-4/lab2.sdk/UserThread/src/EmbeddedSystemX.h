@@ -34,9 +34,11 @@ public:
 	void Resume() { _context->Resume(); }
 	void SelfTestFailed(int ErrorNo) { _context->SelfTestFailed(ErrorNo); }
 	void ConfigX() { _context->ConfigX(); }
-	void chMode() { _context->chMode(); }
-	void eventX() { _context->eventX(); }
-	void eventY() { _context->eventY(); }
+	void ChMode() { _context->ChMode(); }
+	void EventX() { _context->EventX(); }
+	void EventY() { _context->EventY(); }
+	void RunRealTime() { _context->RunRealTime(); }
+	void Simulate() { _context->Simulate(); }
 };
 
 #endif /* SRC_EMBEDDEDSYSTEMX_H_ */
