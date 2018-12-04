@@ -11,7 +11,6 @@ void RealTimeLoop::Stop(Context* ctx) {
 }
 
 void RealTimeLoop::Entered(Context* ctx) {
-	std::cout << "new AMSContext" << std::endl;
 	_amsCtx = new AMSContext();
 	_srtCtx = new SRTContext();
 }

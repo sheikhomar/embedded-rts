@@ -10,6 +10,9 @@
 
 #include "SimulateRealTimeState.h"
 #include "SRTContext.h"
+#include "SimulateProxy.h"
+#include "SimulateScheduler.h"
+#include "SimulateServant.h"
 
 class Simulation : public SimulateRealTimeState {
 public:
@@ -21,6 +24,9 @@ public:
 	void Entered(SRTContext* ctx);
 private:
 	Simulation();
+	SimulateScheduler _scheduler;
+	SimulateProxy _proxy;
+	SimulateServant _servant;
 };
 
 #endif /* SRC_STATES_SIMULATION_H_ */

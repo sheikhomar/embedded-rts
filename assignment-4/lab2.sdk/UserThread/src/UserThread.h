@@ -28,6 +28,8 @@ public:
 
 	virtual void run()
 	{
+		std::cout << "Hello World!" << std::endl;
+
 		EmbeddedSystemX system = EmbeddedSystemX("System1", 1);
 
 		ShowAvailableCommands();

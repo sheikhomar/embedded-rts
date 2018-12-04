@@ -21,7 +21,7 @@ public:
 private:
 	Failure() : State("Failure") { }
 	void Display(int errorNo) {
-		printf("%s: ErrorNo=%d\r\n", GetName(), errorNo);
+		std::cout << GetName() << ": ErrorNo=" << errorNo << std::endl;
 	}
 };
 
