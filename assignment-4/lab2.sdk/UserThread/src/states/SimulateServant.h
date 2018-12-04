@@ -21,7 +21,6 @@ public:
 	virtual ~SimulateServant() {}
 	void SetScheduler(SimulateScheduler* sched) { _scheduler = sched; }
 	virtual void run() {
-		std::cout << "SimulateServant::run()" << std::endl;
 		while(true) {
 			MethodRequest* mr = _scheduler->Take();
 			mr->Execute();

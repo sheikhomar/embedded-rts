@@ -8,7 +8,6 @@
 #include "Simulation.h"
 #include "RealTimeExecution.h"
 #include <iostream>
-#include "SimCount.h" // TODO: remove
 
 Simulation::Simulation()
 	: SimulateRealTimeState("Simulation"),

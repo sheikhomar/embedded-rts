@@ -10,7 +10,6 @@
 
 #include <iostream>
 #include "Mutex.h"
-#include "MutexGuard.h"
 
 class SimCount {
 public:

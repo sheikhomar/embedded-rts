@@ -22,14 +22,12 @@ public:
 	{}
 	~SimulateScheduler() {}
 	void Put(MethodRequest* mr) {
-		std::cout << "SimulateScheduler::Put()" << std::endl;
 		_mtx.Acquire();
 		_queue.push(mr);
 		_mtx.Release();
 		_cond.signal();
 	}
 	MethodRequest* Take() {
-		std::cout << "SimulateScheduler::Take()" << std::endl;
 		_cond.wait();
 		_mtx.Acquire();
 		MethodRequest* mr = _queue.front();

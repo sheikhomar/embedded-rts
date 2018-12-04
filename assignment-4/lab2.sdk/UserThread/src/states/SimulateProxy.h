@@ -17,7 +17,6 @@ public:
 	SimulateProxy(SimulateScheduler* sched) : _scheduler(sched) {}
 	~SimulateProxy() {}
 	void incrementSimCount() {
-		std::cout << "SimulateProxy::incrementSimCount()" << std::endl;
 		MethodRequest* mr = new IncrementSimCount();
 		_scheduler->Put(mr);
 	}
