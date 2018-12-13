@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Thu Dec 13 13:19:02 2018
+-- Date        : Thu Dec 13 13:19:01 2018
 -- Host        : DESKTOP-GI6NB51 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+--               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_processing_system7_0_0_sim_netlist.vhdl
 -- Design      : design_1_processing_system7_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,7 +14,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 is
   port (
     CAN0_PHY_TX : out STD_LOGIC;
     CAN0_PHY_RX : in STD_LOGIC;
@@ -703,126 +703,124 @@ entity design_1_processing_system7_0_0_processing_system7_v5_5_processing_system
     PS_PORB : inout STD_LOGIC
   );
   attribute C_DM_WIDTH : integer;
-  attribute C_DM_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 4;
+  attribute C_DM_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 4;
   attribute C_DQS_WIDTH : integer;
-  attribute C_DQS_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 4;
+  attribute C_DQS_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 4;
   attribute C_DQ_WIDTH : integer;
-  attribute C_DQ_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 32;
+  attribute C_DQ_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 32;
   attribute C_EMIO_GPIO_WIDTH : integer;
-  attribute C_EMIO_GPIO_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 1;
+  attribute C_EMIO_GPIO_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 1;
   attribute C_EN_EMIO_ENET0 : integer;
-  attribute C_EN_EMIO_ENET0 of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_EN_EMIO_ENET0 of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_EN_EMIO_ENET1 : integer;
-  attribute C_EN_EMIO_ENET1 of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_EN_EMIO_ENET1 of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_EN_EMIO_PJTAG : integer;
-  attribute C_EN_EMIO_PJTAG of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_EN_EMIO_PJTAG of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_EN_EMIO_TRACE : integer;
-  attribute C_EN_EMIO_TRACE of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_EN_EMIO_TRACE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_FCLK_CLK0_BUF : string;
-  attribute C_FCLK_CLK0_BUF of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "TRUE";
+  attribute C_FCLK_CLK0_BUF of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is "TRUE";
   attribute C_FCLK_CLK1_BUF : string;
-  attribute C_FCLK_CLK1_BUF of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "FALSE";
+  attribute C_FCLK_CLK1_BUF of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is "FALSE";
   attribute C_FCLK_CLK2_BUF : string;
-  attribute C_FCLK_CLK2_BUF of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "FALSE";
+  attribute C_FCLK_CLK2_BUF of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is "FALSE";
   attribute C_FCLK_CLK3_BUF : string;
-  attribute C_FCLK_CLK3_BUF of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "FALSE";
+  attribute C_FCLK_CLK3_BUF of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is "FALSE";
   attribute C_GP0_EN_MODIFIABLE_TXN : integer;
-  attribute C_GP0_EN_MODIFIABLE_TXN of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 1;
+  attribute C_GP0_EN_MODIFIABLE_TXN of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 1;
   attribute C_GP1_EN_MODIFIABLE_TXN : integer;
-  attribute C_GP1_EN_MODIFIABLE_TXN of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 1;
+  attribute C_GP1_EN_MODIFIABLE_TXN of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 1;
   attribute C_INCLUDE_ACP_TRANS_CHECK : integer;
-  attribute C_INCLUDE_ACP_TRANS_CHECK of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_INCLUDE_ACP_TRANS_CHECK of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_INCLUDE_TRACE_BUFFER : integer;
-  attribute C_INCLUDE_TRACE_BUFFER of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_INCLUDE_TRACE_BUFFER of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_IRQ_F2P_MODE : string;
-  attribute C_IRQ_F2P_MODE of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "DIRECT";
+  attribute C_IRQ_F2P_MODE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is "DIRECT";
   attribute C_MIO_PRIMITIVE : integer;
-  attribute C_MIO_PRIMITIVE of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 54;
+  attribute C_MIO_PRIMITIVE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 54;
   attribute C_M_AXI_GP0_ENABLE_STATIC_REMAP : integer;
-  attribute C_M_AXI_GP0_ENABLE_STATIC_REMAP of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_M_AXI_GP0_ENABLE_STATIC_REMAP of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_M_AXI_GP0_ID_WIDTH : integer;
-  attribute C_M_AXI_GP0_ID_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 12;
+  attribute C_M_AXI_GP0_ID_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 12;
   attribute C_M_AXI_GP0_THREAD_ID_WIDTH : integer;
-  attribute C_M_AXI_GP0_THREAD_ID_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 12;
+  attribute C_M_AXI_GP0_THREAD_ID_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 12;
   attribute C_M_AXI_GP1_ENABLE_STATIC_REMAP : integer;
-  attribute C_M_AXI_GP1_ENABLE_STATIC_REMAP of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_M_AXI_GP1_ENABLE_STATIC_REMAP of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_M_AXI_GP1_ID_WIDTH : integer;
-  attribute C_M_AXI_GP1_ID_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 12;
+  attribute C_M_AXI_GP1_ID_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 12;
   attribute C_M_AXI_GP1_THREAD_ID_WIDTH : integer;
-  attribute C_M_AXI_GP1_THREAD_ID_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 12;
+  attribute C_M_AXI_GP1_THREAD_ID_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 12;
   attribute C_NUM_F2P_INTR_INPUTS : integer;
-  attribute C_NUM_F2P_INTR_INPUTS of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 1;
+  attribute C_NUM_F2P_INTR_INPUTS of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 1;
   attribute C_PACKAGE_NAME : string;
-  attribute C_PACKAGE_NAME of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "clg400";
+  attribute C_PACKAGE_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is "clg400";
   attribute C_PS7_SI_REV : string;
-  attribute C_PS7_SI_REV of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "PRODUCTION";
+  attribute C_PS7_SI_REV of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is "PRODUCTION";
   attribute C_S_AXI_ACP_ARUSER_VAL : integer;
-  attribute C_S_AXI_ACP_ARUSER_VAL of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 31;
+  attribute C_S_AXI_ACP_ARUSER_VAL of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 31;
   attribute C_S_AXI_ACP_AWUSER_VAL : integer;
-  attribute C_S_AXI_ACP_AWUSER_VAL of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 31;
+  attribute C_S_AXI_ACP_AWUSER_VAL of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 31;
   attribute C_S_AXI_ACP_ID_WIDTH : integer;
-  attribute C_S_AXI_ACP_ID_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 3;
+  attribute C_S_AXI_ACP_ID_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 3;
   attribute C_S_AXI_GP0_ID_WIDTH : integer;
-  attribute C_S_AXI_GP0_ID_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 6;
+  attribute C_S_AXI_GP0_ID_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 6;
   attribute C_S_AXI_GP1_ID_WIDTH : integer;
-  attribute C_S_AXI_GP1_ID_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 6;
+  attribute C_S_AXI_GP1_ID_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 6;
   attribute C_S_AXI_HP0_DATA_WIDTH : integer;
-  attribute C_S_AXI_HP0_DATA_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 64;
+  attribute C_S_AXI_HP0_DATA_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 64;
   attribute C_S_AXI_HP0_ID_WIDTH : integer;
-  attribute C_S_AXI_HP0_ID_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 6;
+  attribute C_S_AXI_HP0_ID_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 6;
   attribute C_S_AXI_HP1_DATA_WIDTH : integer;
-  attribute C_S_AXI_HP1_DATA_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 64;
+  attribute C_S_AXI_HP1_DATA_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 64;
   attribute C_S_AXI_HP1_ID_WIDTH : integer;
-  attribute C_S_AXI_HP1_ID_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 6;
+  attribute C_S_AXI_HP1_ID_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 6;
   attribute C_S_AXI_HP2_DATA_WIDTH : integer;
-  attribute C_S_AXI_HP2_DATA_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 64;
+  attribute C_S_AXI_HP2_DATA_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 64;
   attribute C_S_AXI_HP2_ID_WIDTH : integer;
-  attribute C_S_AXI_HP2_ID_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 6;
+  attribute C_S_AXI_HP2_ID_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 6;
   attribute C_S_AXI_HP3_DATA_WIDTH : integer;
-  attribute C_S_AXI_HP3_DATA_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 64;
+  attribute C_S_AXI_HP3_DATA_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 64;
   attribute C_S_AXI_HP3_ID_WIDTH : integer;
-  attribute C_S_AXI_HP3_ID_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 6;
+  attribute C_S_AXI_HP3_ID_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 6;
   attribute C_TRACE_BUFFER_CLOCK_DELAY : integer;
-  attribute C_TRACE_BUFFER_CLOCK_DELAY of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 12;
+  attribute C_TRACE_BUFFER_CLOCK_DELAY of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 12;
   attribute C_TRACE_BUFFER_FIFO_SIZE : integer;
-  attribute C_TRACE_BUFFER_FIFO_SIZE of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 128;
+  attribute C_TRACE_BUFFER_FIFO_SIZE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 128;
   attribute C_TRACE_INTERNAL_WIDTH : integer;
-  attribute C_TRACE_INTERNAL_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 2;
+  attribute C_TRACE_INTERNAL_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 2;
   attribute C_TRACE_PIPELINE_WIDTH : integer;
-  attribute C_TRACE_PIPELINE_WIDTH of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 8;
+  attribute C_TRACE_PIPELINE_WIDTH of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 8;
   attribute C_USE_AXI_NONSECURE : integer;
-  attribute C_USE_AXI_NONSECURE of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_USE_AXI_NONSECURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_USE_DEFAULT_ACP_USER_VAL : integer;
-  attribute C_USE_DEFAULT_ACP_USER_VAL of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_USE_DEFAULT_ACP_USER_VAL of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_USE_M_AXI_GP0 : integer;
-  attribute C_USE_M_AXI_GP0 of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 1;
+  attribute C_USE_M_AXI_GP0 of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 1;
   attribute C_USE_M_AXI_GP1 : integer;
-  attribute C_USE_M_AXI_GP1 of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_USE_M_AXI_GP1 of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_USE_S_AXI_ACP : integer;
-  attribute C_USE_S_AXI_ACP of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_USE_S_AXI_ACP of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_USE_S_AXI_GP0 : integer;
-  attribute C_USE_S_AXI_GP0 of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_USE_S_AXI_GP0 of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_USE_S_AXI_GP1 : integer;
-  attribute C_USE_S_AXI_GP1 of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_USE_S_AXI_GP1 of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_USE_S_AXI_HP0 : integer;
-  attribute C_USE_S_AXI_HP0 of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_USE_S_AXI_HP0 of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_USE_S_AXI_HP1 : integer;
-  attribute C_USE_S_AXI_HP1 of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_USE_S_AXI_HP1 of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_USE_S_AXI_HP2 : integer;
-  attribute C_USE_S_AXI_HP2 of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_USE_S_AXI_HP2 of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_USE_S_AXI_HP3 : integer;
-  attribute C_USE_S_AXI_HP3 of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_USE_S_AXI_HP3 of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute HW_HANDOFF : string;
-  attribute HW_HANDOFF of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "design_1_processing_system7_0_0.hwdef";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "processing_system7_v5_5_processing_system7";
+  attribute HW_HANDOFF of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is "design_1_processing_system7_0_0.hwdef";
   attribute POWER : string;
-  attribute POWER of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "<PROCESSOR name={system} numA9Cores={2} clockFreq={650} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={32} clockFreq={525} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={36} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={9} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS18} bidis={2} ioBank={Vcco_p1} clockFreq={100.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1300.000} /><PLL domain={Memory} vco={1050.000} /><PLL domain={IO} vco={1600.000} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={100} usageRate={0.5} />/>";
+  attribute POWER of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is "<PROCESSOR name={system} numA9Cores={2} clockFreq={650} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={32} clockFreq={525} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={36} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={9} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS18} bidis={2} ioBank={Vcco_p1} clockFreq={100.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1300.000} /><PLL domain={Memory} vco={1050.000} /><PLL domain={IO} vco={1600.000} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={100} usageRate={0.5} />/>";
   attribute USE_TRACE_DATA_EDGE_DETECTOR : integer;
-  attribute USE_TRACE_DATA_EDGE_DETECTOR of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
-end design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7;
+  attribute USE_TRACE_DATA_EDGE_DETECTOR of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 : entity is 0;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7;
 
-architecture STRUCTURE of design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7 is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal ENET0_MDIO_T_n : STD_LOGIC;
@@ -2858,7 +2856,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_processing_system7_0_0 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   port (
     GPIO_I : in STD_LOGIC_VECTOR ( 0 to 0 );
     GPIO_O : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -2928,16 +2926,16 @@ entity design_1_processing_system7_0_0 is
     PS_PORB : inout STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
-  attribute NotValidForBitStream of design_1_processing_system7_0_0 : entity is true;
+  attribute NotValidForBitStream of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of design_1_processing_system7_0_0 : entity is "design_1_processing_system7_0_0,processing_system7_v5_5_processing_system7,{}";
+  attribute CHECK_LICENSE_TYPE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "design_1_processing_system7_0_0,processing_system7_v5_5_processing_system7,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of design_1_processing_system7_0_0 : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of design_1_processing_system7_0_0 : entity is "processing_system7_v5_5_processing_system7,Vivado 2017.2";
-end design_1_processing_system7_0_0;
+  attribute X_CORE_INFO of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "processing_system7_v5_5_processing_system7,Vivado 2017.2";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
 
-architecture STRUCTURE of design_1_processing_system7_0_0 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   signal NLW_inst_CAN0_PHY_TX_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_CAN1_PHY_TX_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_DMA0_DAVALID_UNCONNECTED : STD_LOGIC;
@@ -3346,7 +3344,7 @@ architecture STRUCTURE of design_1_processing_system7_0_0 is
   attribute USE_TRACE_DATA_EDGE_DETECTOR : integer;
   attribute USE_TRACE_DATA_EDGE_DETECTOR of inst : label is 0;
 begin
-inst: entity work.design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7
+inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_processing_system7_v5_5_processing_system7
      port map (
       CAN0_PHY_RX => '0',
       CAN0_PHY_TX => NLW_inst_CAN0_PHY_TX_UNCONNECTED,

@@ -294,8 +294,7 @@
 /******************************************************************/
 
 /* Definitions for Fabric interrupts connected to ps7_scugic_0 */
-#define XPAR_FABRIC_NEURONINITANDCOMPUTE3_INTERRUPT_INTR 61U
-#define XPAR_FABRIC_NEURON3_INTERRUPT_INTR 62U
+#define XPAR_FABRIC_NEURON3_INTERRUPT_INTR 61U
 
 /******************************************************************/
 

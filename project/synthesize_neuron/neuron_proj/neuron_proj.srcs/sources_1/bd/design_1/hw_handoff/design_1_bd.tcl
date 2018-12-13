@@ -337,9 +337,6 @@ CONFIG.GPIO_BOARD_INTERFACE {sws_4bits} \
 CONFIG.USE_BOARD_FLOW {true} \
  ] $switches
 
-  # Create instance: xlconcat_0, and set properties
-  set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
-
   # Create interface connections
   connect_bd_intf_net -intf_net leds_GPIO [get_bd_intf_ports leds_4bits] [get_bd_intf_pins leds/GPIO]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
@@ -353,18 +350,16 @@ CONFIG.USE_BOARD_FLOW {true} \
   connect_bd_intf_net -intf_net switches_GPIO [get_bd_intf_ports sws_4bits] [get_bd_intf_pins switches/GPIO]
 
   # Create port connections
-  connect_bd_net -net neuron3_interrupt [get_bd_pins neuron3/interrupt] [get_bd_pins xlconcat_0/In1]
-  connect_bd_net -net neuronInitAndCompute3_interrupt [get_bd_pins neuronInitAndCompute3/interrupt] [get_bd_pins xlconcat_0/In0]
+  connect_bd_net -net neuron3_interrupt [get_bd_pins neuron3/interrupt] [get_bd_pins processing_system7_0/IRQ_F2P]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins leds/s_axi_aclk] [get_bd_pins neuron3/ap_clk] [get_bd_pins neuronInitAndCompute3/ap_clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/M03_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins switches/s_axi_aclk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_100M_interconnect_aresetn [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins rst_ps7_0_100M/interconnect_aresetn]
   connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins leds/s_axi_aresetn] [get_bd_pins neuron3/ap_rst_n] [get_bd_pins neuronInitAndCompute3/ap_rst_n] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/M03_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins switches/s_axi_aresetn]
-  connect_bd_net -net xlconcat_0_dout [get_bd_pins processing_system7_0/IRQ_F2P] [get_bd_pins xlconcat_0/dout]
 
   # Create address segments
   create_bd_addr_seg -range 0x00010000 -offset 0x41210000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs leds/S_AXI/Reg] SEG_leds_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x43C10000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs neuron3/s_axi_neuron_hard_io/Reg] SEG_neuronInitAndCompute3HardCoded_0_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs neuronInitAndCompute3/s_axi_neuron_io/Reg] SEG_neuronInitAndCompute3_0_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs neuronInitAndCompute3/s_axi_neuron_io/Reg] SEG_neuronInitAndCompute3_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x41200000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs switches/S_AXI/Reg] SEG_switches_Reg
 
 
