@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="asserts.cpp" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_neuron\neuron_hls\src\asserts.cpp"/>
+    <originFiles name="asserts.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_neuron\neuron_hls\src\asserts.h"/>
+    <originFiles name="input.cpp" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_neuron\neuron_hls\src\input.cpp"/>
+    <originFiles name="input.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_neuron\neuron_hls\src\input.h"/>
+    <originFiles name="maths.cpp" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_neuron\neuron_hls\src\maths.cpp"/>
+    <originFiles name="maths.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_neuron\neuron_hls\src\maths.h"/>
+    <originFiles name="neuron.cpp" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_neuron\neuron_hls\src\neuron.cpp"/>
+    <originFiles name="neuron.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_neuron\neuron_hls\src\neuron.h"/>
+    <originFiles name="neuron_class.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_neuron\neuron_hls\src\neuron_class.h"/>
+    <originFiles name="neuron_init_and_compute.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_neuron\neuron_hls\src\neuron_init_and_compute.h"/>
+    <originFiles name="neuron_main.cpp" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_neuron\neuron_hls\src\neuron_main.cpp"/>
+    <originFiles name="types.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_neuron\neuron_hls\src\types.h"/>
+  </source>
+  <testbench>
+    <originFiles name="greatest.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_neuron\neuron_hls\src\tests\greatest.h"/>
+    <originFiles name="neuron_class_tests.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_neuron\neuron_hls\src\tests\neuron_class_tests.h"/>
+    <originFiles name="neuron_tests.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_neuron\neuron_hls\src\tests\neuron_tests.h"/>
+    <originFiles name="runner.cpp" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_neuron\neuron_hls\src\tests\runner.cpp"/>
+    <originFiles name="test_helper.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_neuron\neuron_hls\src\tests\test_helper.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,339 @@
+
+
+================================================================
+== Vivado HLS Report for 'neuronInitAndCompute3'
+================================================================
+* Date:           Mon Nov  5 20:43:49 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        neuron_hls
+* Solution:       solution4
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      6.98|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   26|   26|   27|   27|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                       |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |       Loop Name       | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Neuron_compute_loop  |   24|   24|         8|          -|          -|     3|    no    |
+        +-----------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 10
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / (!exitcond)
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	3  / true
+* FSM state operations: 
+
+ <State 1>: 2.32ns
+ST_1: neuron_weights_V (14)  [1/1] 0.00ns
+:10  %neuron_weights_V = getelementptr [4 x i64]* %weights_V, i32 0, i32 0
+
+ST_1: sum_V (15)  [2/2] 2.32ns  loc: neuron_hls/src/neuron.cpp:35->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:11  %sum_V = load i64* %neuron_weights_V, align 8
+
+
+ <State 2>: 3.91ns
+ST_2: StgValue_13 (4)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap([4 x i64]* %weights_V), !map !155
+
+ST_2: StgValue_14 (5)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap([3 x i64]* %inputData_V), !map !161
+
+ST_2: StgValue_15 (6)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i64* %output_V), !map !167
+
+ST_2: StgValue_16 (7)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecTopModule([22 x i8]* @neuronInitAndCompute) nounwind
+
+ST_2: StgValue_17 (8)  [1/1] 0.00ns  loc: neuron_hls/src/neuron_main.cpp:8
+:4  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [10 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_2: StgValue_18 (9)  [1/1] 0.00ns  loc: neuron_hls/src/neuron_main.cpp:8
+:5  call void (...)* @_ssdm_op_SpecInterface(i64* %output_V, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [10 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_2: empty (10)  [1/1] 0.00ns
+:6  %empty = call i32 (...)* @_ssdm_op_SpecMemCore([3 x i64]* %inputData_V, [1 x i8]* @p_str4, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str4, i32 -1, [1 x i8]* @p_str4, [1 x i8]* @p_str4, [1 x i8]* @p_str4, [1 x i8]* @p_str4, [1 x i8]* @p_str4)
+
+ST_2: StgValue_20 (11)  [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecInterface([3 x i64]* %inputData_V, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [10 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_2: empty_4 (12)  [1/1] 0.00ns
+:8  %empty_4 = call i32 (...)* @_ssdm_op_SpecMemCore([4 x i64]* %weights_V, [1 x i8]* @p_str3, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str3, i32 -1, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3)
+
+ST_2: StgValue_22 (13)  [1/1] 0.00ns
+:9  call void (...)* @_ssdm_op_SpecInterface([4 x i64]* %weights_V, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [10 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_2: sum_V (15)  [1/2] 2.32ns  loc: neuron_hls/src/neuron.cpp:35->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:11  %sum_V = load i64* %neuron_weights_V, align 8
+
+ST_2: StgValue_24 (16)  [1/1] 1.59ns  loc: neuron_hls/src/neuron.cpp:38->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:12  br label %1
+
+
+ <State 3>: 4.50ns
+ST_3: p_Val2_s (18)  [1/1] 0.00ns
+:0  %p_Val2_s = phi i64 [ %sum_V, %0 ], [ %sum_V_1, %2 ]
+
+ST_3: p_i_i (19)  [1/1] 0.00ns
+:1  %p_i_i = phi i3 [ 1, %0 ], [ %i_V, %2 ]
+
+ST_3: empty_5 (20)  [1/1] 0.00ns
+:2  %empty_5 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)
+
+ST_3: exitcond (21)  [1/1] 2.07ns  loc: neuron_hls/src/neuron.cpp:38->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:3  %exitcond = icmp eq i3 %p_i_i, -4
+
+ST_3: StgValue_29 (22)  [1/1] 0.00ns  loc: neuron_hls/src/neuron.cpp:38->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:4  br i1 %exitcond, label %"neuronInitAndCompute<3u>.exit", label %2
+
+ST_3: tmp_7_i_i (25)  [1/1] 0.00ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:1  %tmp_7_i_i = zext i3 %p_i_i to i32
+
+ST_3: tmp_2 (26)  [1/1] 0.00ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:2  %tmp_2 = trunc i3 %p_i_i to i2
+
+ST_3: tmp_8_i_i (27)  [1/1] 2.17ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:3  %tmp_8_i_i = add i2 -1, %tmp_2
+
+ST_3: tmp_8_i_i_cast (28)  [1/1] 0.00ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:4  %tmp_8_i_i_cast = zext i2 %tmp_8_i_i to i32
+
+ST_3: weights_V_addr (29)  [1/1] 0.00ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:5  %weights_V_addr = getelementptr [4 x i64]* %weights_V, i32 0, i32 %tmp_7_i_i
+
+ST_3: weights_V_load (30)  [2/2] 2.32ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:6  %weights_V_load = load i64* %weights_V_addr, align 8
+
+ST_3: inputData_V_addr (32)  [1/1] 0.00ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:8  %inputData_V_addr = getelementptr [3 x i64]* %inputData_V, i32 0, i32 %tmp_8_i_i_cast
+
+ST_3: inputData_V_load (33)  [2/2] 2.32ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:9  %inputData_V_load = load i64* %inputData_V_addr, align 8
+
+ST_3: i_V (39)  [1/1] 2.26ns  loc: neuron_hls/src/neuron.cpp:38->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:15  %i_V = add i3 1, %p_i_i
+
+ST_3: tmp (42)  [1/1] 0.00ns  loc: neuron_hls/src/neuron.cpp:35->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+neuronInitAndCompute<3u>.exit:0  %tmp = trunc i64 %p_Val2_s to i63
+
+ST_3: tmp_1 (43)  [1/1] 0.00ns  loc: neuron_hls/src/neuron.cpp:43->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+neuronInitAndCompute<3u>.exit:1  %tmp_1 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %p_Val2_s, i32 63)
+
+ST_3: p_Val2_4 (44)  [1/1] 2.07ns  loc: neuron_hls/src/neuron.cpp:43->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+neuronInitAndCompute<3u>.exit:2  %p_Val2_4 = select i1 %tmp_1, i63 0, i63 %tmp
+
+ST_3: p_Val2_3_cast (45)  [1/1] 0.00ns  loc: neuron_hls/src/neuron.cpp:43->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+neuronInitAndCompute<3u>.exit:3  %p_Val2_3_cast = zext i63 %p_Val2_4 to i64
+
+ST_3: StgValue_43 (46)  [1/1] 1.00ns  loc: neuron_hls/src/neuron_main.cpp:8
+neuronInitAndCompute<3u>.exit:4  call void @_ssdm_op_Write.s_axilite.i64P(i64* %output_V, i64 %p_Val2_3_cast)
+
+ST_3: StgValue_44 (47)  [1/1] 0.00ns  loc: neuron_hls/src/neuron_main.cpp:9
+neuronInitAndCompute<3u>.exit:5  ret void
+
+
+ <State 4>: 2.32ns
+ST_4: weights_V_load (30)  [1/2] 2.32ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:6  %weights_V_load = load i64* %weights_V_addr, align 8
+
+ST_4: inputData_V_load (33)  [1/2] 2.32ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:9  %inputData_V_load = load i64* %inputData_V_addr, align 8
+
+
+ <State 5>: 6.98ns
+ST_5: OP1_V (31)  [1/1] 0.00ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:7  %OP1_V = sext i64 %weights_V_load to i112
+
+ST_5: OP2_V (34)  [1/1] 0.00ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:10  %OP2_V = sext i64 %inputData_V_load to i112
+
+ST_5: p_Val2_1 (35)  [5/5] 6.98ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:11  %p_Val2_1 = mul i112 %OP2_V, %OP1_V
+
+
+ <State 6>: 6.98ns
+ST_6: p_Val2_1 (35)  [4/5] 6.98ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:11  %p_Val2_1 = mul i112 %OP2_V, %OP1_V
+
+
+ <State 7>: 6.98ns
+ST_7: p_Val2_1 (35)  [3/5] 6.98ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:11  %p_Val2_1 = mul i112 %OP2_V, %OP1_V
+
+
+ <State 8>: 6.98ns
+ST_8: p_Val2_1 (35)  [2/5] 6.98ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:11  %p_Val2_1 = mul i112 %OP2_V, %OP1_V
+
+
+ <State 9>: 6.98ns
+ST_9: p_Val2_1 (35)  [1/5] 6.98ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:11  %p_Val2_1 = mul i112 %OP2_V, %OP1_V
+
+
+ <State 10>: 5.25ns
+ST_10: StgValue_54 (24)  [1/1] 0.00ns  loc: neuron_hls/src/neuron.cpp:38->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:0  call void (...)* @_ssdm_op_SpecLoopName([20 x i8]* @p_str7) nounwind
+
+ST_10: tmp_1_i_i (36)  [1/1] 0.00ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:12  %tmp_1_i_i = call i112 @_ssdm_op_BitConcatenate.i112.i64.i48(i64 %p_Val2_s, i48 0)
+
+ST_10: p_Val2_2 (37)  [1/1] 5.25ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:13  %p_Val2_2 = add i112 %tmp_1_i_i, %p_Val2_1
+
+ST_10: sum_V_1 (38)  [1/1] 0.00ns  loc: neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:14  %sum_V_1 = call i64 @_ssdm_op_PartSelect.i64.i112.i32.i32(i112 %p_Val2_2, i32 48, i32 111)
+
+ST_10: StgValue_58 (40)  [1/1] 0.00ns  loc: neuron_hls/src/neuron.cpp:38->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8
+:16  br label %1
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('neuron.weights.V') [14]  (0 ns)
+	'load' operation ('sum.V', neuron_hls/src/neuron.cpp:35->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8) on array 'weights_V' [15]  (2.32 ns)
+
+ <State 2>: 3.91ns
+The critical path consists of the following:
+	'load' operation ('sum.V', neuron_hls/src/neuron.cpp:35->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8) on array 'weights_V' [15]  (2.32 ns)
+	multiplexor before 'phi' operation ('sum.V') with incoming values : ('sum.V', neuron_hls/src/neuron.cpp:35->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8) ('sum.V', neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8) [18]  (1.59 ns)
+
+ <State 3>: 4.5ns
+The critical path consists of the following:
+	'phi' operation ('i.V') with incoming values : ('i.V', neuron_hls/src/neuron.cpp:38->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8) [19]  (0 ns)
+	'add' operation ('tmp_8_i_i', neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8) [27]  (2.17 ns)
+	'getelementptr' operation ('inputData_V_addr', neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8) [32]  (0 ns)
+	'load' operation ('inputData_V_load', neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8) on array 'inputData_V' [33]  (2.32 ns)
+
+ <State 4>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('weights_V_load', neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8) on array 'weights_V' [30]  (2.32 ns)
+
+ <State 5>: 6.98ns
+The critical path consists of the following:
+	'mul' operation ('p_Val2_1', neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8) [35]  (6.98 ns)
+
+ <State 6>: 6.98ns
+The critical path consists of the following:
+	'mul' operation ('p_Val2_1', neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8) [35]  (6.98 ns)
+
+ <State 7>: 6.98ns
+The critical path consists of the following:
+	'mul' operation ('p_Val2_1', neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8) [35]  (6.98 ns)
+
+ <State 8>: 6.98ns
+The critical path consists of the following:
+	'mul' operation ('p_Val2_1', neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8) [35]  (6.98 ns)
+
+ <State 9>: 6.98ns
+The critical path consists of the following:
+	'mul' operation ('p_Val2_1', neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8) [35]  (6.98 ns)
+
+ <State 10>: 5.25ns
+The critical path consists of the following:
+	'add' operation ('__Val2__', neuron_hls/src/neuron.cpp:39->neuron_hls/src/neuron_init_and_compute.h:13->neuron_hls/src/neuron_main.cpp:8) [37]  (5.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

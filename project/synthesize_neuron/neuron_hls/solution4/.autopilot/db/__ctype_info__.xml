@@ -1,0 +1,33 @@
+<InterfaceSummary>
+<RtlPorts>
+<name>weights_V</name>
+<CType>
+<TypeName>sc_fixed 64 16 5 3 0</TypeName>
+<TypeWidth>64</TypeWidth>
+<PhysicalWidth>64</PhysicalWidth>
+</CType>
+<CFractionWidth>48</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>inputData_V</name>
+<CType>
+<TypeName>sc_fixed 64 16 5 3 0</TypeName>
+<TypeWidth>64</TypeWidth>
+<PhysicalWidth>64</PhysicalWidth>
+</CType>
+<CFractionWidth>48</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>output_V</name>
+<CType>
+<TypeName>sc_fixed 64 16 5 3 0</TypeName>
+<TypeWidth>64</TypeWidth>
+<PhysicalWidth>64</PhysicalWidth>
+</CType>
+<CFractionWidth>48</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+</InterfaceSummary>
+

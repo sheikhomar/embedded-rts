@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="neuronInitAndCompute3HardCoded" xd:componentRef="neuronInitAndCompute3HardCoded" xd:initiationInterval="12" xd:clockPeriod="8.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_neuron_hard_io" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="inputData[]" xd:originalName="inputData" xd:direction="in" xd:interfaceRef="s_axi_neuron_hard_io" xd:busTypeRef="axilite" xd:offset="0x20" xd:arraySize="3" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(output)" xd:originalName="output" xd:direction="out" xd:interfaceRef="s_axi_neuron_hard_io" xd:busTypeRef="axilite" xd:offset="0x40" xd:statusOffset="0x48" xd:handshakeRef="ap_vld" xd:dataWidth="64"/>
+  <xd:latencyEstimates xd:best-case="11" xd:worst-case="11" xd:average-case="11"/>
+  <xd:resourceEstimates xd:LUT="884" xd:FF="1360" xd:BRAM="4" xd:DSP="16"/>
+</xd:acceleratorMap>

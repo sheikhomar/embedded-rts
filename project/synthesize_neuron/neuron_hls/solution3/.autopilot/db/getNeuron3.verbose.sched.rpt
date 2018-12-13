@@ -1,0 +1,193 @@
+
+
+================================================================
+== Vivado HLS Report for 'getNeuron3'
+================================================================
+* Date:           Sat Nov 10 15:42:24 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        neuron_hls
+* Solution:       solution3
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      4.64|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    9|    9|   10|   10|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    8|    8|         2|          -|          -|     4|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 3
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!tmp)
+3 --> 
+	2  / true
+* FSM state operations: 
+
+ <State 1>: 1.59ns
+ST_1: StgValue_4 (5)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap([4 x i64]* %agg_result_weights_V), !map !157
+
+ST_1: StgValue_5 (6)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %agg_result_activation), !map !163
+
+ST_1: StgValue_6 (7)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap([4 x i64]* %weights_V), !map !169
+
+ST_1: StgValue_7 (8)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i1 %activation), !map !173
+
+ST_1: activation_read (9)  [1/1] 0.00ns
+:4  %activation_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %activation)
+
+ST_1: StgValue_9 (10)  [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @getNeuron3_str) nounwind
+
+ST_1: StgValue_10 (11)  [1/1] 0.00ns  loc: neuron_hls/src/neuron_class.h:12->neuron_hls/src/neuron_class.h:14->neuron_hls/src/neuron_main.cpp:25
+:6  call void @_ssdm_op_Write.ap_auto.i1P(i1* %agg_result_activation, i1 %activation_read)
+
+ST_1: StgValue_11 (12)  [1/1] 1.59ns  loc: neuron_hls/src/neuron_class.h:13->neuron_hls/src/neuron_class.h:14->neuron_hls/src/neuron_main.cpp:25
+:7  br label %1
+
+
+ <State 2>: 2.32ns
+ST_2: p_012_0_i_i (14)  [1/1] 0.00ns
+:0  %p_012_0_i_i = phi i3 [ 0, %0 ], [ %i_V, %2 ]
+
+ST_2: tmp (15)  [1/1] 2.07ns  loc: neuron_hls/src/neuron_class.h:13->neuron_hls/src/neuron_class.h:14->neuron_hls/src/neuron_main.cpp:25
+:1  %tmp = icmp eq i3 %p_012_0_i_i, -4
+
+ST_2: empty (16)  [1/1] 0.00ns
+:2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
+
+ST_2: i_V (17)  [1/1] 2.26ns  loc: neuron_hls/src/neuron_class.h:13->neuron_hls/src/neuron_class.h:14->neuron_hls/src/neuron_main.cpp:25
+:3  %i_V = add i3 %p_012_0_i_i, 1
+
+ST_2: StgValue_16 (18)  [1/1] 0.00ns  loc: neuron_hls/src/neuron_class.h:13->neuron_hls/src/neuron_class.h:14->neuron_hls/src/neuron_main.cpp:25
+:4  br i1 %tmp, label %NeuronC.exit, label %2
+
+ST_2: tmp_1 (20)  [1/1] 0.00ns  loc: neuron_hls/src/neuron_class.h:13->neuron_hls/src/neuron_class.h:14->neuron_hls/src/neuron_main.cpp:25
+:0  %tmp_1 = zext i3 %p_012_0_i_i to i32
+
+ST_2: weights_V_addr (21)  [1/1] 0.00ns  loc: neuron_hls/src/neuron_class.h:13->neuron_hls/src/neuron_class.h:14->neuron_hls/src/neuron_main.cpp:25
+:1  %weights_V_addr = getelementptr [4 x i64]* %weights_V, i32 0, i32 %tmp_1
+
+ST_2: weights_V_load (22)  [2/2] 2.32ns  loc: neuron_hls/src/neuron_class.h:13->neuron_hls/src/neuron_class.h:14->neuron_hls/src/neuron_main.cpp:25
+:2  %weights_V_load = load i64* %weights_V_addr, align 8
+
+ST_2: StgValue_20 (27)  [1/1] 0.00ns  loc: neuron_hls/src/neuron_main.cpp:25
+NeuronC.exit:0  ret void
+
+
+ <State 3>: 4.64ns
+ST_3: weights_V_load (22)  [1/2] 2.32ns  loc: neuron_hls/src/neuron_class.h:13->neuron_hls/src/neuron_class.h:14->neuron_hls/src/neuron_main.cpp:25
+:2  %weights_V_load = load i64* %weights_V_addr, align 8
+
+ST_3: agg_result_weights_s (23)  [1/1] 0.00ns  loc: neuron_hls/src/neuron_class.h:13->neuron_hls/src/neuron_class.h:14->neuron_hls/src/neuron_main.cpp:25
+:3  %agg_result_weights_s = getelementptr [4 x i64]* %agg_result_weights_V, i32 0, i32 %tmp_1
+
+ST_3: StgValue_23 (24)  [1/1] 2.32ns  loc: neuron_hls/src/neuron_class.h:13->neuron_hls/src/neuron_class.h:14->neuron_hls/src/neuron_main.cpp:25
+:4  store i64 %weights_V_load, i64* %agg_result_weights_s, align 8
+
+ST_3: StgValue_24 (25)  [1/1] 0.00ns  loc: neuron_hls/src/neuron_class.h:13->neuron_hls/src/neuron_class.h:14->neuron_hls/src/neuron_main.cpp:25
+:5  br label %1
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i.V') with incoming values : ('i.V', neuron_hls/src/neuron_class.h:13->neuron_hls/src/neuron_class.h:14->neuron_hls/src/neuron_main.cpp:25) [14]  (1.59 ns)
+
+ <State 2>: 2.32ns
+The critical path consists of the following:
+	'phi' operation ('i.V') with incoming values : ('i.V', neuron_hls/src/neuron_class.h:13->neuron_hls/src/neuron_class.h:14->neuron_hls/src/neuron_main.cpp:25) [14]  (0 ns)
+	'getelementptr' operation ('weights_V_addr', neuron_hls/src/neuron_class.h:13->neuron_hls/src/neuron_class.h:14->neuron_hls/src/neuron_main.cpp:25) [21]  (0 ns)
+	'load' operation ('weights_V_load', neuron_hls/src/neuron_class.h:13->neuron_hls/src/neuron_class.h:14->neuron_hls/src/neuron_main.cpp:25) on array 'weights_V' [22]  (2.32 ns)
+
+ <State 3>: 4.64ns
+The critical path consists of the following:
+	'load' operation ('weights_V_load', neuron_hls/src/neuron_class.h:13->neuron_hls/src/neuron_class.h:14->neuron_hls/src/neuron_main.cpp:25) on array 'weights_V' [22]  (2.32 ns)
+	'store' operation (neuron_hls/src/neuron_class.h:13->neuron_hls/src/neuron_class.h:14->neuron_hls/src/neuron_main.cpp:25) of variable 'weights_V_load', neuron_hls/src/neuron_class.h:13->neuron_hls/src/neuron_class.h:14->neuron_hls/src/neuron_main.cpp:25 on array 'agg_result_weights_V' [24]  (2.32 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
