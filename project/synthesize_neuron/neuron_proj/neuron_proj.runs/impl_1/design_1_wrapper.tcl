@@ -54,7 +54,7 @@ set rc [catch {
   set_property webtalk.parent_dir C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.cache/wt [current_project]
   set_property parent.project_path C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.xpr [current_project]
   set_property ip_repo_paths {
-  c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution4/impl/ip
+  C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution4/impl/ip
   C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_hls/solution5/impl/ip
 } [current_project]
   set_property ip_output_repo C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.cache/ip [current_project]

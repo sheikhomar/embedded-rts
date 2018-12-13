@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
---Date        : Tue Nov  6 11:15:23 2018
+--Date        : Thu Dec 13 11:11:49 2018
 --Host        : DESKTOP-GI6NB51 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -1582,7 +1582,7 @@ entity design_1 is
     sws_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=14,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=6,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=2,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_board_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=15,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=6,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=2,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_board_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -1632,6 +1632,7 @@ architecture STRUCTURE of design_1 is
     M_AXI_GP0_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_GP0_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_GP0_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    IRQ_F2P : in STD_LOGIC_VECTOR ( 1 downto 0 );
     FCLK_CLK0 : out STD_LOGIC;
     FCLK_RESET0_N : out STD_LOGIC;
     MIO : inout STD_LOGIC_VECTOR ( 53 downto 0 );
@@ -1767,7 +1768,16 @@ architecture STRUCTURE of design_1 is
     interrupt : out STD_LOGIC
   );
   end component design_1_neuronInitAndCompute3HardCoded_0_0;
+  component design_1_xlconcat_0_0 is
+  port (
+    In0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    dout : out STD_LOGIC_VECTOR ( 1 downto 0 )
+  );
+  end component design_1_xlconcat_0_0;
   signal leds_GPIO_TRI_O : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal neuron3_interrupt : STD_LOGIC;
+  signal neuronInitAndCompute3_interrupt : STD_LOGIC;
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -1903,8 +1913,7 @@ architecture STRUCTURE of design_1 is
   signal rst_ps7_0_100M_interconnect_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_ps7_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal switches_GPIO_TRI_I : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_neuronInitAndCompute3HardCoded_0_interrupt_UNCONNECTED : STD_LOGIC;
-  signal NLW_neuronInitAndCompute3_0_interrupt_UNCONNECTED : STD_LOGIC;
+  signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_rst_ps7_0_100M_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_ps7_0_100M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_ps7_0_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -1937,11 +1946,11 @@ leds: component design_1_axi_gpio_0_1
       s_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M01_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => ps7_0_axi_periph_M01_AXI_WVALID
     );
-neuronInitAndCompute3HardCoded_0: component design_1_neuronInitAndCompute3HardCoded_0_0
+neuron3: component design_1_neuronInitAndCompute3HardCoded_0_0
      port map (
       ap_clk => processing_system7_0_FCLK_CLK0,
       ap_rst_n => rst_ps7_0_100M_peripheral_aresetn(0),
-      interrupt => NLW_neuronInitAndCompute3HardCoded_0_interrupt_UNCONNECTED,
+      interrupt => neuron3_interrupt,
       s_axi_neuron_hard_io_ARADDR(6 downto 0) => ps7_0_axi_periph_M03_AXI_ARADDR(6 downto 0),
       s_axi_neuron_hard_io_ARREADY => ps7_0_axi_periph_M03_AXI_ARREADY,
       s_axi_neuron_hard_io_ARVALID => ps7_0_axi_periph_M03_AXI_ARVALID,
@@ -1960,11 +1969,11 @@ neuronInitAndCompute3HardCoded_0: component design_1_neuronInitAndCompute3HardCo
       s_axi_neuron_hard_io_WSTRB(3 downto 0) => ps7_0_axi_periph_M03_AXI_WSTRB(3 downto 0),
       s_axi_neuron_hard_io_WVALID => ps7_0_axi_periph_M03_AXI_WVALID
     );
-neuronInitAndCompute3_0: component design_1_neuronInitAndCompute3_0_1
+neuronInitAndCompute3: component design_1_neuronInitAndCompute3_0_1
      port map (
       ap_clk => processing_system7_0_FCLK_CLK0,
       ap_rst_n => rst_ps7_0_100M_peripheral_aresetn(0),
-      interrupt => NLW_neuronInitAndCompute3_0_interrupt_UNCONNECTED,
+      interrupt => neuronInitAndCompute3_interrupt,
       s_axi_neuron_io_ARADDR(6 downto 0) => ps7_0_axi_periph_M02_AXI_ARADDR(6 downto 0),
       s_axi_neuron_io_ARREADY => ps7_0_axi_periph_M02_AXI_ARREADY,
       s_axi_neuron_io_ARVALID => ps7_0_axi_periph_M02_AXI_ARVALID,
@@ -2007,6 +2016,7 @@ processing_system7_0: component design_1_processing_system7_0_0
       GPIO_I(0) => processing_system7_0_GPIO_0_TRI_I(0),
       GPIO_O(0) => processing_system7_0_GPIO_0_TRI_O(0),
       GPIO_T(0) => processing_system7_0_GPIO_0_TRI_T(0),
+      IRQ_F2P(1 downto 0) => xlconcat_0_dout(1 downto 0),
       MIO(53 downto 0) => FIXED_IO_mio(53 downto 0),
       M_AXI_GP0_ACLK => processing_system7_0_FCLK_CLK0,
       M_AXI_GP0_ARADDR(31 downto 0) => processing_system7_0_M_AXI_GP0_ARADDR(31 downto 0),
@@ -2207,5 +2217,11 @@ switches: component design_1_axi_gpio_0_0
       s_axi_wready => ps7_0_axi_periph_M00_AXI_WREADY,
       s_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M00_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => ps7_0_axi_periph_M00_AXI_WVALID(0)
+    );
+xlconcat_0: component design_1_xlconcat_0_0
+     port map (
+      In0(0) => neuronInitAndCompute3_interrupt,
+      In1(0) => neuron3_interrupt,
+      dout(1 downto 0) => xlconcat_0_dout(1 downto 0)
     );
 end STRUCTURE;

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Nov  6 11:15:25 2018" VIVADOVERSION="2017.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec 13 11:12:14 2018" VIVADOVERSION="2017.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:1.0" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -448,7 +448,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE FULLNAME="/neuronInitAndCompute3HardCoded_0" HWVERSION="1.0" INSTANCE="neuronInitAndCompute3HardCoded_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="neuronInitAndCompute3HardCoded" VLNV="xilinx.com:hls:neuronInitAndCompute3HardCoded:1.0">
+    <MODULE FULLNAME="/neuron3" HWVERSION="1.0" INSTANCE="neuron3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="neuronInitAndCompute3HardCoded" VLNV="xilinx.com:hls:neuronInitAndCompute3HardCoded:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="read-write" INTERFACE="s_axi_neuron_hard_io" NAME="Reg" RANGE="65536" USAGE="register">
@@ -738,87 +738,87 @@
         <PARAMETER NAME="C_S_AXI_NEURON_HARD_IO_HIGHADDR" VALUE="0x43C1FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="6" NAME="s_axi_neuron_hard_io_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_AWADDR">
+        <PORT DIR="I" LEFT="6" NAME="s_axi_neuron_hard_io_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_AWADDR">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_AXI_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_neuron_hard_io_AWVALID" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_AWVALID">
+        <PORT DIR="I" NAME="s_axi_neuron_hard_io_AWVALID" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_AWVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_AXI_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_neuron_hard_io_AWREADY" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_AWREADY">
+        <PORT DIR="O" NAME="s_axi_neuron_hard_io_AWREADY" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_AWREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_AXI_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="s_axi_neuron_hard_io_WDATA" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_WDATA">
+        <PORT DIR="I" LEFT="31" NAME="s_axi_neuron_hard_io_WDATA" RIGHT="0" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_WDATA">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_AXI_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="s_axi_neuron_hard_io_WSTRB" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_WSTRB">
+        <PORT DIR="I" LEFT="3" NAME="s_axi_neuron_hard_io_WSTRB" RIGHT="0" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_WSTRB">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_AXI_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_neuron_hard_io_WVALID" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_WVALID">
+        <PORT DIR="I" NAME="s_axi_neuron_hard_io_WVALID" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_WVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_AXI_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_neuron_hard_io_WREADY" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_WREADY">
+        <PORT DIR="O" NAME="s_axi_neuron_hard_io_WREADY" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_WREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_AXI_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="s_axi_neuron_hard_io_BRESP" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_BRESP">
+        <PORT DIR="O" LEFT="1" NAME="s_axi_neuron_hard_io_BRESP" RIGHT="0" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_BRESP">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_AXI_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_neuron_hard_io_BVALID" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_BVALID">
+        <PORT DIR="O" NAME="s_axi_neuron_hard_io_BVALID" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_BVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_AXI_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_neuron_hard_io_BREADY" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_BREADY">
+        <PORT DIR="I" NAME="s_axi_neuron_hard_io_BREADY" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_BREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_AXI_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="6" NAME="s_axi_neuron_hard_io_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_ARADDR">
+        <PORT DIR="I" LEFT="6" NAME="s_axi_neuron_hard_io_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_ARADDR">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_AXI_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_neuron_hard_io_ARVALID" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_ARVALID">
+        <PORT DIR="I" NAME="s_axi_neuron_hard_io_ARVALID" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_ARVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_AXI_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_neuron_hard_io_ARREADY" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_ARREADY">
+        <PORT DIR="O" NAME="s_axi_neuron_hard_io_ARREADY" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_ARREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_AXI_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="s_axi_neuron_hard_io_RDATA" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_RDATA">
+        <PORT DIR="O" LEFT="31" NAME="s_axi_neuron_hard_io_RDATA" RIGHT="0" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_RDATA">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_AXI_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="s_axi_neuron_hard_io_RRESP" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_RRESP">
+        <PORT DIR="O" LEFT="1" NAME="s_axi_neuron_hard_io_RRESP" RIGHT="0" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_RRESP">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_AXI_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_neuron_hard_io_RVALID" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_RVALID">
+        <PORT DIR="O" NAME="s_axi_neuron_hard_io_RVALID" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_RVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_AXI_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_neuron_hard_io_RREADY" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_RREADY">
+        <PORT DIR="I" NAME="s_axi_neuron_hard_io_RREADY" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_RREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_AXI_rready"/>
           </CONNECTIONS>
@@ -833,7 +833,11 @@
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="interrupt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>
+        <PORT DIR="O" NAME="interrupt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="neuron3_interrupt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="In1"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="ps7_0_axi_periph_M03_AXI" DATAWIDTH="32" NAME="s_axi_neuron_hard_io" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -890,7 +894,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE FULLNAME="/neuronInitAndCompute3_0" HWVERSION="1.0" INSTANCE="neuronInitAndCompute3_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="neuronInitAndCompute3" VLNV="xilinx.com:hls:neuronInitAndCompute3:1.0">
+    <MODULE FULLNAME="/neuronInitAndCompute3" HWVERSION="1.0" INSTANCE="neuronInitAndCompute3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="neuronInitAndCompute3" VLNV="xilinx.com:hls:neuronInitAndCompute3:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="read-write" INTERFACE="s_axi_neuron_io" NAME="Reg" RANGE="65536" USAGE="register">
@@ -1188,87 +1192,87 @@
         <PARAMETER NAME="C_S_AXI_NEURON_IO_HIGHADDR" VALUE="0x43C0FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="6" NAME="s_axi_neuron_io_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_AWADDR">
+        <PORT DIR="I" LEFT="6" NAME="s_axi_neuron_io_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_AWADDR">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_neuron_io_AWVALID" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_AWVALID">
+        <PORT DIR="I" NAME="s_axi_neuron_io_AWVALID" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_AWVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_neuron_io_AWREADY" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_AWREADY">
+        <PORT DIR="O" NAME="s_axi_neuron_io_AWREADY" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_AWREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="s_axi_neuron_io_WDATA" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_WDATA">
+        <PORT DIR="I" LEFT="31" NAME="s_axi_neuron_io_WDATA" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_WDATA">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="s_axi_neuron_io_WSTRB" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_WSTRB">
+        <PORT DIR="I" LEFT="3" NAME="s_axi_neuron_io_WSTRB" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_WSTRB">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_neuron_io_WVALID" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_WVALID">
+        <PORT DIR="I" NAME="s_axi_neuron_io_WVALID" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_WVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_neuron_io_WREADY" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_WREADY">
+        <PORT DIR="O" NAME="s_axi_neuron_io_WREADY" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_WREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="s_axi_neuron_io_BRESP" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_BRESP">
+        <PORT DIR="O" LEFT="1" NAME="s_axi_neuron_io_BRESP" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_BRESP">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_neuron_io_BVALID" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_BVALID">
+        <PORT DIR="O" NAME="s_axi_neuron_io_BVALID" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_BVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_neuron_io_BREADY" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_BREADY">
+        <PORT DIR="I" NAME="s_axi_neuron_io_BREADY" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_BREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="6" NAME="s_axi_neuron_io_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_ARADDR">
+        <PORT DIR="I" LEFT="6" NAME="s_axi_neuron_io_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_ARADDR">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_neuron_io_ARVALID" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_ARVALID">
+        <PORT DIR="I" NAME="s_axi_neuron_io_ARVALID" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_ARVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_neuron_io_ARREADY" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_ARREADY">
+        <PORT DIR="O" NAME="s_axi_neuron_io_ARREADY" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_ARREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="s_axi_neuron_io_RDATA" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_RDATA">
+        <PORT DIR="O" LEFT="31" NAME="s_axi_neuron_io_RDATA" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_RDATA">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="s_axi_neuron_io_RRESP" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_RRESP">
+        <PORT DIR="O" LEFT="1" NAME="s_axi_neuron_io_RRESP" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_RRESP">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_neuron_io_RVALID" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_RVALID">
+        <PORT DIR="O" NAME="s_axi_neuron_io_RVALID" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_RVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_neuron_io_RREADY" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_RREADY">
+        <PORT DIR="I" NAME="s_axi_neuron_io_RREADY" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_RREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_AXI_rready"/>
           </CONNECTIONS>
@@ -1283,7 +1287,11 @@
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="interrupt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>
+        <PORT DIR="O" NAME="interrupt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="neuronInitAndCompute3_interrupt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="In0"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="ps7_0_axi_periph_M02_AXI" DATAWIDTH="32" NAME="s_axi_neuron_io" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -1376,7 +1384,7 @@
         <PARAMETER NAME="C_S_AXI_HP3_DATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_M_AXI_GP0_THREAD_ID_WIDTH" VALUE="12"/>
         <PARAMETER NAME="C_M_AXI_GP1_THREAD_ID_WIDTH" VALUE="12"/>
-        <PARAMETER NAME="C_NUM_F2P_INTR_INPUTS" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_F2P_INTR_INPUTS" VALUE="2"/>
         <PARAMETER NAME="C_IRQ_F2P_MODE" VALUE="DIRECT"/>
         <PARAMETER NAME="C_DQ_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_DQS_WIDTH" VALUE="4"/>
@@ -1679,7 +1687,7 @@
         <PARAMETER NAME="PCW_USE_CR_FABRIC" VALUE="1"/>
         <PARAMETER NAME="PCW_USE_AXI_FABRIC_IDLE" VALUE="0"/>
         <PARAMETER NAME="PCW_USE_DDR_BYPASS" VALUE="0"/>
-        <PARAMETER NAME="PCW_USE_FABRIC_INTERRUPT" VALUE="0"/>
+        <PARAMETER NAME="PCW_USE_FABRIC_INTERRUPT" VALUE="1"/>
         <PARAMETER NAME="PCW_USE_PROC_EVENT_BUS" VALUE="0"/>
         <PARAMETER NAME="PCW_USE_EXPANDED_IOP" VALUE="0"/>
         <PARAMETER NAME="PCW_USE_HIGH_OCM" VALUE="0"/>
@@ -1718,7 +1726,7 @@
         <PARAMETER NAME="PCW_S_AXI_HP2_DATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="PCW_S_AXI_HP3_ID_WIDTH" VALUE="6"/>
         <PARAMETER NAME="PCW_S_AXI_HP3_DATA_WIDTH" VALUE="64"/>
-        <PARAMETER NAME="PCW_NUM_F2P_INTR_INPUTS" VALUE="1"/>
+        <PARAMETER NAME="PCW_NUM_F2P_INTR_INPUTS" VALUE="2"/>
         <PARAMETER NAME="PCW_EN_DDR" VALUE="1"/>
         <PARAMETER NAME="PCW_EN_SMC" VALUE="0"/>
         <PARAMETER NAME="PCW_EN_QSPI" VALUE="1"/>
@@ -1787,7 +1795,7 @@
         <PARAMETER NAME="PCW_P2F_SPI1_INTR" VALUE="0"/>
         <PARAMETER NAME="PCW_P2F_UART1_INTR" VALUE="0"/>
         <PARAMETER NAME="PCW_P2F_CAN1_INTR" VALUE="0"/>
-        <PARAMETER NAME="PCW_IRQ_F2P_INTR" VALUE="0"/>
+        <PARAMETER NAME="PCW_IRQ_F2P_INTR" VALUE="1"/>
         <PARAMETER NAME="PCW_IRQ_F2P_MODE" VALUE="DIRECT"/>
         <PARAMETER NAME="PCW_CORE0_FIQ_INTR" VALUE="0"/>
         <PARAMETER NAME="PCW_CORE0_IRQ_INTR" VALUE="0"/>
@@ -2476,19 +2484,24 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_AXI_rdata"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="1" NAME="IRQ_F2P" RIGHT="0" SENSITIVITY="LEVEL_HIGH:LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="xlconcat_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="FCLK_CLK0" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="switches" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="leds" PORT="s_axi_aclk"/>
-            <CONNECTION INSTANCE="neuronInitAndCompute3_0" PORT="ap_clk"/>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="ap_clk"/>
+            <CONNECTION INSTANCE="neuron3" PORT="ap_clk"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M01_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_ACLK"/>
-            <CONNECTION INSTANCE="neuronInitAndCompute3HardCoded_0" PORT="ap_clk"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_ACLK"/>
           </CONNECTIONS>
         </PORT>
@@ -2647,14 +2660,14 @@
       <MEMORYMAP>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x41200000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4120FFFF" INSTANCE="switches" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x41210000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4121FFFF" INSTANCE="leds" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
-        <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_S_AXI_NEURON_IO_BASEADDR" BASEVALUE="0x43C00000" HIGHNAME="C_S_AXI_NEURON_IO_HIGHADDR" HIGHVALUE="0x43C0FFFF" INSTANCE="neuronInitAndCompute3_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="s_axi_neuron_io"/>
-        <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_S_AXI_NEURON_HARD_IO_BASEADDR" BASEVALUE="0x43C10000" HIGHNAME="C_S_AXI_NEURON_HARD_IO_HIGHADDR" HIGHVALUE="0x43C1FFFF" INSTANCE="neuronInitAndCompute3HardCoded_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="s_axi_neuron_hard_io"/>
+        <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_S_AXI_NEURON_IO_BASEADDR" BASEVALUE="0x43C00000" HIGHNAME="C_S_AXI_NEURON_IO_HIGHADDR" HIGHVALUE="0x43C0FFFF" INSTANCE="neuronInitAndCompute3" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="s_axi_neuron_io"/>
+        <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_S_AXI_NEURON_HARD_IO_BASEADDR" BASEVALUE="0x43C10000" HIGHNAME="C_S_AXI_NEURON_HARD_IO_HIGHADDR" HIGHVALUE="0x43C1FFFF" INSTANCE="neuron3" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="s_axi_neuron_hard_io"/>
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="switches"/>
         <PERIPHERAL INSTANCE="leds"/>
-        <PERIPHERAL INSTANCE="neuronInitAndCompute3_0"/>
-        <PERIPHERAL INSTANCE="neuronInitAndCompute3HardCoded_0"/>
+        <PERIPHERAL INSTANCE="neuronInitAndCompute3"/>
+        <PERIPHERAL INSTANCE="neuron3"/>
       </PERIPHERALS>
     </MODULE>
     <MODULE FULLNAME="/ps7_0_axi_periph" HWVERSION="2.1" INSTANCE="ps7_0_axi_periph" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axi_interconnect" VLNV="xilinx.com:ip:axi_interconnect:2.1">
@@ -3030,6 +3043,16 @@
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="M03_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M03_ARESETN" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="S00_AXI_arvalid" SIGIS="undef" SIGNAME="processing_system7_0_M_AXI_GP0_ARVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARVALID"/>
@@ -3390,186 +3413,174 @@
             <CONNECTION INSTANCE="leds" PORT="s_axi_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M02_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_AWADDR">
+        <PORT DIR="O" LEFT="31" NAME="M02_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_AWADDR">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3_0" PORT="s_axi_neuron_io_AWADDR"/>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="s_axi_neuron_io_AWADDR"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M02_AXI_awvalid" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_AWVALID">
+        <PORT DIR="O" NAME="M02_AXI_awvalid" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_AWVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3_0" PORT="s_axi_neuron_io_AWVALID"/>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="s_axi_neuron_io_AWVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M02_AXI_awready" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_AWREADY">
+        <PORT DIR="I" NAME="M02_AXI_awready" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_AWREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3_0" PORT="s_axi_neuron_io_AWREADY"/>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="s_axi_neuron_io_AWREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M02_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_WDATA">
+        <PORT DIR="O" LEFT="31" NAME="M02_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_WDATA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3_0" PORT="s_axi_neuron_io_WDATA"/>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="s_axi_neuron_io_WDATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M02_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_WSTRB">
+        <PORT DIR="O" LEFT="3" NAME="M02_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_WSTRB">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3_0" PORT="s_axi_neuron_io_WSTRB"/>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="s_axi_neuron_io_WSTRB"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M02_AXI_wvalid" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_WVALID">
+        <PORT DIR="O" NAME="M02_AXI_wvalid" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_WVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3_0" PORT="s_axi_neuron_io_WVALID"/>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="s_axi_neuron_io_WVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M02_AXI_wready" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_WREADY">
+        <PORT DIR="I" NAME="M02_AXI_wready" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_WREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3_0" PORT="s_axi_neuron_io_WREADY"/>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="s_axi_neuron_io_WREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M02_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_BRESP">
+        <PORT DIR="I" LEFT="1" NAME="M02_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_BRESP">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3_0" PORT="s_axi_neuron_io_BRESP"/>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="s_axi_neuron_io_BRESP"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M02_AXI_bvalid" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_BVALID">
+        <PORT DIR="I" NAME="M02_AXI_bvalid" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_BVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3_0" PORT="s_axi_neuron_io_BVALID"/>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="s_axi_neuron_io_BVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M02_AXI_bready" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_BREADY">
+        <PORT DIR="O" NAME="M02_AXI_bready" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_BREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3_0" PORT="s_axi_neuron_io_BREADY"/>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="s_axi_neuron_io_BREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M02_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_ARADDR">
+        <PORT DIR="O" LEFT="31" NAME="M02_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_ARADDR">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3_0" PORT="s_axi_neuron_io_ARADDR"/>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="s_axi_neuron_io_ARADDR"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M02_AXI_arvalid" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_ARVALID">
+        <PORT DIR="O" NAME="M02_AXI_arvalid" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_ARVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3_0" PORT="s_axi_neuron_io_ARVALID"/>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="s_axi_neuron_io_ARVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M02_AXI_arready" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_ARREADY">
+        <PORT DIR="I" NAME="M02_AXI_arready" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_ARREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3_0" PORT="s_axi_neuron_io_ARREADY"/>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="s_axi_neuron_io_ARREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M02_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_RDATA">
+        <PORT DIR="I" LEFT="31" NAME="M02_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_RDATA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3_0" PORT="s_axi_neuron_io_RDATA"/>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="s_axi_neuron_io_RDATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M02_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_RRESP">
+        <PORT DIR="I" LEFT="1" NAME="M02_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_RRESP">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3_0" PORT="s_axi_neuron_io_RRESP"/>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="s_axi_neuron_io_RRESP"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M02_AXI_rvalid" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_RVALID">
+        <PORT DIR="I" NAME="M02_AXI_rvalid" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_RVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3_0" PORT="s_axi_neuron_io_RVALID"/>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="s_axi_neuron_io_RVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M02_AXI_rready" SIGIS="undef" SIGNAME="neuronInitAndCompute3_0_s_axi_neuron_io_RREADY">
+        <PORT DIR="O" NAME="M02_AXI_rready" SIGIS="undef" SIGNAME="neuronInitAndCompute3_s_axi_neuron_io_RREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3_0" PORT="s_axi_neuron_io_RREADY"/>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="s_axi_neuron_io_RREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M03_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+        <PORT DIR="O" LEFT="31" NAME="M03_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_AWADDR">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+            <CONNECTION INSTANCE="neuron3" PORT="s_axi_neuron_hard_io_AWADDR"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M03_ARESETN" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
+        <PORT DIR="O" NAME="M03_AXI_awvalid" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_AWVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
+            <CONNECTION INSTANCE="neuron3" PORT="s_axi_neuron_hard_io_AWVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M03_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_AWADDR">
+        <PORT DIR="I" NAME="M03_AXI_awready" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_AWREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3HardCoded_0" PORT="s_axi_neuron_hard_io_AWADDR"/>
+            <CONNECTION INSTANCE="neuron3" PORT="s_axi_neuron_hard_io_AWREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M03_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_awvalid" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_AWVALID">
+        <PORT DIR="O" LEFT="31" NAME="M03_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_WDATA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3HardCoded_0" PORT="s_axi_neuron_hard_io_AWVALID"/>
+            <CONNECTION INSTANCE="neuron3" PORT="s_axi_neuron_hard_io_WDATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M03_AXI_awready" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_AWREADY">
+        <PORT DIR="O" LEFT="3" NAME="M03_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_WSTRB">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3HardCoded_0" PORT="s_axi_neuron_hard_io_AWREADY"/>
+            <CONNECTION INSTANCE="neuron3" PORT="s_axi_neuron_hard_io_WSTRB"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M03_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_WDATA">
+        <PORT DIR="O" NAME="M03_AXI_wvalid" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_WVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3HardCoded_0" PORT="s_axi_neuron_hard_io_WDATA"/>
+            <CONNECTION INSTANCE="neuron3" PORT="s_axi_neuron_hard_io_WVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M03_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_WSTRB">
+        <PORT DIR="I" NAME="M03_AXI_wready" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_WREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3HardCoded_0" PORT="s_axi_neuron_hard_io_WSTRB"/>
+            <CONNECTION INSTANCE="neuron3" PORT="s_axi_neuron_hard_io_WREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M03_AXI_wvalid" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_WVALID">
+        <PORT DIR="I" LEFT="1" NAME="M03_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_BRESP">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3HardCoded_0" PORT="s_axi_neuron_hard_io_WVALID"/>
+            <CONNECTION INSTANCE="neuron3" PORT="s_axi_neuron_hard_io_BRESP"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M03_AXI_wready" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_WREADY">
+        <PORT DIR="I" NAME="M03_AXI_bvalid" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_BVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3HardCoded_0" PORT="s_axi_neuron_hard_io_WREADY"/>
+            <CONNECTION INSTANCE="neuron3" PORT="s_axi_neuron_hard_io_BVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M03_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_BRESP">
+        <PORT DIR="O" NAME="M03_AXI_bready" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_BREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3HardCoded_0" PORT="s_axi_neuron_hard_io_BRESP"/>
+            <CONNECTION INSTANCE="neuron3" PORT="s_axi_neuron_hard_io_BREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M03_AXI_bvalid" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_BVALID">
+        <PORT DIR="O" LEFT="31" NAME="M03_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_ARADDR">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3HardCoded_0" PORT="s_axi_neuron_hard_io_BVALID"/>
+            <CONNECTION INSTANCE="neuron3" PORT="s_axi_neuron_hard_io_ARADDR"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M03_AXI_bready" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_BREADY">
+        <PORT DIR="O" NAME="M03_AXI_arvalid" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_ARVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3HardCoded_0" PORT="s_axi_neuron_hard_io_BREADY"/>
+            <CONNECTION INSTANCE="neuron3" PORT="s_axi_neuron_hard_io_ARVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M03_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_ARADDR">
+        <PORT DIR="I" NAME="M03_AXI_arready" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_ARREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3HardCoded_0" PORT="s_axi_neuron_hard_io_ARADDR"/>
+            <CONNECTION INSTANCE="neuron3" PORT="s_axi_neuron_hard_io_ARREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M03_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_arvalid" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_ARVALID">
+        <PORT DIR="I" LEFT="31" NAME="M03_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_RDATA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3HardCoded_0" PORT="s_axi_neuron_hard_io_ARVALID"/>
+            <CONNECTION INSTANCE="neuron3" PORT="s_axi_neuron_hard_io_RDATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M03_AXI_arready" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_ARREADY">
+        <PORT DIR="I" LEFT="1" NAME="M03_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_RRESP">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3HardCoded_0" PORT="s_axi_neuron_hard_io_ARREADY"/>
+            <CONNECTION INSTANCE="neuron3" PORT="s_axi_neuron_hard_io_RRESP"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M03_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_RDATA">
+        <PORT DIR="I" NAME="M03_AXI_rvalid" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_RVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3HardCoded_0" PORT="s_axi_neuron_hard_io_RDATA"/>
+            <CONNECTION INSTANCE="neuron3" PORT="s_axi_neuron_hard_io_RVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M03_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_RRESP">
+        <PORT DIR="O" NAME="M03_AXI_rready" SIGIS="undef" SIGNAME="neuron3_s_axi_neuron_hard_io_RREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3HardCoded_0" PORT="s_axi_neuron_hard_io_RRESP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M03_AXI_rvalid" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_RVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3HardCoded_0" PORT="s_axi_neuron_hard_io_RVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M03_AXI_rready" SIGIS="undef" SIGNAME="neuronInitAndCompute3HardCoded_0_s_axi_neuron_hard_io_RREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="neuronInitAndCompute3HardCoded_0" PORT="s_axi_neuron_hard_io_RREADY"/>
+            <CONNECTION INSTANCE="neuron3" PORT="s_axi_neuron_hard_io_RREADY"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -3682,7 +3693,6 @@
         <BUSINTERFACE BUSNAME="ps7_0_axi_periph_M03_AXI" DATAWIDTH="32" NAME="M03_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M03_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWPROT" PHYSICAL="M03_AXI_awprot"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M03_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M03_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M03_AXI_wdata"/>
@@ -3693,7 +3703,6 @@
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M03_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M03_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M03_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARPROT" PHYSICAL="M03_AXI_arprot"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M03_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M03_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M03_AXI_rdata"/>
@@ -3749,12 +3758,12 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="switches" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="leds" PORT="s_axi_aresetn"/>
-            <CONNECTION INSTANCE="neuronInitAndCompute3_0" PORT="ap_rst_n"/>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="ap_rst_n"/>
+            <CONNECTION INSTANCE="neuron3" PORT="ap_rst_n"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M01_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_ARESETN"/>
-            <CONNECTION INSTANCE="neuronInitAndCompute3HardCoded_0" PORT="ap_rst_n"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_ARESETN"/>
           </CONNECTIONS>
         </PORT>
@@ -4111,6 +4120,65 @@
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/xlconcat_0" HWVERSION="2.1" INSTANCE="xlconcat_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="IN0_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN1_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN2_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN3_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN4_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN5_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN6_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN7_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN8_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN9_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN10_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN11_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN12_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN13_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN14_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN15_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN16_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN17_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN18_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN19_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN20_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN21_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN22_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN23_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN24_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN25_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN26_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN27_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN28_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN29_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN30_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN31_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="dout_width" VALUE="2"/>
+        <PARAMETER NAME="NUM_PORTS" VALUE="2"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_xlconcat_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="neuronInitAndCompute3_interrupt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="neuronInitAndCompute3" PORT="interrupt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="neuron3_interrupt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="neuron3" PORT="interrupt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="IRQ_F2P"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
     </MODULE>
   </MODULES>
 

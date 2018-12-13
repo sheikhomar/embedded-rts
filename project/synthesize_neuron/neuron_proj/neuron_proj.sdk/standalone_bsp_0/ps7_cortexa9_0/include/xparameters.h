@@ -232,6 +232,44 @@
 
 /******************************************************************/
 
+/* Definitions for driver NEURONINITANDCOMPUTE3 */
+#define XPAR_XNEURONINITANDCOMPUTE3_NUM_INSTANCES 1
+
+/* Definitions for peripheral NEURONINITANDCOMPUTE3 */
+#define XPAR_NEURONINITANDCOMPUTE3_DEVICE_ID 0
+#define XPAR_NEURONINITANDCOMPUTE3_S_AXI_NEURON_IO_BASEADDR 0x43C00000
+#define XPAR_NEURONINITANDCOMPUTE3_S_AXI_NEURON_IO_HIGHADDR 0x43C0FFFF
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral NEURONINITANDCOMPUTE3 */
+#define XPAR_XNEURONINITANDCOMPUTE3_0_DEVICE_ID XPAR_NEURONINITANDCOMPUTE3_DEVICE_ID
+#define XPAR_XNEURONINITANDCOMPUTE3_0_S_AXI_NEURON_IO_BASEADDR 0x43C00000
+#define XPAR_XNEURONINITANDCOMPUTE3_0_S_AXI_NEURON_IO_HIGHADDR 0x43C0FFFF
+
+
+/******************************************************************/
+
+/* Definitions for driver NEURONINITANDCOMPUTE3HARDCODED */
+#define XPAR_XNEURONINITANDCOMPUTE3HARDCODED_NUM_INSTANCES 1
+
+/* Definitions for peripheral NEURON3 */
+#define XPAR_NEURON3_DEVICE_ID 0
+#define XPAR_NEURON3_S_AXI_NEURON_HARD_IO_BASEADDR 0x43C10000
+#define XPAR_NEURON3_S_AXI_NEURON_HARD_IO_HIGHADDR 0x43C1FFFF
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral NEURON3 */
+#define XPAR_XNEURONINITANDCOMPUTE3HARDCODED_0_DEVICE_ID XPAR_NEURON3_DEVICE_ID
+#define XPAR_XNEURONINITANDCOMPUTE3HARDCODED_0_S_AXI_NEURON_HARD_IO_BASEADDR 0x43C10000
+#define XPAR_XNEURONINITANDCOMPUTE3HARDCODED_0_S_AXI_NEURON_HARD_IO_HIGHADDR 0x43C1FFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver QSPIPS */
 #define XPAR_XQSPIPS_NUM_INSTANCES 1
 
@@ -252,6 +290,16 @@
 #define XPAR_XQSPIPS_0_QSPI_CLK_FREQ_HZ 200000000
 #define XPAR_XQSPIPS_0_QSPI_MODE 0
 
+
+/******************************************************************/
+
+/* Definitions for Fabric interrupts connected to ps7_scugic_0 */
+#define XPAR_FABRIC_NEURONINITANDCOMPUTE3_INTERRUPT_INTR 61U
+#define XPAR_FABRIC_NEURON3_INTERRUPT_INTR 62U
+
+/******************************************************************/
+
+/* Canonical definitions for Fabric interrupts connected to ps7_scugic_0 */
 
 /******************************************************************/
 
