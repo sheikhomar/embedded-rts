@@ -25,23 +25,23 @@ Decimal inputData[INPUT_SIZE] = { -0.3, 0.5, .03 };
 
 
 template <typename Fn>
-void runBenchmark(XScuTimer *timer, size_t numIterations, Fn func) {
+void runBenchmark(XScuTimer *timerPtr, size_t numIterations, Fn func) {
 
 	u32 timerVals[numIterations];
 
-	XScuTimer_LoadTimer(timer, TIMER_START_VALUE);
+	XScuTimer_LoadTimer(timerPtr, TIMER_START_VALUE);
 
     std::cout << "Running benchmark for " << numIterations << " iterations..." << std::endl;
 
     for (size_t i = 0; i < numIterations; i++) {
 
-        XScuTimer_Start(timer);
-		u32 startCount = XScuTimer_GetCounterValue(timer);
+        XScuTimer_Start(timerPtr);
+		u32 startCount = XScuTimer_GetCounterValue(timerPtr);
 
 		func();
 
-		u32 endCount = XScuTimer_GetCounterValue(timer);
-		XScuTimer_Stop(timer);
+		u32 endCount = XScuTimer_GetCounterValue(timerPtr);
+		XScuTimer_Stop(timerPtr);
 		timerVals[i] = startCount - endCount;
 	}
 
@@ -114,7 +114,6 @@ void initNeuron() {
 
 void hlsNeuronISR(void *InstancePtr)
 {
-	std::cout << "hlsNeuronISR!" << std::endl;
 	XNeuroninitandcompute3hardcoded *pAccelerator =	(XNeuroninitandcompute3hardcoded *) InstancePtr;
 
 	// clear the local interrupt
@@ -164,10 +163,8 @@ void benchmarkHwNeuron(size_t numIter, XScuTimer* timerPtr) {
 	XNeuroninitandcompute3hardcoded_Start(&hlsNeuron);
 
 	while(!resultAvailHlsNeuron);
-	u64 result = XNeuroninitandcompute3hardcoded_Get_output_V(&hlsNeuron);
-	u32 result2 = XNeuroninitandcompute3hardcoded_Get_output_V_vld(&hlsNeuron);
-	std::cout << "NeuronHLS result:" << result << std::endl;
-	std::cout << "NeuronHLS result2:" << result2 << std::endl;
+
+	std::cout << "NeuronHLS test result:" << XNeuroninitandcompute3hardcoded_Get_output_V(&hlsNeuron) << std::endl;
 
 	runBenchmark(timerPtr, numIter, [&offset, &dummyData]() {
 		XNeuroninitandcompute3hardcoded_Write_inputData_V_Words(&hlsNeuron,	offset, dummyData, INPUT_SIZE);
@@ -177,6 +174,36 @@ void benchmarkHwNeuron(size_t numIter, XScuTimer* timerPtr) {
 		XNeuroninitandcompute3hardcoded_Start(&hlsNeuron);
 
 		while(!resultAvailHlsNeuron);
+		XNeuroninitandcompute3hardcoded_Get_output_V(&hlsNeuron); // toss away result
+	});
+}
+
+void benchmarkHwNeuronExclWait(size_t numIter, XScuTimer* timerPtr) {
+	std::cout << "HW weights hardcoded, compute per cycle without busy-wait" << std::endl;
+
+	int dummyData[INPUT_SIZE] = { 42, 43, 44 };
+	int offset = 0;
+
+	XNeuroninitandcompute3hardcoded_Write_inputData_V_Words(&hlsNeuron,	offset, dummyData, INPUT_SIZE);
+
+	resultAvailHlsNeuron = 0;
+
+	XNeuroninitandcompute3hardcoded_Start(&hlsNeuron);
+
+	while(!resultAvailHlsNeuron);
+
+	std::cout << "NeuronHLS test result:" << XNeuroninitandcompute3hardcoded_Get_output_V(&hlsNeuron) << std::endl;
+
+	runBenchmark(timerPtr, numIter, [&offset, &dummyData, &timerPtr]() {
+		XNeuroninitandcompute3hardcoded_Write_inputData_V_Words(&hlsNeuron,	offset, dummyData, INPUT_SIZE);
+
+		resultAvailHlsNeuron = 0;
+
+		XNeuroninitandcompute3hardcoded_Start(&hlsNeuron);
+
+		XScuTimer_Stop(timerPtr);	// was started by runBenchmark
+		while(!resultAvailHlsNeuron);
+		XScuTimer_Start(timerPtr); 	// will be stopped by runBenchmark
 		XNeuroninitandcompute3hardcoded_Get_output_V(&hlsNeuron); // toss away result
 	});
 }
@@ -198,7 +225,7 @@ int main(void) {
     u8 isRunning = TRUE;
     while (isRunning) {
     	std::cout 	<< "-- Please choose a 3-input neuron implementation to benchmark --" << std::endl
-    				<< "1 (SW), 2 (HW, weights passed), 3 (HW, hard-coded weights), 9 (Exit)" << std::endl
+    				<< "1 (SW), 2 (HW, weights passed), 3 (HW, hard-coded weights), 4 (HW, hard-coded weight excluding busy-wait), 9 (Exit)" << std::endl
     				<< "# " << std::endl;
 
         char8 userInput;
@@ -208,8 +235,10 @@ int main(void) {
 			benchmarkSwNeuronWithInit(numIter, &timer);
 		} else if (userInput == '2') {
 			benchmarkSwNeuron(numIter, &timer);
-		}  else if (userInput == '3') {
+		} else if (userInput == '3') {
 			benchmarkHwNeuron(numIter, &timer);
+        } else if (userInput == '4') {
+        	benchmarkHwNeuronExclWait(numIter, &timer);
         } else if (userInput == '9') {
            isRunning = FALSE;
         } else {
