@@ -1,0 +1,815 @@
+
+
+================================================================
+== Vivado HLS Report for 'digitRecognizer'
+================================================================
+* Date:           Tue Dec 18 10:44:47 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        nn_hls
+* Solution:       solution4
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      6.79|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  178268|  178268|  178269|  178269|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------+--------+--------+----------+-----------+-----------+------+----------+
+        |            |     Latency     | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name |   min  |   max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------+--------+--------+----------+-----------+-----------+------+----------+
+        |- ih_loop   |  175936|  175936|      5498|          -|          -|    32|    no    |
+        | + hn_loop  |    5493|    5493|        13|          7|          1|   784|    yes   |
+        |- ho_loop   |    2330|    2330|       233|          -|          -|    10|    no    |
+        | + on_loop  |     229|     229|        13|          7|          1|    32|    yes   |
+        +------------+--------+--------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 7, depth = 13
+  * Pipeline-1: initiation interval (II) = 7, depth = 13
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 34
+* Pipeline: 2
+  Pipeline-0: II = 7, D = 13, States = { 4 5 6 7 8 9 10 11 12 13 14 15 16 }
+  Pipeline-1: II = 7, D = 13, States = { 21 22 23 24 25 26 27 28 29 30 31 32 33 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond3)
+	19  / (exitcond3)
+3 --> 
+	4  / true
+4 --> 
+	17  / (exitcond2)
+	5  / (!exitcond2)
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	4  / true
+17 --> 
+	18  / true
+18 --> 
+	2  / true
+19 --> 
+	20  / (!exitcond1)
+20 --> 
+	21  / true
+21 --> 
+	34  / (exitcond)
+	22  / (!exitcond)
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	21  / true
+34 --> 
+	19  / true
+* FSM state operations: 
+
+ <State 1>: 1.59ns
+ST_1: StgValue_35 (5)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap([784 x float]* %inputData) nounwind, !map !20
+
+ST_1: StgValue_36 (6)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap([10 x float]* %output_r) nounwind, !map !26
+
+ST_1: StgValue_37 (7)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecTopModule([16 x i8]* @digitRecognizer_str) nounwind
+
+ST_1: hiddenOut (8)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:6
+:3  %hiddenOut = alloca [32 x float], align 4
+
+ST_1: empty (9)  [1/1] 0.00ns
+:4  %empty = call i32 (...)* @_ssdm_op_SpecMemCore([10 x float]* %output_r, [1 x i8]* @p_str8, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str8, i32 -1, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8) nounwind
+
+ST_1: StgValue_40 (10)  [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecInterface([10 x float]* %output_r, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [10 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: empty_5 (11)  [1/1] 0.00ns
+:6  %empty_5 = call i32 (...)* @_ssdm_op_SpecMemCore([784 x float]* %inputData, [1 x i8]* @p_str7, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str7, i32 -1, [1 x i8]* @p_str7, [1 x i8]* @p_str7, [1 x i8]* @p_str7, [1 x i8]* @p_str7, [1 x i8]* @p_str7) nounwind
+
+ST_1: StgValue_42 (12)  [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecInterface([784 x float]* %inputData, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [10 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_43 (13)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:4
+:8  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [10 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_44 (14)  [1/1] 1.59ns  loc: nn_hls/src/digitRecognizer.cpp:9
+:9  br label %1
+
+
+ <State 2>: 3.88ns
+ST_2: o (16)  [1/1] 0.00ns
+:0  %o = phi i6 [ 0, %0 ], [ %o_2, %5 ]
+
+ST_2: phi_mul (17)  [1/1] 0.00ns
+:1  %phi_mul = phi i15 [ 0, %0 ], [ %next_mul, %5 ]
+
+ST_2: phi_mul_cast (18)  [1/1] 0.00ns
+:2  %phi_mul_cast = zext i15 %phi_mul to i32
+
+ST_2: next_mul (19)  [1/1] 2.35ns
+:3  %next_mul = add i15 %phi_mul, 785
+
+ST_2: exitcond3 (20)  [1/1] 3.88ns  loc: nn_hls/src/digitRecognizer.cpp:9
+:4  %exitcond3 = icmp eq i6 %o, -32
+
+ST_2: o_2 (21)  [1/1] 2.31ns  loc: nn_hls/src/digitRecognizer.cpp:9
+:5  %o_2 = add i6 %o, 1
+
+ST_2: StgValue_51 (22)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:9
+:6  br i1 %exitcond3, label %.preheader.preheader, label %2
+
+ST_2: inputToHiddenWeights (28)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:11
+:4  %inputToHiddenWeights = getelementptr [25120 x float]* @inputToHiddenWeights, i32 0, i32 %phi_mul_cast
+
+ST_2: sum (29)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:11
+:5  %sum = load float* %inputToHiddenWeights, align 4
+
+ST_2: StgValue_54 (70)  [1/1] 1.59ns  loc: nn_hls/src/digitRecognizer.cpp:21
+.preheader.preheader:0  br label %.preheader
+
+
+ <State 3>: 4.84ns
+ST_3: empty_6 (24)  [1/1] 0.00ns
+:0  %empty_6 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32) nounwind
+
+ST_3: StgValue_56 (25)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:9
+:1  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str3) nounwind
+
+ST_3: tmp_6 (26)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:9
+:2  %tmp_6 = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str3) nounwind
+
+ST_3: tmp (27)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:11
+:3  %tmp = zext i6 %o to i32
+
+ST_3: sum (29)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:11
+:5  %sum = load float* %inputToHiddenWeights, align 4
+
+ST_3: StgValue_60 (30)  [1/1] 1.59ns  loc: nn_hls/src/digitRecognizer.cpp:12
+:6  br label %3
+
+
+ <State 4>: 5.61ns
+ST_4: i (32)  [1/1] 0.00ns
+:0  %i = phi i10 [ 1, %2 ], [ %i_2, %4 ]
+
+ST_4: sum1 (33)  [1/1] 0.00ns
+:1  %sum1 = phi float [ %sum, %2 ], [ %sum_2, %4 ]
+
+ST_4: exitcond2 (34)  [1/1] 3.02ns  loc: nn_hls/src/digitRecognizer.cpp:12
+:2  %exitcond2 = icmp eq i10 %i, -239
+
+ST_4: StgValue_64 (35)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:12
+:3  br i1 %exitcond2, label %5, label %4
+
+ST_4: tmp_5_cast (41)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:4  %tmp_5_cast = zext i10 %i to i15
+
+ST_4: tmp_16 (42)  [1/1] 2.35ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:5  %tmp_16 = add i15 %phi_mul, %tmp_5_cast
+
+ST_4: tmp_19_cast (43)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:6  %tmp_19_cast = zext i15 %tmp_16 to i32
+
+ST_4: inputToHiddenWeights_1 (44)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:7  %inputToHiddenWeights_1 = getelementptr [25120 x float]* @inputToHiddenWeights, i32 0, i32 %tmp_19_cast
+
+ST_4: inputToHiddenWeights_2 (45)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:8  %inputToHiddenWeights_2 = load float* %inputToHiddenWeights_1, align 4
+
+ST_4: sum2 (46)  [1/1] 2.32ns  loc: nn_hls/src/digitRecognizer.cpp:12
+:9  %sum2 = add i10 %i, -1
+
+ST_4: sum2_cast (47)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:12
+:10  %sum2_cast = zext i10 %sum2 to i32
+
+ST_4: inputData_addr (48)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:11  %inputData_addr = getelementptr [784 x float]* %inputData, i32 0, i32 %sum2_cast
+
+ST_4: inputData_load (49)  [2/2] 2.57ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:12  %inputData_load = load float* %inputData_addr, align 4
+
+ST_4: i_2 (53)  [1/1] 2.32ns  loc: nn_hls/src/digitRecognizer.cpp:12
+:16  %i_2 = add i10 %i, 1
+
+
+ <State 5>: 3.25ns
+ST_5: inputToHiddenWeights_2 (45)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:8  %inputToHiddenWeights_2 = load float* %inputToHiddenWeights_1, align 4
+
+ST_5: inputData_load (49)  [1/2] 2.57ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:12  %inputData_load = load float* %inputData_addr, align 4
+
+
+ <State 6>: 5.70ns
+ST_6: tmp_7 (50)  [4/4] 5.70ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:13  %tmp_7 = fmul float %inputToHiddenWeights_2, %inputData_load
+
+
+ <State 7>: 5.70ns
+ST_7: tmp_7 (50)  [3/4] 5.70ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:13  %tmp_7 = fmul float %inputToHiddenWeights_2, %inputData_load
+
+
+ <State 8>: 5.70ns
+ST_8: tmp_7 (50)  [2/4] 5.70ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:13  %tmp_7 = fmul float %inputToHiddenWeights_2, %inputData_load
+
+
+ <State 9>: 5.70ns
+ST_9: tmp_7 (50)  [1/4] 5.70ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:13  %tmp_7 = fmul float %inputToHiddenWeights_2, %inputData_load
+
+
+ <State 10>: 6.44ns
+ST_10: sum_2 (51)  [7/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:14  %sum_2 = fadd float %sum1, %tmp_7
+
+
+ <State 11>: 6.44ns
+ST_11: sum_2 (51)  [6/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:14  %sum_2 = fadd float %sum1, %tmp_7
+
+
+ <State 12>: 6.44ns
+ST_12: sum_2 (51)  [5/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:14  %sum_2 = fadd float %sum1, %tmp_7
+
+
+ <State 13>: 6.44ns
+ST_13: sum_2 (51)  [4/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:14  %sum_2 = fadd float %sum1, %tmp_7
+
+
+ <State 14>: 6.44ns
+ST_14: sum_2 (51)  [3/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:14  %sum_2 = fadd float %sum1, %tmp_7
+
+
+ <State 15>: 6.44ns
+ST_15: sum_2 (51)  [2/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:14  %sum_2 = fadd float %sum1, %tmp_7
+
+
+ <State 16>: 6.44ns
+ST_16: empty_7 (37)  [1/1] 0.00ns
+:0  %empty_7 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784) nounwind
+
+ST_16: StgValue_88 (38)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:1  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str4) nounwind
+
+ST_16: tmp_10 (39)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:2  %tmp_10 = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str4) nounwind
+
+ST_16: StgValue_90 (40)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:14
+:3  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
+
+ST_16: sum_2 (51)  [1/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:14  %sum_2 = fadd float %sum1, %tmp_7
+
+ST_16: empty_8 (52)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:15  %empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str4, i32 %tmp_10) nounwind
+
+ST_16: StgValue_93 (54)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:12
+:17  br label %3
+
+
+ <State 17>: 6.79ns
+ST_17: sum1_to_int (56)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:11
+:0  %sum1_to_int = bitcast float %sum1 to i32
+
+ST_17: tmp_2 (57)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:11
+:1  %tmp_2 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %sum1_to_int, i32 23, i32 30)
+
+ST_17: tmp_12 (58)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:11
+:2  %tmp_12 = trunc i32 %sum1_to_int to i23
+
+ST_17: notlhs (59)  [1/1] 2.91ns  loc: nn_hls/src/digitRecognizer.cpp:11
+:3  %notlhs = icmp ne i8 %tmp_2, -1
+
+ST_17: notrhs (60)  [1/1] 3.20ns  loc: nn_hls/src/digitRecognizer.cpp:11
+:4  %notrhs = icmp eq i23 %tmp_12, 0
+
+ST_17: tmp_14 (62)  [1/1] 6.79ns  loc: nn_hls/src/digitRecognizer.cpp:16
+:6  %tmp_14 = fcmp olt float %sum1, 0.000000e+00
+
+
+ <State 18>: 5.32ns
+ST_18: tmp_13 (61)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:11 (grouped into LUT with out node tmp_3)
+:5  %tmp_13 = or i1 %notrhs, %notlhs
+
+ST_18: tmp_15 (63)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:16 (grouped into LUT with out node tmp_3)
+:7  %tmp_15 = and i1 %tmp_13, %tmp_14
+
+ST_18: tmp_3 (64)  [1/1] 2.07ns  loc: nn_hls/src/digitRecognizer.cpp:16 (out node of the LUT)
+:8  %tmp_3 = select i1 %tmp_15, float 0.000000e+00, float %sum1
+
+ST_18: hiddenOut_addr (65)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:16
+:9  %hiddenOut_addr = getelementptr inbounds [32 x float]* %hiddenOut, i32 0, i32 %tmp
+
+ST_18: StgValue_104 (66)  [1/1] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:16
+:10  store float %tmp_3, float* %hiddenOut_addr, align 4
+
+ST_18: empty_9 (67)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:17
+:11  %empty_9 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str3, i32 %tmp_6) nounwind
+
+ST_18: StgValue_106 (68)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:9
+:12  br label %1
+
+
+ <State 19>: 5.58ns
+ST_19: o_1 (72)  [1/1] 0.00ns
+.preheader:0  %o_1 = phi i4 [ %o_3, %9 ], [ 0, %.preheader.preheader ]
+
+ST_19: exitcond1 (73)  [1/1] 3.10ns  loc: nn_hls/src/digitRecognizer.cpp:21
+.preheader:1  %exitcond1 = icmp eq i4 %o_1, -6
+
+ST_19: o_3 (74)  [1/1] 2.35ns  loc: nn_hls/src/digitRecognizer.cpp:21
+.preheader:2  %o_3 = add i4 %o_1, 1
+
+ST_19: StgValue_110 (75)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:21
+.preheader:3  br i1 %exitcond1, label %10, label %6
+
+ST_19: tmp_1_cast (81)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:21
+:4  %tmp_1_cast = zext i4 %o_1 to i10
+
+ST_19: tmp_s (82)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:21
+:5  %tmp_s = call i9 @_ssdm_op_BitConcatenate.i9.i4.i5(i4 %o_1, i5 0)
+
+ST_19: p_shl_cast (83)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:23
+:6  %p_shl_cast = zext i9 %tmp_s to i10
+
+ST_19: tmp_5 (84)  [1/1] 2.32ns  loc: nn_hls/src/digitRecognizer.cpp:23
+:7  %tmp_5 = add i10 %tmp_1_cast, %p_shl_cast
+
+ST_19: tmp_18_cast (85)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:23
+:8  %tmp_18_cast = zext i10 %tmp_5 to i32
+
+ST_19: hiddenToOutputWeight (86)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:23
+:9  %hiddenToOutputWeight = getelementptr [330 x float]* @hiddenToOutputWeight, i32 0, i32 %tmp_18_cast
+
+ST_19: sum_1 (87)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:23
+:10  %sum_1 = load float* %hiddenToOutputWeight, align 4
+
+ST_19: StgValue_118 (119)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:37
+:0  ret void
+
+
+ <State 20>: 4.84ns
+ST_20: empty_10 (77)  [1/1] 0.00ns
+:0  %empty_10 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind
+
+ST_20: StgValue_120 (78)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:21
+:1  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str5) nounwind
+
+ST_20: tmp_9 (79)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:21
+:2  %tmp_9 = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str5) nounwind
+
+ST_20: tmp_1 (80)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:23
+:3  %tmp_1 = zext i4 %o_1 to i32
+
+ST_20: sum_1 (87)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:23
+:10  %sum_1 = load float* %hiddenToOutputWeight, align 4
+
+ST_20: StgValue_124 (88)  [1/1] 1.59ns  loc: nn_hls/src/digitRecognizer.cpp:24
+:11  br label %7
+
+
+ <State 21>: 5.58ns
+ST_21: i_1 (90)  [1/1] 0.00ns
+:0  %i_1 = phi i6 [ 1, %6 ], [ %i_3, %8 ]
+
+ST_21: sum3 (91)  [1/1] 0.00ns
+:1  %sum3 = phi float [ %sum_1, %6 ], [ %sum_3, %8 ]
+
+ST_21: exitcond (92)  [1/1] 3.88ns  loc: nn_hls/src/digitRecognizer.cpp:24
+:2  %exitcond = icmp eq i6 %i_1, -31
+
+ST_21: StgValue_128 (93)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:24
+:3  br i1 %exitcond, label %9, label %8
+
+ST_21: tmp_cast (99)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:4  %tmp_cast = zext i6 %i_1 to i10
+
+ST_21: tmp_17 (100)  [1/1] 2.32ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:5  %tmp_17 = add i10 %tmp_5, %tmp_cast
+
+ST_21: tmp_20_cast (101)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:6  %tmp_20_cast = zext i10 %tmp_17 to i32
+
+ST_21: hiddenToOutputWeight_1 (102)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:7  %hiddenToOutputWeight_1 = getelementptr [330 x float]* @hiddenToOutputWeight, i32 0, i32 %tmp_20_cast
+
+ST_21: hiddenToOutputWeight_2 (103)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:8  %hiddenToOutputWeight_2 = load float* %hiddenToOutputWeight_1, align 4
+
+ST_21: tmp_4 (104)  [1/1] 2.31ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:9  %tmp_4 = add i6 %i_1, -1
+
+ST_21: tmp_4_cast (105)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:10  %tmp_4_cast = zext i6 %tmp_4 to i32
+
+ST_21: hiddenOut_addr_1 (106)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:11  %hiddenOut_addr_1 = getelementptr inbounds [32 x float]* %hiddenOut, i32 0, i32 %tmp_4_cast
+
+ST_21: hiddenOut_load (107)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:12  %hiddenOut_load = load float* %hiddenOut_addr_1, align 4
+
+ST_21: i_3 (111)  [1/1] 2.31ns  loc: nn_hls/src/digitRecognizer.cpp:24
+:16  %i_3 = add i6 %i_1, 1
+
+
+ <State 22>: 3.25ns
+ST_22: hiddenToOutputWeight_2 (103)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:8  %hiddenToOutputWeight_2 = load float* %hiddenToOutputWeight_1, align 4
+
+ST_22: hiddenOut_load (107)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:12  %hiddenOut_load = load float* %hiddenOut_addr_1, align 4
+
+
+ <State 23>: 5.70ns
+ST_23: tmp_8 (108)  [4/4] 5.70ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:13  %tmp_8 = fmul float %hiddenToOutputWeight_2, %hiddenOut_load
+
+
+ <State 24>: 5.70ns
+ST_24: tmp_8 (108)  [3/4] 5.70ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:13  %tmp_8 = fmul float %hiddenToOutputWeight_2, %hiddenOut_load
+
+
+ <State 25>: 5.70ns
+ST_25: tmp_8 (108)  [2/4] 5.70ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:13  %tmp_8 = fmul float %hiddenToOutputWeight_2, %hiddenOut_load
+
+
+ <State 26>: 5.70ns
+ST_26: tmp_8 (108)  [1/4] 5.70ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:13  %tmp_8 = fmul float %hiddenToOutputWeight_2, %hiddenOut_load
+
+
+ <State 27>: 6.44ns
+ST_27: sum_3 (109)  [7/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:14  %sum_3 = fadd float %sum3, %tmp_8
+
+
+ <State 28>: 6.44ns
+ST_28: sum_3 (109)  [6/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:14  %sum_3 = fadd float %sum3, %tmp_8
+
+
+ <State 29>: 6.44ns
+ST_29: sum_3 (109)  [5/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:14  %sum_3 = fadd float %sum3, %tmp_8
+
+
+ <State 30>: 6.44ns
+ST_30: sum_3 (109)  [4/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:14  %sum_3 = fadd float %sum3, %tmp_8
+
+
+ <State 31>: 6.44ns
+ST_31: sum_3 (109)  [3/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:14  %sum_3 = fadd float %sum3, %tmp_8
+
+
+ <State 32>: 6.44ns
+ST_32: sum_3 (109)  [2/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:14  %sum_3 = fadd float %sum3, %tmp_8
+
+
+ <State 33>: 6.44ns
+ST_33: empty_11 (95)  [1/1] 0.00ns
+:0  %empty_11 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32) nounwind
+
+ST_33: StgValue_152 (96)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:1  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str6) nounwind
+
+ST_33: tmp_11 (97)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:2  %tmp_11 = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str6) nounwind
+
+ST_33: StgValue_154 (98)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:26
+:3  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
+
+ST_33: sum_3 (109)  [1/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:14  %sum_3 = fadd float %sum3, %tmp_8
+
+ST_33: empty_12 (110)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:25
+:15  %empty_12 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str6, i32 %tmp_11) nounwind
+
+ST_33: StgValue_157 (112)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:24
+:17  br label %7
+
+
+ <State 34>: 2.32ns
+ST_34: output_addr (114)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:27
+:0  %output_addr = getelementptr [10 x float]* %output_r, i32 0, i32 %tmp_1
+
+ST_34: StgValue_159 (115)  [1/1] 2.32ns  loc: nn_hls/src/digitRecognizer.cpp:27
+:1  store float %sum3, float* %output_addr, align 4
+
+ST_34: empty_13 (116)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:30
+:2  %empty_13 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str5, i32 %tmp_9) nounwind
+
+ST_34: StgValue_161 (117)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:21
+:3  br label %.preheader
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('o') with incoming values : ('o', nn_hls/src/digitRecognizer.cpp:9) [16]  (1.59 ns)
+
+ <State 2>: 3.88ns
+The critical path consists of the following:
+	'phi' operation ('o') with incoming values : ('o', nn_hls/src/digitRecognizer.cpp:9) [16]  (0 ns)
+	'icmp' operation ('exitcond3', nn_hls/src/digitRecognizer.cpp:9) [20]  (3.88 ns)
+
+ <State 3>: 4.84ns
+The critical path consists of the following:
+	'load' operation ('sum', nn_hls/src/digitRecognizer.cpp:11) on array 'inputToHiddenWeights' [29]  (3.25 ns)
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', nn_hls/src/digitRecognizer.cpp:12) [32]  (1.59 ns)
+
+ <State 4>: 5.61ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', nn_hls/src/digitRecognizer.cpp:12) [32]  (0 ns)
+	'add' operation ('tmp_16', nn_hls/src/digitRecognizer.cpp:13) [42]  (2.35 ns)
+	'getelementptr' operation ('inputToHiddenWeights_1', nn_hls/src/digitRecognizer.cpp:13) [44]  (0 ns)
+	'load' operation ('inputToHiddenWeights_2', nn_hls/src/digitRecognizer.cpp:13) on array 'inputToHiddenWeights' [45]  (3.25 ns)
+
+ <State 5>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('inputToHiddenWeights_2', nn_hls/src/digitRecognizer.cpp:13) on array 'inputToHiddenWeights' [45]  (3.25 ns)
+
+ <State 6>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_7', nn_hls/src/digitRecognizer.cpp:13) [50]  (5.7 ns)
+
+ <State 7>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_7', nn_hls/src/digitRecognizer.cpp:13) [50]  (5.7 ns)
+
+ <State 8>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_7', nn_hls/src/digitRecognizer.cpp:13) [50]  (5.7 ns)
+
+ <State 9>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_7', nn_hls/src/digitRecognizer.cpp:13) [50]  (5.7 ns)
+
+ <State 10>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:13) [51]  (6.44 ns)
+
+ <State 11>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:13) [51]  (6.44 ns)
+
+ <State 12>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:13) [51]  (6.44 ns)
+
+ <State 13>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:13) [51]  (6.44 ns)
+
+ <State 14>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:13) [51]  (6.44 ns)
+
+ <State 15>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:13) [51]  (6.44 ns)
+
+ <State 16>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:13) [51]  (6.44 ns)
+
+ <State 17>: 6.79ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_14', nn_hls/src/digitRecognizer.cpp:16) [62]  (6.79 ns)
+
+ <State 18>: 5.32ns
+The critical path consists of the following:
+	'or' operation ('tmp_13', nn_hls/src/digitRecognizer.cpp:11) [61]  (0 ns)
+	'and' operation ('tmp_15', nn_hls/src/digitRecognizer.cpp:16) [63]  (0 ns)
+	'select' operation ('tmp_3', nn_hls/src/digitRecognizer.cpp:16) [64]  (2.07 ns)
+	'store' operation (nn_hls/src/digitRecognizer.cpp:16) of variable 'tmp_3', nn_hls/src/digitRecognizer.cpp:16 on array 'hiddenOut', nn_hls/src/digitRecognizer.cpp:6 [66]  (3.25 ns)
+
+ <State 19>: 5.58ns
+The critical path consists of the following:
+	'phi' operation ('o') with incoming values : ('o', nn_hls/src/digitRecognizer.cpp:21) [72]  (0 ns)
+	'add' operation ('tmp_5', nn_hls/src/digitRecognizer.cpp:23) [84]  (2.32 ns)
+	'getelementptr' operation ('hiddenToOutputWeight', nn_hls/src/digitRecognizer.cpp:23) [86]  (0 ns)
+	'load' operation ('sum', nn_hls/src/digitRecognizer.cpp:23) on array 'hiddenToOutputWeight' [87]  (3.25 ns)
+
+ <State 20>: 4.84ns
+The critical path consists of the following:
+	'load' operation ('sum', nn_hls/src/digitRecognizer.cpp:23) on array 'hiddenToOutputWeight' [87]  (3.25 ns)
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', nn_hls/src/digitRecognizer.cpp:24) [90]  (1.59 ns)
+
+ <State 21>: 5.58ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', nn_hls/src/digitRecognizer.cpp:24) [90]  (0 ns)
+	'add' operation ('tmp_17', nn_hls/src/digitRecognizer.cpp:25) [100]  (2.32 ns)
+	'getelementptr' operation ('hiddenToOutputWeight_1', nn_hls/src/digitRecognizer.cpp:25) [102]  (0 ns)
+	'load' operation ('hiddenToOutputWeight_2', nn_hls/src/digitRecognizer.cpp:25) on array 'hiddenToOutputWeight' [103]  (3.25 ns)
+
+ <State 22>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('hiddenToOutputWeight_2', nn_hls/src/digitRecognizer.cpp:25) on array 'hiddenToOutputWeight' [103]  (3.25 ns)
+
+ <State 23>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_8', nn_hls/src/digitRecognizer.cpp:25) [108]  (5.7 ns)
+
+ <State 24>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_8', nn_hls/src/digitRecognizer.cpp:25) [108]  (5.7 ns)
+
+ <State 25>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_8', nn_hls/src/digitRecognizer.cpp:25) [108]  (5.7 ns)
+
+ <State 26>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_8', nn_hls/src/digitRecognizer.cpp:25) [108]  (5.7 ns)
+
+ <State 27>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:25) [109]  (6.44 ns)
+
+ <State 28>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:25) [109]  (6.44 ns)
+
+ <State 29>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:25) [109]  (6.44 ns)
+
+ <State 30>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:25) [109]  (6.44 ns)
+
+ <State 31>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:25) [109]  (6.44 ns)
+
+ <State 32>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:25) [109]  (6.44 ns)
+
+ <State 33>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:25) [109]  (6.44 ns)
+
+ <State 34>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('output_addr', nn_hls/src/digitRecognizer.cpp:27) [114]  (0 ns)
+	'store' operation (nn_hls/src/digitRecognizer.cpp:27) of variable 'sum' on array 'output_r' [115]  (2.32 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

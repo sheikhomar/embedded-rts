@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="digitRecognizer" xd:componentRef="digitRecognizer" xd:initiationInterval="178269" xd:clockPeriod="8.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_digrec_io" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="inputData[]" xd:originalName="inputData" xd:direction="in" xd:interfaceRef="s_axi_digrec_io" xd:busTypeRef="axilite" xd:offset="0x1000" xd:arraySize="784" xd:dataWidth="32"/>
+  <xd:arg xd:name="output[]" xd:originalName="output" xd:direction="out" xd:interfaceRef="s_axi_digrec_io" xd:busTypeRef="axilite" xd:offset="0x2000" xd:arraySize="10" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="178268" xd:worst-case="178268" xd:average-case="178268"/>
+  <xd:resourceEstimates xd:LUT="1689" xd:FF="1396" xd:BRAM="70" xd:DSP="5"/>
+</xd:acceleratorMap>

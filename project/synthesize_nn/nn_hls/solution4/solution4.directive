@@ -1,0 +1,62 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="nn" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="inputData" positionalBoolean="4"/>
+                <option name="bundle" value="nn_io"/>
+            </pragma>
+        </directive>
+        <directive functionName="nn" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="output" positionalBoolean="4"/>
+                <option name="bundle" value="nn_io"/>
+            </pragma>
+        </directive>
+        <directive functionName="nn" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+                <option name="bundle" value="nn_io"/>
+            </pragma>
+        </directive>
+        <directive functionName="digitRecognizer" label="smt_loop" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="digitRecognizer" label="smo_loop" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="expApprox" label="approx_loop" functionLabel="exp_approx">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="digitRecognizer" label="hn_loop" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="digitRecognizer" label="on_loop" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="digitRecognizer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+                <option name="bundle" value="digrec_io"/>
+            </pragma>
+        </directive>
+        <directive functionName="digitRecognizer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="inputData" positionalBoolean="4"/>
+                <option name="bundle" value="digrec_io"/>
+            </pragma>
+        </directive>
+        <directive functionName="digitRecognizer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="output" positionalBoolean="4"/>
+                <option name="bundle" value="digrec_io"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+
