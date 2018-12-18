@@ -1,0 +1,643 @@
+
+
+================================================================
+== Vivado HLS Report for 'hn_loop_proc'
+================================================================
+* Date:           Tue Dec 18 11:03:20 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        nn_hls
+* Solution:       solution6
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      6.46|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  5495|  5495|  5495|  5495|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+------+------+----------+-----------+-----------+------+----------+
+        |           |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name |  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+------+------+----------+-----------+-----------+------+----------+
+        |- hn_loop  |  5493|  5493|        13|          7|          1|   784|    yes   |
+        +-----------+------+------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 7, depth = 13
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 15
+* Pipeline: 1
+  Pipeline-0: II = 7, D = 13, States = { 2 3 4 5 6 7 8 9 10 11 12 13 14 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	15  / (exitcond2_i_i_i_i)
+	3  / (!exitcond2_i_i_i_i)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	2  / true
+15 --> 
+* FSM state operations: 
+
+ <State 1>: 4.64ns
+ST_1: empty_9 (37)  [1/1] 0.00ns
+entry:0  %empty_9 = call i32 (...)* @_ssdm_op_SpecMemCore([784 x float]* %inputData, [1 x i8]* @p_str7, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str7, i32 -1, [1 x i8]* @p_str7, [1 x i8]* @p_str7, [1 x i8]* @p_str7, [1 x i8]* @p_str7, [1 x i8]* @p_str7)
+
+ST_1: load (38)  [1/1] 0.00ns
+entry:1  %load = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %empty)
+
+ST_1: StgValue_18 (39)  [1/1] 0.00ns
+entry:2  call void (...)* @_ssdm_op_SpecInterface(i6* %o_0_i_i, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str101, i32 0, i32 0, [1 x i8]* @p_str102, [1 x i8]* @p_str103, [1 x i8]* @p_str104, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str105, [1 x i8]* @p_str106)
+
+ST_1: o_0_i_i_read (40)  [1/1] 2.32ns
+entry:3  %o_0_i_i_read = call i6 @_ssdm_op_Read.ap_fifo.i6P(i6* %o_0_i_i)
+
+ST_1: StgValue_20 (41)  [1/1] 0.00ns
+entry:4  call void (...)* @_ssdm_op_SpecInterface(i6* %o_0_i_i_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str107, i32 0, i32 0, [1 x i8]* @p_str108, [1 x i8]* @p_str109, [1 x i8]* @p_str110, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str111, [1 x i8]* @p_str112)
+
+ST_1: StgValue_21 (42)  [1/1] 2.32ns
+entry:5  call void @_ssdm_op_Write.ap_fifo.i6P(i6* %o_0_i_i_out, i6 %o_0_i_i_read)
+
+ST_1: tmp_1 (43)  [1/1] 0.00ns
+entry:6  %tmp_1 = trunc i6 %o_0_i_i_read to i5
+
+ST_1: StgValue_23 (44)  [1/1] 1.59ns
+entry:7  br label %0
+
+
+ <State 2>: 5.09ns
+ST_2: i_0_i_i_i_i (46)  [1/1] 0.00ns
+:0  %i_0_i_i_i_i = phi i10 [ 1, %entry ], [ %i, %1 ]
+
+ST_2: sum_0_i_i_loc1 (47)  [1/1] 0.00ns
+:1  %sum_0_i_i_loc1 = phi float [ %load, %entry ], [ %sum, %1 ]
+
+ST_2: exitcond2_i_i_i_i (48)  [1/1] 3.02ns  loc: nn_hls/src/digitRecognizer.cpp:12
+:2  %exitcond2_i_i_i_i = icmp eq i10 %i_0_i_i_i_i, -239
+
+ST_2: StgValue_27 (49)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:12
+:3  br i1 %exitcond2_i_i_i_i, label %.exit, label %1
+
+ST_2: tmp_5_i_i_i (55)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:4  %tmp_5_i_i_i = zext i10 %i_0_i_i_i_i to i32
+
+ST_2: inputToHiddenWeights (56)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:5  %inputToHiddenWeights = getelementptr [785 x float]* @inputToHiddenWeights_2, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_1 (57)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:6  %inputToHiddenWeights_1 = load float* %inputToHiddenWeights, align 4
+
+ST_2: inputToHiddenWeights_2 (58)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:7  %inputToHiddenWeights_2 = getelementptr [785 x float]* @inputToHiddenWeights_1, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_3 (59)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:8  %inputToHiddenWeights_3 = load float* %inputToHiddenWeights_2, align 4
+
+ST_2: inputToHiddenWeights_4 (60)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:9  %inputToHiddenWeights_4 = getelementptr [785 x float]* @inputToHiddenWeights_34, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_5 (61)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:10  %inputToHiddenWeights_5 = load float* %inputToHiddenWeights_4, align 4
+
+ST_2: inputToHiddenWeights_6 (62)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:11  %inputToHiddenWeights_6 = getelementptr [785 x float]* @inputToHiddenWeights_3, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_7 (63)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:12  %inputToHiddenWeights_7 = load float* %inputToHiddenWeights_6, align 4
+
+ST_2: inputToHiddenWeights_8 (64)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:13  %inputToHiddenWeights_8 = getelementptr [785 x float]* @inputToHiddenWeights_55, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_9 (65)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:14  %inputToHiddenWeights_9 = load float* %inputToHiddenWeights_8, align 4
+
+ST_2: inputToHiddenWeights_10 (66)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:15  %inputToHiddenWeights_10 = getelementptr [785 x float]* @inputToHiddenWeights_5, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_11 (67)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:16  %inputToHiddenWeights_11 = load float* %inputToHiddenWeights_10, align 4
+
+ST_2: inputToHiddenWeights_12 (68)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:17  %inputToHiddenWeights_12 = getelementptr [785 x float]* @inputToHiddenWeights_58, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_13 (69)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:18  %inputToHiddenWeights_13 = load float* %inputToHiddenWeights_12, align 4
+
+ST_2: inputToHiddenWeights_14 (70)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:19  %inputToHiddenWeights_14 = getelementptr [785 x float]* @inputToHiddenWeights_7, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_15 (71)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:20  %inputToHiddenWeights_15 = load float* %inputToHiddenWeights_14, align 4
+
+ST_2: inputToHiddenWeights_16 (72)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:21  %inputToHiddenWeights_16 = getelementptr [785 x float]* @inputToHiddenWeights_61, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_17 (73)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:22  %inputToHiddenWeights_17 = load float* %inputToHiddenWeights_16, align 4
+
+ST_2: inputToHiddenWeights_18 (74)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:23  %inputToHiddenWeights_18 = getelementptr [785 x float]* @inputToHiddenWeights_9, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_19 (75)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:24  %inputToHiddenWeights_19 = load float* %inputToHiddenWeights_18, align 4
+
+ST_2: inputToHiddenWeights_20 (76)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:25  %inputToHiddenWeights_20 = getelementptr [785 x float]* @inputToHiddenWeights_6, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_21 (77)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:26  %inputToHiddenWeights_21 = load float* %inputToHiddenWeights_20, align 4
+
+ST_2: inputToHiddenWeights_22 (78)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:27  %inputToHiddenWeights_22 = getelementptr [785 x float]* @inputToHiddenWeights_11, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_23 (79)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:28  %inputToHiddenWeights_23 = load float* %inputToHiddenWeights_22, align 4
+
+ST_2: inputToHiddenWeights_24 (80)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:29  %inputToHiddenWeights_24 = getelementptr [785 x float]* @inputToHiddenWeights_12, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_25 (81)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:30  %inputToHiddenWeights_25 = load float* %inputToHiddenWeights_24, align 4
+
+ST_2: inputToHiddenWeights_26 (82)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:31  %inputToHiddenWeights_26 = getelementptr [785 x float]* @inputToHiddenWeights_13, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_27 (83)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:32  %inputToHiddenWeights_27 = load float* %inputToHiddenWeights_26, align 4
+
+ST_2: inputToHiddenWeights_28 (84)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:33  %inputToHiddenWeights_28 = getelementptr [785 x float]* @inputToHiddenWeights_18, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_29 (85)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:34  %inputToHiddenWeights_29 = load float* %inputToHiddenWeights_28, align 4
+
+ST_2: inputToHiddenWeights_30 (86)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:35  %inputToHiddenWeights_30 = getelementptr [785 x float]* @inputToHiddenWeights_15, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_31 (87)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:36  %inputToHiddenWeights_31 = load float* %inputToHiddenWeights_30, align 4
+
+ST_2: inputToHiddenWeights_32 (88)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:37  %inputToHiddenWeights_32 = getelementptr [785 x float]* @inputToHiddenWeights_25, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_33 (89)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:38  %inputToHiddenWeights_33 = load float* %inputToHiddenWeights_32, align 4
+
+ST_2: inputToHiddenWeights_34 (90)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:39  %inputToHiddenWeights_34 = getelementptr [785 x float]* @inputToHiddenWeights_17, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_35 (91)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:40  %inputToHiddenWeights_35 = load float* %inputToHiddenWeights_34, align 4
+
+ST_2: inputToHiddenWeights_36 (92)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:41  %inputToHiddenWeights_36 = getelementptr [785 x float]* @inputToHiddenWeights_30, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_37 (93)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:42  %inputToHiddenWeights_37 = load float* %inputToHiddenWeights_36, align 4
+
+ST_2: inputToHiddenWeights_38 (94)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:43  %inputToHiddenWeights_38 = getelementptr [785 x float]* @inputToHiddenWeights_19, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_39 (95)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:44  %inputToHiddenWeights_39 = load float* %inputToHiddenWeights_38, align 4
+
+ST_2: inputToHiddenWeights_40 (96)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:45  %inputToHiddenWeights_40 = getelementptr [785 x float]* @inputToHiddenWeights_20, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_41 (97)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:46  %inputToHiddenWeights_41 = load float* %inputToHiddenWeights_40, align 4
+
+ST_2: inputToHiddenWeights_42 (98)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:47  %inputToHiddenWeights_42 = getelementptr [785 x float]* @inputToHiddenWeights_37, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_43 (99)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:48  %inputToHiddenWeights_43 = load float* %inputToHiddenWeights_42, align 4
+
+ST_2: inputToHiddenWeights_44 (100)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:49  %inputToHiddenWeights_44 = getelementptr [785 x float]* @inputToHiddenWeights_22, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_45 (101)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:50  %inputToHiddenWeights_45 = load float* %inputToHiddenWeights_44, align 4
+
+ST_2: inputToHiddenWeights_46 (102)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:51  %inputToHiddenWeights_46 = getelementptr [785 x float]* @inputToHiddenWeights_40, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_47 (103)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:52  %inputToHiddenWeights_47 = load float* %inputToHiddenWeights_46, align 4
+
+ST_2: inputToHiddenWeights_48 (104)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:53  %inputToHiddenWeights_48 = getelementptr [785 x float]* @inputToHiddenWeights_24, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_49 (105)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:54  %inputToHiddenWeights_49 = load float* %inputToHiddenWeights_48, align 4
+
+ST_2: inputToHiddenWeights_50 (106)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:55  %inputToHiddenWeights_50 = getelementptr [785 x float]* @inputToHiddenWeights_43, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_51 (107)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:56  %inputToHiddenWeights_51 = load float* %inputToHiddenWeights_50, align 4
+
+ST_2: inputToHiddenWeights_52 (108)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:57  %inputToHiddenWeights_52 = getelementptr [785 x float]* @inputToHiddenWeights_26, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_53 (109)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:58  %inputToHiddenWeights_53 = load float* %inputToHiddenWeights_52, align 4
+
+ST_2: inputToHiddenWeights_54 (110)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:59  %inputToHiddenWeights_54 = getelementptr [785 x float]* @inputToHiddenWeights_46, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_55 (111)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:60  %inputToHiddenWeights_55 = load float* %inputToHiddenWeights_54, align 4
+
+ST_2: inputToHiddenWeights_56 (112)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:61  %inputToHiddenWeights_56 = getelementptr [785 x float]* @inputToHiddenWeights_28, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_57 (113)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:62  %inputToHiddenWeights_57 = load float* %inputToHiddenWeights_56, align 4
+
+ST_2: inputToHiddenWeights_58 (114)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:63  %inputToHiddenWeights_58 = getelementptr [785 x float]* @inputToHiddenWeights_49, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_59 (115)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:64  %inputToHiddenWeights_59 = load float* %inputToHiddenWeights_58, align 4
+
+ST_2: inputToHiddenWeights_60 (116)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:65  %inputToHiddenWeights_60 = getelementptr [785 x float]* @inputToHiddenWeights_52, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_61 (117)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:66  %inputToHiddenWeights_61 = load float* %inputToHiddenWeights_60, align 4
+
+ST_2: inputToHiddenWeights_62 (118)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:67  %inputToHiddenWeights_62 = getelementptr [785 x float]* @inputToHiddenWeights_31, i32 0, i32 %tmp_5_i_i_i
+
+ST_2: inputToHiddenWeights_63 (119)  [2/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:68  %inputToHiddenWeights_63 = load float* %inputToHiddenWeights_62, align 4
+
+ST_2: sum_i_i (121)  [1/1] 2.32ns  loc: nn_hls/src/digitRecognizer.cpp:12
+:70  %sum_i_i = add i10 %i_0_i_i_i_i, -1
+
+ST_2: sum_cast_i_i (122)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:12
+:71  %sum_cast_i_i = zext i10 %sum_i_i to i32
+
+ST_2: inputData_addr (123)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:72  %inputData_addr = getelementptr [784 x float]* %inputData, i32 0, i32 %sum_cast_i_i
+
+ST_2: inputData_load (124)  [2/2] 2.57ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:73  %inputData_load = load float* %inputData_addr, align 4
+
+ST_2: i (128)  [1/1] 2.32ns  loc: nn_hls/src/digitRecognizer.cpp:12
+:77  %i = add i10 %i_0_i_i_i_i, 1
+
+
+ <State 3>: 6.46ns
+ST_3: inputToHiddenWeights_1 (57)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:6  %inputToHiddenWeights_1 = load float* %inputToHiddenWeights, align 4
+
+ST_3: inputToHiddenWeights_3 (59)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:8  %inputToHiddenWeights_3 = load float* %inputToHiddenWeights_2, align 4
+
+ST_3: inputToHiddenWeights_5 (61)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:10  %inputToHiddenWeights_5 = load float* %inputToHiddenWeights_4, align 4
+
+ST_3: inputToHiddenWeights_7 (63)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:12  %inputToHiddenWeights_7 = load float* %inputToHiddenWeights_6, align 4
+
+ST_3: inputToHiddenWeights_9 (65)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:14  %inputToHiddenWeights_9 = load float* %inputToHiddenWeights_8, align 4
+
+ST_3: inputToHiddenWeights_11 (67)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:16  %inputToHiddenWeights_11 = load float* %inputToHiddenWeights_10, align 4
+
+ST_3: inputToHiddenWeights_13 (69)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:18  %inputToHiddenWeights_13 = load float* %inputToHiddenWeights_12, align 4
+
+ST_3: inputToHiddenWeights_15 (71)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:20  %inputToHiddenWeights_15 = load float* %inputToHiddenWeights_14, align 4
+
+ST_3: inputToHiddenWeights_17 (73)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:22  %inputToHiddenWeights_17 = load float* %inputToHiddenWeights_16, align 4
+
+ST_3: inputToHiddenWeights_19 (75)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:24  %inputToHiddenWeights_19 = load float* %inputToHiddenWeights_18, align 4
+
+ST_3: inputToHiddenWeights_21 (77)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:26  %inputToHiddenWeights_21 = load float* %inputToHiddenWeights_20, align 4
+
+ST_3: inputToHiddenWeights_23 (79)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:28  %inputToHiddenWeights_23 = load float* %inputToHiddenWeights_22, align 4
+
+ST_3: inputToHiddenWeights_25 (81)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:30  %inputToHiddenWeights_25 = load float* %inputToHiddenWeights_24, align 4
+
+ST_3: inputToHiddenWeights_27 (83)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:32  %inputToHiddenWeights_27 = load float* %inputToHiddenWeights_26, align 4
+
+ST_3: inputToHiddenWeights_29 (85)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:34  %inputToHiddenWeights_29 = load float* %inputToHiddenWeights_28, align 4
+
+ST_3: inputToHiddenWeights_31 (87)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:36  %inputToHiddenWeights_31 = load float* %inputToHiddenWeights_30, align 4
+
+ST_3: inputToHiddenWeights_33 (89)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:38  %inputToHiddenWeights_33 = load float* %inputToHiddenWeights_32, align 4
+
+ST_3: inputToHiddenWeights_35 (91)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:40  %inputToHiddenWeights_35 = load float* %inputToHiddenWeights_34, align 4
+
+ST_3: inputToHiddenWeights_37 (93)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:42  %inputToHiddenWeights_37 = load float* %inputToHiddenWeights_36, align 4
+
+ST_3: inputToHiddenWeights_39 (95)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:44  %inputToHiddenWeights_39 = load float* %inputToHiddenWeights_38, align 4
+
+ST_3: inputToHiddenWeights_41 (97)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:46  %inputToHiddenWeights_41 = load float* %inputToHiddenWeights_40, align 4
+
+ST_3: inputToHiddenWeights_43 (99)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:48  %inputToHiddenWeights_43 = load float* %inputToHiddenWeights_42, align 4
+
+ST_3: inputToHiddenWeights_45 (101)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:50  %inputToHiddenWeights_45 = load float* %inputToHiddenWeights_44, align 4
+
+ST_3: inputToHiddenWeights_47 (103)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:52  %inputToHiddenWeights_47 = load float* %inputToHiddenWeights_46, align 4
+
+ST_3: inputToHiddenWeights_49 (105)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:54  %inputToHiddenWeights_49 = load float* %inputToHiddenWeights_48, align 4
+
+ST_3: inputToHiddenWeights_51 (107)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:56  %inputToHiddenWeights_51 = load float* %inputToHiddenWeights_50, align 4
+
+ST_3: inputToHiddenWeights_53 (109)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:58  %inputToHiddenWeights_53 = load float* %inputToHiddenWeights_52, align 4
+
+ST_3: inputToHiddenWeights_55 (111)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:60  %inputToHiddenWeights_55 = load float* %inputToHiddenWeights_54, align 4
+
+ST_3: inputToHiddenWeights_57 (113)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:62  %inputToHiddenWeights_57 = load float* %inputToHiddenWeights_56, align 4
+
+ST_3: inputToHiddenWeights_59 (115)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:64  %inputToHiddenWeights_59 = load float* %inputToHiddenWeights_58, align 4
+
+ST_3: inputToHiddenWeights_61 (117)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:66  %inputToHiddenWeights_61 = load float* %inputToHiddenWeights_60, align 4
+
+ST_3: inputToHiddenWeights_63 (119)  [1/2] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:68  %inputToHiddenWeights_63 = load float* %inputToHiddenWeights_62, align 4
+
+ST_3: tmp (120)  [1/1] 3.21ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:69  %tmp = call float @_ssdm_op_Mux.ap_auto.32float.i5(float %inputToHiddenWeights_1, float %inputToHiddenWeights_3, float %inputToHiddenWeights_5, float %inputToHiddenWeights_7, float %inputToHiddenWeights_9, float %inputToHiddenWeights_11, float %inputToHiddenWeights_13, float %inputToHiddenWeights_15, float %inputToHiddenWeights_17, float %inputToHiddenWeights_19, float %inputToHiddenWeights_21, float %inputToHiddenWeights_23, float %inputToHiddenWeights_25, float %inputToHiddenWeights_27, float %inputToHiddenWeights_29, float %inputToHiddenWeights_31, float %inputToHiddenWeights_33, float %inputToHiddenWeights_35, float %inputToHiddenWeights_37, float %inputToHiddenWeights_39, float %inputToHiddenWeights_41, float %inputToHiddenWeights_43, float %inputToHiddenWeights_45, float %inputToHiddenWeights_47, float %inputToHiddenWeights_49, float %inputToHiddenWeights_51, float %inputToHiddenWeights_53, float %inputToHiddenWeights_55, float %inputToHiddenWeights_57, float %inputToHiddenWeights_59, float %inputToHiddenWeights_61, float %inputToHiddenWeights_63, i5 %tmp_1)
+
+ST_3: inputData_load (124)  [1/2] 2.57ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:73  %inputData_load = load float* %inputData_addr, align 4
+
+
+ <State 4>: 5.70ns
+ST_4: tmp_7_i_i_i (125)  [4/4] 5.70ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:74  %tmp_7_i_i_i = fmul float %tmp, %inputData_load
+
+
+ <State 5>: 5.70ns
+ST_5: tmp_7_i_i_i (125)  [3/4] 5.70ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:74  %tmp_7_i_i_i = fmul float %tmp, %inputData_load
+
+
+ <State 6>: 5.70ns
+ST_6: tmp_7_i_i_i (125)  [2/4] 5.70ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:74  %tmp_7_i_i_i = fmul float %tmp, %inputData_load
+
+
+ <State 7>: 5.70ns
+ST_7: tmp_7_i_i_i (125)  [1/4] 5.70ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:74  %tmp_7_i_i_i = fmul float %tmp, %inputData_load
+
+
+ <State 8>: 6.44ns
+ST_8: sum (126)  [7/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:75  %sum = fadd float %sum_0_i_i_loc1, %tmp_7_i_i_i
+
+
+ <State 9>: 6.44ns
+ST_9: sum (126)  [6/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:75  %sum = fadd float %sum_0_i_i_loc1, %tmp_7_i_i_i
+
+
+ <State 10>: 6.44ns
+ST_10: sum (126)  [5/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:75  %sum = fadd float %sum_0_i_i_loc1, %tmp_7_i_i_i
+
+
+ <State 11>: 6.44ns
+ST_11: sum (126)  [4/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:75  %sum = fadd float %sum_0_i_i_loc1, %tmp_7_i_i_i
+
+
+ <State 12>: 6.44ns
+ST_12: sum (126)  [3/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:75  %sum = fadd float %sum_0_i_i_loc1, %tmp_7_i_i_i
+
+
+ <State 13>: 6.44ns
+ST_13: sum (126)  [2/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:75  %sum = fadd float %sum_0_i_i_loc1, %tmp_7_i_i_i
+
+
+ <State 14>: 6.44ns
+ST_14: empty_10 (51)  [1/1] 0.00ns
+:0  %empty_10 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784) nounwind
+
+ST_14: StgValue_143 (52)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:1  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str5) nounwind
+
+ST_14: tmp_38_i_i (53)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:2  %tmp_38_i_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str5) nounwind
+
+ST_14: StgValue_145 (54)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:14
+:3  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
+
+ST_14: sum (126)  [1/7] 6.44ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:75  %sum = fadd float %sum_0_i_i_loc1, %tmp_7_i_i_i
+
+ST_14: empty_11 (127)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+:76  %empty_11 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str5, i32 %tmp_38_i_i) nounwind
+
+ST_14: StgValue_148 (129)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:12
+:78  br label %0
+
+
+ <State 15>: 0.00ns
+ST_15: StgValue_149 (131)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:13
+.exit:0  ret float %sum_0_i_i_loc1
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 4.64ns
+The critical path consists of the following:
+	fifo read on port 'o_0_i_i' [40]  (2.32 ns)
+	fifo write on port 'o_0_i_i_out' [42]  (2.32 ns)
+
+ <State 2>: 5.09ns
+The critical path consists of the following:
+	'icmp' operation ('exitcond2_i_i_i_i', nn_hls/src/digitRecognizer.cpp:12) [48]  (3.02 ns)
+	blocking operation 2.07 ns on control path)
+
+ <State 3>: 6.46ns
+The critical path consists of the following:
+	'load' operation ('inputToHiddenWeights_1', nn_hls/src/digitRecognizer.cpp:13) on array 'inputToHiddenWeights_2' [57]  (3.25 ns)
+	'mux' operation ('tmp', nn_hls/src/digitRecognizer.cpp:13) [120]  (3.21 ns)
+
+ <State 4>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_7_i_i_i', nn_hls/src/digitRecognizer.cpp:13) [125]  (5.7 ns)
+
+ <State 5>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_7_i_i_i', nn_hls/src/digitRecognizer.cpp:13) [125]  (5.7 ns)
+
+ <State 6>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_7_i_i_i', nn_hls/src/digitRecognizer.cpp:13) [125]  (5.7 ns)
+
+ <State 7>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_7_i_i_i', nn_hls/src/digitRecognizer.cpp:13) [125]  (5.7 ns)
+
+ <State 8>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:13) [126]  (6.44 ns)
+
+ <State 9>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:13) [126]  (6.44 ns)
+
+ <State 10>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:13) [126]  (6.44 ns)
+
+ <State 11>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:13) [126]  (6.44 ns)
+
+ <State 12>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:13) [126]  (6.44 ns)
+
+ <State 13>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:13) [126]  (6.44 ns)
+
+ <State 14>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('sum', nn_hls/src/digitRecognizer.cpp:13) [126]  (6.44 ns)
+
+ <State 15>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

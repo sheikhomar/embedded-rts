@@ -1,0 +1,181 @@
+
+
+================================================================
+== Vivado HLS Report for 'dataflow_in_loop_ih_s'
+================================================================
+* Date:           Tue Dec 18 11:03:27 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        nn_hls
+* Solution:       solution6
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      6.79|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+----------+
+    |   Latency   |   Interval  | Pipeline |
+    |  min |  max |  min |  max |   Type   |
+    +------+------+------+------+----------+
+    |  5501|  5501|  5496|  5496| dataflow |
+    +------+------+------+------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+----------------------+------+------+------+------+---------+
+        |                         |                      |   Latency   |   Interval  | Pipeline|
+        |         Instance        |        Module        |  min |  max |  min |  max |   Type  |
+        +-------------------------+----------------------+------+------+------+------+---------+
+        |hn_loop_proc_U0          |hn_loop_proc          |  5495|  5495|  5495|  5495|   none  |
+        |aesl_mux_load_32_785_U0  |aesl_mux_load_32_785  |     5|     5|     5|     5|   none  |
+        |p_nn_hls_src_digitRe_U0  |p_nn_hls_src_digitRe  |     1|     1|     1|     1|   none  |
+        +-------------------------+----------------------+------+------+------+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|DSP              |        -|      -|      -|      -|
+|Expression       |        -|      -|     44|     44|
+|FIFO             |        0|      -|      0|      3|
+|Instance         |       64|      5|   1087|   2427|
+|Memory           |        -|      -|      -|      -|
+|Multiplexer      |        -|      -|      -|     36|
+|Register         |        -|      -|      6|      -|
++-----------------+---------+-------+-------+-------+
+|Total            |       64|      5|   1137|   2510|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |       53|      6|      3|     14|
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+-----+------+
+    |         Instance        |        Module        | BRAM_18K| DSP48E|  FF |  LUT |
+    +-------------------------+----------------------+---------+-------+-----+------+
+    |aesl_mux_load_32_785_U0  |aesl_mux_load_32_785  |        0|      0|  147|  1141|
+    |hn_loop_proc_U0          |hn_loop_proc          |       64|      5|  868|   959|
+    |p_nn_hls_src_digitRe_U0  |p_nn_hls_src_digitRe  |        0|      0|   72|   327|
+    +-------------------------+----------------------+---------+-------+-----+------+
+    |Total                    |                      |       64|      5| 1087|  2427|
+    +-------------------------+----------------------+---------+-------+-----+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +------------------------+---------+---+----+------+-----+---------+
+    |          Name          | BRAM_18K| FF| LUT| Depth| Bits| Size:D*B|
+    +------------------------+---------+---+----+------+-----+---------+
+    |o_0_i_i_channel1_U      |        0|  0|   1|     1|    6|        6|
+    |o_0_i_i_channel_U       |        0|  0|   1|     1|    6|        6|
+    |p_channel_U             |        0|  0|   1|     2|   32|       64|
+    |sum_0_i_i_loc1_chann_U  |        0|  0|   0|     2|   32|       64|
+    +------------------------+---------+---+----+------+-----+---------+
+    |Total                   |        0|  0|   3|     6|   76|      140|
+    +------------------------+---------+---+----+------+-----+---------+
+
+    * Expression: 
+    +------------------------------------------+----------+-------+----+----+------------+------------+
+    |               Variable Name              | Operation| DSP48E| FF | LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------------+----------+-------+----+----+------------+------------+
+    |aesl_mux_load_32_785_U0_ap_ready_count    |     +    |      0|  11|   8|           2|           1|
+    |hn_loop_proc_U0_ap_ready_count            |     +    |      0|  11|   8|           2|           1|
+    |aesl_mux_load_32_785_U0_ap_ready_count    |     -    |      0|  11|   8|           2|           1|
+    |hn_loop_proc_U0_ap_ready_count            |     -    |      0|  11|   8|           2|           1|
+    |aesl_mux_load_32_785_U0_ap_start          |    and   |      0|   0|   2|           1|           1|
+    |ap_idle                                   |    and   |      0|   0|   2|           1|           1|
+    |ap_sync_ready                             |    and   |      0|   0|   2|           1|           1|
+    |hn_loop_proc_U0_ap_start                  |    and   |      0|   0|   2|           1|           1|
+    |ap_sync_aesl_mux_load_32_785_U0_ap_ready  |    or    |      0|   0|   2|           1|           1|
+    |ap_sync_hn_loop_proc_U0_ap_ready          |    or    |      0|   0|   2|           1|           1|
+    +------------------------------------------+----------+-------+----+----+------------+------------+
+    |Total                                     |          |      0|  44|  44|          14|          10|
+    +------------------------------------------+----------+-------+----+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |                     Name                     | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |aesl_mux_load_32_785_U0_ap_ready_count        |   9|          2|    2|          4|
+    |ap_sync_reg_aesl_mux_load_32_785_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_hn_loop_proc_U0_ap_ready          |   9|          2|    1|          2|
+    |hn_loop_proc_U0_ap_ready_count                |   9|          2|    2|          4|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |Total                                         |  36|          8|    6|         12|
+    +----------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------+---+----+-----+-----------+
+    |                     Name                     | FF| LUT| Bits| Const Bits|
+    +----------------------------------------------+---+----+-----+-----------+
+    |aesl_mux_load_32_785_U0_ap_ready_count        |  2|   0|    2|          0|
+    |ap_sync_reg_aesl_mux_load_32_785_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_hn_loop_proc_U0_ap_ready          |  1|   0|    1|          0|
+    |hn_loop_proc_U0_ap_ready_count                |  2|   0|    2|          0|
+    +----------------------------------------------+---+----+-----+-----------+
+    |Total                                         |  6|   0|    6|          0|
+    +----------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+----------------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++--------------------+-----+-----+------------+----------------------+--------------+
+|o_0_i_i             |  in |    6|   ap_none  |        o_0_i_i       |    scalar    |
+|o_0_i_i_ap_vld      |  in |    1|   ap_none  |        o_0_i_i       |    scalar    |
+|inputData_address0  | out |   10|  ap_memory |       inputData      |     array    |
+|inputData_ce0       | out |    1|  ap_memory |       inputData      |     array    |
+|inputData_d0        | out |   32|  ap_memory |       inputData      |     array    |
+|inputData_q0        |  in |   32|  ap_memory |       inputData      |     array    |
+|inputData_we0       | out |    1|  ap_memory |       inputData      |     array    |
+|hiddenOut_address0  | out |    5|  ap_memory |       hiddenOut      |     array    |
+|hiddenOut_ce0       | out |    1|  ap_memory |       hiddenOut      |     array    |
+|hiddenOut_d0        | out |   32|  ap_memory |       hiddenOut      |     array    |
+|hiddenOut_q0        |  in |   32|  ap_memory |       hiddenOut      |     array    |
+|hiddenOut_we0       | out |    1|  ap_memory |       hiddenOut      |     array    |
+|hiddenOut_address1  | out |    5|  ap_memory |       hiddenOut      |     array    |
+|hiddenOut_ce1       | out |    1|  ap_memory |       hiddenOut      |     array    |
+|hiddenOut_d1        | out |   32|  ap_memory |       hiddenOut      |     array    |
+|hiddenOut_q1        |  in |   32|  ap_memory |       hiddenOut      |     array    |
+|hiddenOut_we1       | out |    1|  ap_memory |       hiddenOut      |     array    |
+|ap_clk              |  in |    1| ap_ctrl_hs | dataflow_in_loop_ih_ | return value |
+|ap_rst              |  in |    1| ap_ctrl_hs | dataflow_in_loop_ih_ | return value |
+|hiddenOut_full_n    |  in |    1| ap_ctrl_hs | dataflow_in_loop_ih_ | return value |
+|hiddenOut_write     | out |    1| ap_ctrl_hs | dataflow_in_loop_ih_ | return value |
+|ap_done             | out |    1| ap_ctrl_hs | dataflow_in_loop_ih_ | return value |
+|ap_start            |  in |    1| ap_ctrl_hs | dataflow_in_loop_ih_ | return value |
+|ap_ready            | out |    1| ap_ctrl_hs | dataflow_in_loop_ih_ | return value |
+|ap_idle             | out |    1| ap_ctrl_hs | dataflow_in_loop_ih_ | return value |
+|ap_continue         |  in |    1| ap_ctrl_hs | dataflow_in_loop_ih_ | return value |
++--------------------+-----+-----+------------+----------------------+--------------+
+

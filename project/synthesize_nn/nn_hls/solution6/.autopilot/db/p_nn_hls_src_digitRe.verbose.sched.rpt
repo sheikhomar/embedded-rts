@@ -1,0 +1,163 @@
+
+
+================================================================
+== Vivado HLS Report for 'p_nn_hls_src_digitRe'
+================================================================
+* Date:           Tue Dec 18 11:03:21 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        nn_hls
+* Solution:       solution6
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      6.79|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    1|    1|    1|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 2
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+* FSM state operations: 
+
+ <State 1>: 6.79ns
+ST_1: p_read_1 (5)  [1/1] 0.00ns
+entry:1  %p_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %p_read)
+
+ST_1: p_read_to_int (7)  [1/1] 0.00ns
+entry:3  %p_read_to_int = bitcast float %p_read_1 to i32
+
+ST_1: tmp (8)  [1/1] 0.00ns
+entry:4  %tmp = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %p_read_to_int, i32 23, i32 30)
+
+ST_1: tmp_2 (9)  [1/1] 0.00ns
+entry:5  %tmp_2 = trunc i32 %p_read_to_int to i23
+
+ST_1: notlhs (10)  [1/1] 2.91ns
+entry:6  %notlhs = icmp ne i8 %tmp, -1
+
+ST_1: notrhs (11)  [1/1] 3.20ns
+entry:7  %notrhs = icmp eq i23 %tmp_2, 0
+
+ST_1: tmp_34 (13)  [1/1] 6.79ns  loc: nn_hls/src/digitRecognizer.cpp:16
+entry:9  %tmp_34 = fcmp olt float %p_read_1, 0.000000e+00
+
+
+ <State 2>: 5.58ns
+ST_2: StgValue_10 (4)  [1/1] 0.00ns
+entry:0  call void (...)* @_ssdm_op_SpecInterface(i6* %o_0_i_i, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str121, i32 0, i32 0, [1 x i8]* @p_str122, [1 x i8]* @p_str123, [1 x i8]* @p_str124, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str125, [1 x i8]* @p_str126)
+
+ST_2: o_0_i_i_read (6)  [1/1] 2.32ns
+entry:2  %o_0_i_i_read = call i6 @_ssdm_op_Read.ap_fifo.i6P(i6* %o_0_i_i)
+
+ST_2: tmp_s (12)  [1/1] 0.00ns (grouped into LUT with out node tmp_3_i_i)
+entry:8  %tmp_s = or i1 %notrhs, %notlhs
+
+ST_2: tmp_35 (14)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:16 (grouped into LUT with out node tmp_3_i_i)
+entry:10  %tmp_35 = and i1 %tmp_s, %tmp_34
+
+ST_2: tmp_3_i_i (15)  [1/1] 2.07ns  loc: nn_hls/src/digitRecognizer.cpp:16 (out node of the LUT)
+entry:11  %tmp_3_i_i = select i1 %tmp_35, float 0.000000e+00, float %p_read_1
+
+ST_2: tmp_i_i (16)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:11
+entry:12  %tmp_i_i = zext i6 %o_0_i_i_read to i32
+
+ST_2: hiddenOut_addr (17)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:16
+entry:13  %hiddenOut_addr = getelementptr inbounds [32 x float]* %hiddenOut, i32 0, i32 %tmp_i_i
+
+ST_2: StgValue_17 (18)  [1/1] 3.25ns  loc: nn_hls/src/digitRecognizer.cpp:16
+entry:14  store float %tmp_3_i_i, float* %hiddenOut_addr, align 4
+
+ST_2: StgValue_18 (19)  [1/1] 0.00ns
+entry:15  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 6.79ns
+The critical path consists of the following:
+	wire read on port 'p_read' [5]  (0 ns)
+	'fcmp' operation ('tmp_34', nn_hls/src/digitRecognizer.cpp:16) [13]  (6.79 ns)
+
+ <State 2>: 5.58ns
+The critical path consists of the following:
+	fifo read on port 'o_0_i_i' [6]  (2.32 ns)
+	'getelementptr' operation ('hiddenOut_addr', nn_hls/src/digitRecognizer.cpp:16) [17]  (0 ns)
+	'store' operation (nn_hls/src/digitRecognizer.cpp:16) of variable 'tmp_3_i_i', nn_hls/src/digitRecognizer.cpp:16 on array 'hiddenOut' [18]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
