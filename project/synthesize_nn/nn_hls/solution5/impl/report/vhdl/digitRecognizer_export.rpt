@@ -1,0 +1,19 @@
+
+
+Implementation tool: Xilinx Vivado v.2017.2
+Project:             nn_hls
+Solution:            solution5
+Device target:       xc7z010clg400-1
+Report date:         Tue Dec 18 12:55:58 +0100 2018
+
+#=== Post-Synthesis Resource usage ===
+SLICE:            0
+LUT:           1032
+FF:            1329
+DSP:             10
+BRAM:            70
+SRL:              2
+#=== Final timing ===
+CP required:    8.000
+CP achieved post-synthesis:    6.116
+Timing met
