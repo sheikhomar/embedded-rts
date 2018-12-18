@@ -42,6 +42,11 @@
 			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution4/impl/vhdl/digitRecognizer.xdc</location>
 		</link>
 		<link>
+			<name>solution4/constraints</name>
+			<type>2</type>
+			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution4/.tcls</location>
+		</link>
+		<link>
 			<name>solution5/constraints</name>
 			<type>2</type>
 			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/.tcls</location>
@@ -100,6 +105,21 @@
 			<name>testbench/test_helper.h</name>
 			<type>1</type>
 			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/src/tests/test_helper.h</location>
+		</link>
+		<link>
+			<name>solution4/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution4/solution4.directive</location>
+		</link>
+		<link>
+			<name>solution4/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution4/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution4/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution4/script.tcl</location>
 		</link>
 		<link>
 			<name>solution5/constraints/.xml.directive</name>

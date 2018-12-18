@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="digitRecognizer.cpp" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_nn\nn_hls\src\digitRecognizer.cpp"/>
-    <originFiles name="digitRecognizer.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_nn\nn_hls\src\digitRecognizer.h"/>
-    <originFiles name="nn_3_layers_32_neurons.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_nn\nn_hls\src\nn_3_layers_32_neurons.h"/>
     <originFiles name="types.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_nn\nn_hls\src\types.h"/>
+    <originFiles name="nn_3_layers_32_neurons.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_nn\nn_hls\src\nn_3_layers_32_neurons.h"/>
+    <originFiles name="digitRecognizer.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_nn\nn_hls\src\digitRecognizer.h"/>
+    <originFiles name="digitRecognizer.cpp" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_nn\nn_hls\src\digitRecognizer.cpp"/>
   </source>
   <testbench>
-    <originFiles name="greatest.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_nn\nn_hls\src\tests\greatest.h"/>
-    <originFiles name="nn_test.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_nn\nn_hls\src\tests\nn_test.h"/>
-    <originFiles name="runner.cpp" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_nn\nn_hls\src\tests\runner.cpp"/>
-    <originFiles name="ten_digits.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_nn\nn_hls\src\tests\ten_digits.h"/>
     <originFiles name="test_helper.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_nn\nn_hls\src\tests\test_helper.h"/>
+    <originFiles name="ten_digits.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_nn\nn_hls\src\tests\ten_digits.h"/>
+    <originFiles name="runner.cpp" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_nn\nn_hls\src\tests\runner.cpp"/>
+    <originFiles name="nn_test.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_nn\nn_hls\src\tests\nn_test.h"/>
+    <originFiles name="greatest.h" path="C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_nn\nn_hls\src\tests\greatest.h"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>
