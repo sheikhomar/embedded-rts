@@ -1,0 +1,149 @@
+
+
+================================================================
+== Vivado HLS Report for 'digitRecognizer'
+================================================================
+* Date:           Mon Dec 17 17:28:54 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        layer_hls
+* Solution:       solution3
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      6.79|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+----------+
+    |     Latency     |     Interval    | Pipeline |
+    |   min  |   max  |   min  |   max  |   Type   |
+    +--------+--------+--------+--------+----------+
+    |  330465|  330465|  326274|  326274| dataflow |
+    +--------+--------+--------+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------+-------------------+--------+--------+--------+--------+---------+
+        |                      |                   |     Latency     |     Interval    | Pipeline|
+        |       Instance       |       Module      |   min  |   max  |   min  |   max  |   Type  |
+        +----------------------+-------------------+--------+--------+--------+--------+---------+
+        |Loop_ih_loop_proc_U0  |Loop_ih_loop_proc  |  326273|  326273|  326273|  326273|   none  |
+        |Loop_ho_loop_proc_U0  |Loop_ho_loop_proc  |    4191|    4191|    4191|    4191|   none  |
+        +----------------------+-------------------+--------+--------+--------+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|DSP              |        -|      -|      -|      -|
+|Expression       |        -|      -|      0|      2|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |       65|     10|   1686|   2211|
+|Memory           |        2|      -|      0|      0|
+|Multiplexer      |        -|      -|      -|      -|
+|Register         |        -|      -|      -|      -|
++-----------------+---------+-------+-------+-------+
+|Total            |       67|     10|   1686|   2213|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |       55|     12|      4|     12|
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    +----------------------+-------------------+---------+-------+-----+------+
+    |       Instance       |       Module      | BRAM_18K| DSP48E|  FF |  LUT |
+    +----------------------+-------------------+---------+-------+-----+------+
+    |Loop_ho_loop_proc_U0  |Loop_ho_loop_proc  |        1|      5|  761|   939|
+    |Loop_ih_loop_proc_U0  |Loop_ih_loop_proc  |       64|      5|  925|  1272|
+    +----------------------+-------------------+---------+-------+-----+------+
+    |Total                 |                   |       65|     10| 1686|  2211|
+    +----------------------+-------------------+---------+-------+-----+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +-------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |    Memory   |        Module        | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
+    +-------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |hiddenOut_U  |digitRecognizer_hg8j  |        2|  0|   0|    32|   32|     2|         2048|
+    +-------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |Total        |                      |        2|  0|   0|    32|   32|     2|         2048|
+    +-------------+----------------------+---------+---+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------+----------+-------+---+----+------------+------------+
+    | Variable Name| Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------+----------+-------+---+----+------------+------------+
+    |ap_idle       |    and   |      0|  0|   2|           1|           1|
+    +--------------+----------+-------+---+----+------------+------------+
+    |Total         |          |      0|  0|   2|           1|           1|
+    +--------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+-----------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++--------------------+-----+-----+------------+-----------------+--------------+
+|ap_clk              |  in |    1| ap_ctrl_hs | digitRecognizer | return value |
+|ap_rst              |  in |    1| ap_ctrl_hs | digitRecognizer | return value |
+|ap_done             | out |    1| ap_ctrl_hs | digitRecognizer | return value |
+|ap_start            |  in |    1| ap_ctrl_hs | digitRecognizer | return value |
+|ap_ready            | out |    1| ap_ctrl_hs | digitRecognizer | return value |
+|ap_idle             | out |    1| ap_ctrl_hs | digitRecognizer | return value |
+|inputData_address0  | out |   10|  ap_memory |    inputData    |     array    |
+|inputData_ce0       | out |    1|  ap_memory |    inputData    |     array    |
+|inputData_d0        | out |   32|  ap_memory |    inputData    |     array    |
+|inputData_q0        |  in |   32|  ap_memory |    inputData    |     array    |
+|inputData_we0       | out |    1|  ap_memory |    inputData    |     array    |
+|inputData_address1  | out |   10|  ap_memory |    inputData    |     array    |
+|inputData_ce1       | out |    1|  ap_memory |    inputData    |     array    |
+|inputData_d1        | out |   32|  ap_memory |    inputData    |     array    |
+|inputData_q1        |  in |   32|  ap_memory |    inputData    |     array    |
+|inputData_we1       | out |    1|  ap_memory |    inputData    |     array    |
+|output_r_address0   | out |    4|  ap_memory |     output_r    |     array    |
+|output_r_ce0        | out |    1|  ap_memory |     output_r    |     array    |
+|output_r_d0         | out |   32|  ap_memory |     output_r    |     array    |
+|output_r_q0         |  in |   32|  ap_memory |     output_r    |     array    |
+|output_r_we0        | out |    1|  ap_memory |     output_r    |     array    |
+|output_r_address1   | out |    4|  ap_memory |     output_r    |     array    |
+|output_r_ce1        | out |    1|  ap_memory |     output_r    |     array    |
+|output_r_d1         | out |   32|  ap_memory |     output_r    |     array    |
+|output_r_q1         |  in |   32|  ap_memory |     output_r    |     array    |
+|output_r_we1        | out |    1|  ap_memory |     output_r    |     array    |
++--------------------+-----+-----+------------+-----------------+--------------+
+
