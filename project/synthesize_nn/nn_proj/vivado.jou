@@ -1,0 +1,65 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Dec 12 17:22:34 2018
+# Process ID: 21456
+# Current directory: C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3236 C:\Users\Lukas\Desktop\embedded-rts\project\synthesize_neuron\neuron_proj\neuron_proj.xpr
+# Log file: C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/vivado.log
+# Journal file: C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.xpr
+launch_sdk -workspace C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.sdk -hwspec C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.sdk/design_1_wrapper.hdf
+update_compile_order -fileset sources_1
+file copy -force C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.runs/impl_1/design_1_wrapper.sysdef C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.sdk -hwspec C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.sdk/design_1_wrapper.hdf
+open_bd_design {C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/design_1.bd}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+file copy -force C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.runs/impl_1/design_1_wrapper.sysdef C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.sdk -hwspec C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.sdk/design_1_wrapper.hdf
+set_property name neuronHard [get_bd_cells neuronInitAndCompute3HardCoded_0]
+set_property name neuron3 [get_bd_cells neuronHard]
+set_property name neuronInitAndCompute3 [get_bd_cells neuronInitAndCompute3_0]
+regenerate_bd_layout
+startgroup
+set_property -dict [list CONFIG.PCW_USE_FABRIC_INTERRUPT {1} CONFIG.PCW_IRQ_F2P_INTR {1}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+set_property location {3 698 242} [get_bd_cells xlconcat_0]
+connect_bd_net [get_bd_pins neuronInitAndCompute3/interrupt] [get_bd_pins xlconcat_0/In0]
+connect_bd_net [get_bd_pins neuron3/interrupt] [get_bd_pins xlconcat_0/In1]
+connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins processing_system7_0/IRQ_F2P]
+regenerate_bd_layout
+validate_bd_design
+save_bd_design
+reset_run synth_1
+reset_run design_1_processing_system7_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+file copy -force C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.runs/impl_1/design_1_wrapper.sysdef C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.sdk -hwspec C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.sdk/design_1_wrapper.hdf
+open_bd_design {C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_neuron/neuron_proj/neuron_proj.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_nets neuronInitAndCompute3_interrupt] [get_bd_nets neuron3_interrupt] [get_bd_nets xlconcat_0_dout] [get_bd_cells xlconcat_0]
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M02_AXI] [get_bd_cells neuronInitAndCompute3]
+connect_bd_net [get_bd_pins neuron3/interrupt] [get_bd_pins processing_system7_0/IRQ_F2P]
+regenerate_bd_layout
+validate_bd_design
+undo
+undo
+undo
+undo
+undo
+regenerate_bd_layout
+validate_bd_design
+assign_bd_address [get_bd_addr_segs neuronInitAndCompute3/s_axi_neuron_io/Reg] -target_address_space /processing_system7_0/Data
+validate_bd_design
+save_bd_design
