@@ -20,3 +20,5 @@
 **/*.a
 **/*.log
 
+# Enterprice Architect
+**/diagrams.ldb
