@@ -1,0 +1,231 @@
+
+
+================================================================
+== Vivado HLS Report for 'digitRecognizer'
+================================================================
+* Date:           Tue Dec 18 10:44:48 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        nn_hls
+* Solution:       solution4
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      6.79|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  178268|  178268|  178269|  178269|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------+--------+--------+----------+-----------+-----------+------+----------+
+        |            |     Latency     | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name |   min  |   max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------+--------+--------+----------+-----------+-----------+------+----------+
+        |- ih_loop   |  175936|  175936|      5498|          -|          -|    32|    no    |
+        | + hn_loop  |    5493|    5493|        13|          7|          1|   784|    yes   |
+        |- ho_loop   |    2330|    2330|       233|          -|          -|    10|    no    |
+        | + on_loop  |     229|     229|        13|          7|          1|    32|    yes   |
+        +------------+--------+--------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|DSP              |        -|      -|      -|      -|
+|Expression       |        -|      -|    326|    217|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |        4|      5|    711|   1158|
+|Memory           |       66|      -|      0|      0|
+|Multiplexer      |        -|      -|      -|    314|
+|Register         |        -|      -|    359|      -|
++-----------------+---------+-------+-------+-------+
+|Total            |       70|      5|   1396|   1689|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |       58|      6|      3|      9|
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------+---------------------------------+---------+-------+-----+-----+
+    |              Instance             |              Module             | BRAM_18K| DSP48E|  FF | LUT |
+    +-----------------------------------+---------------------------------+---------+-------+-----+-----+
+    |digitRecognizer_digrec_io_s_axi_U  |digitRecognizer_digrec_io_s_axi  |        4|      0|  196|  180|
+    |digitRecognizer_feOg_U0            |digitRecognizer_feOg             |        0|      2|  306|  418|
+    |digitRecognizer_ffYi_U1            |digitRecognizer_ffYi             |        0|      3|  143|  321|
+    |digitRecognizer_fg8j_U2            |digitRecognizer_fg8j             |        0|      0|   66|  239|
+    +-----------------------------------+---------------------------------+---------+-------+-----+-----+
+    |Total                              |                                 |        4|      5|  711| 1158|
+    +-----------------------------------+---------------------------------+---------+-------+-----+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +------------------------+----------------------+---------+---+----+-------+-----+------+-------------+
+    |         Memory         |        Module        | BRAM_18K| FF| LUT| Words | Bits| Banks| W*Bits*Banks|
+    +------------------------+----------------------+---------+---+----+-------+-----+------+-------------+
+    |hiddenToOutputWeight_U  |digitRecognizer_hcud  |        1|  0|   0|    330|   32|     1|        10560|
+    |hiddenOut_U             |digitRecognizer_hdEe  |        1|  0|   0|     32|   32|     1|         1024|
+    |inputToHiddenWeights_U  |digitRecognizer_ibkb  |       64|  0|   0|  25120|   32|     1|       803840|
+    +------------------------+----------------------+---------+---+----+-------+-----+------+-------------+
+    |Total                   |                      |       66|  0|   0|  25482|   96|     3|       815424|
+    +------------------------+----------------------+---------+---+----+-------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------+----------+-------+----+----+------------+------------+
+    |      Variable Name      | Operation| DSP48E| FF | LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------+----------+-------+----+----+------------+------------+
+    |i_2_fu_353_p2            |     +    |      0|  35|  15|          10|           1|
+    |i_3_fu_481_p2            |     +    |      0|  23|  11|           6|           1|
+    |next_mul_fu_299_p2       |     +    |      0|  50|  20|          15|          10|
+    |o_2_fu_311_p2            |     +    |      0|  23|  11|           6|           1|
+    |o_3_fu_413_p2            |     +    |      0|  17|   9|           4|           1|
+    |sum2_fu_342_p2           |     +    |      0|  35|  15|          10|           2|
+    |tmp_16_fu_331_p2         |     +    |      0|  50|  20|          15|          15|
+    |tmp_17_fu_460_p2         |     +    |      0|  35|  15|          10|          10|
+    |tmp_4_fu_470_p2          |     +    |      0|  23|  11|           6|           2|
+    |tmp_5_fu_435_p2          |     +    |      0|  35|  15|          10|          10|
+    |tmp_15_fu_393_p2         |    and   |      0|   0|   2|           1|           1|
+    |exitcond1_fu_407_p2      |   icmp   |      0|   0|   2|           4|           4|
+    |exitcond2_fu_321_p2      |   icmp   |      0|   0|   5|          10|           9|
+    |exitcond3_fu_305_p2      |   icmp   |      0|   0|   4|           6|           7|
+    |exitcond_fu_450_p2       |   icmp   |      0|   0|   3|           6|           6|
+    |notlhs_fu_377_p2         |   icmp   |      0|   0|   4|           8|           2|
+    |notrhs_fu_383_p2         |   icmp   |      0|   0|  13|          23|           1|
+    |tmp_13_fu_389_p2         |    or    |      0|   0|   2|           1|           1|
+    |hiddenOut_d0             |  select  |      0|   0|  32|           1|           1|
+    |ap_enable_pp0            |    xor   |      0|   0|   2|           1|           2|
+    |ap_enable_pp1            |    xor   |      0|   0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1  |    xor   |      0|   0|   2|           1|           2|
+    |ap_enable_reg_pp1_iter1  |    xor   |      0|   0|   2|           1|           2|
+    +-------------------------+----------+-------+----+----+------------+------------+
+    |Total                    |          |      0| 326| 217|         156|          93|
+    +-------------------------+----------+-------+----+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------+-----+-----------+-----+-----------+
+    |              Name             | LUT | Input Size| Bits| Total Bits|
+    +-------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                      |  113|         23|    1|         23|
+    |ap_enable_reg_pp0_iter1        |   15|          3|    1|          3|
+    |ap_enable_reg_pp1_iter1        |   15|          3|    1|          3|
+    |grp_fu_267_p0                  |   15|          3|   32|         96|
+    |grp_fu_273_p0                  |   15|          3|   32|         96|
+    |grp_fu_273_p1                  |   15|          3|   32|         96|
+    |hiddenOut_address0             |   15|          3|    5|         15|
+    |hiddenToOutputWeight_address0  |   15|          3|    9|         27|
+    |i_1_phi_fu_249_p4              |    9|          2|    6|         12|
+    |i_1_reg_245                    |    9|          2|    6|         12|
+    |i_phi_fu_216_p4                |    9|          2|   10|         20|
+    |i_reg_212                      |    9|          2|   10|         20|
+    |inputToHiddenWeights_address0  |   15|          3|   15|         45|
+    |o_1_reg_233                    |    9|          2|    4|          8|
+    |o_reg_188                      |    9|          2|    6|         12|
+    |phi_mul_reg_200                |    9|          2|   15|         30|
+    |sum1_reg_223                   |    9|          2|   32|         64|
+    |sum3_reg_256                   |    9|          2|   32|         64|
+    +-------------------------------+-----+-----------+-----+-----------+
+    |Total                          |  314|         65|  249|        646|
+    +-------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------+----+----+-----+-----------+
+    |                Name                | FF | LUT| Bits| Const Bits|
+    +------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                           |  22|   0|   22|          0|
+    |ap_enable_reg_pp0_iter0             |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1             |   1|   0|    1|          0|
+    |ap_enable_reg_pp1_iter0             |   1|   0|    1|          0|
+    |ap_enable_reg_pp1_iter1             |   1|   0|    1|          0|
+    |ap_reg_pp0_iter1_exitcond2_reg_515  |   1|   0|    1|          0|
+    |ap_reg_pp1_iter1_exitcond_reg_587   |   1|   0|    1|          0|
+    |exitcond2_reg_515                   |   1|   0|    1|          0|
+    |exitcond_reg_587                    |   1|   0|    1|          0|
+    |hiddenOut_load_reg_611              |  32|   0|   32|          0|
+    |hiddenToOutputWeight_2_reg_606      |  32|   0|   32|          0|
+    |i_1_reg_245                         |   6|   0|    6|          0|
+    |i_2_reg_529                         |  10|   0|   10|          0|
+    |i_3_reg_601                         |   6|   0|    6|          0|
+    |i_reg_212                           |  10|   0|   10|          0|
+    |inputData_load_reg_539              |  32|   0|   32|          0|
+    |inputToHiddenWeights_2_reg_534      |  32|   0|   32|          0|
+    |next_mul_reg_487                    |  15|   0|   15|          0|
+    |notlhs_reg_544                      |   1|   0|    1|          0|
+    |notrhs_reg_549                      |   1|   0|    1|          0|
+    |o_1_reg_233                         |   4|   0|    4|          0|
+    |o_2_reg_495                         |   6|   0|    6|          0|
+    |o_3_reg_562                         |   4|   0|    4|          0|
+    |o_reg_188                           |   6|   0|    6|          0|
+    |phi_mul_reg_200                     |  15|   0|   15|          0|
+    |reg_283                             |  32|   0|   32|          0|
+    |sum1_reg_223                        |  32|   0|   32|          0|
+    |sum3_reg_256                        |  32|   0|   32|          0|
+    |tmp_14_reg_554                      |   1|   0|    1|          0|
+    |tmp_1_reg_577                       |   4|   0|   32|         28|
+    |tmp_5_reg_567                       |  10|   0|   10|          0|
+    |tmp_reg_505                         |   6|   0|   32|         26|
+    +------------------------------------+----+----+-----+-----------+
+    |Total                               | 359|   0|  413|         54|
+    +------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+-----------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++-------------------------+-----+-----+------------+-----------------+--------------+
+|s_axi_digrec_io_AWVALID  |  in |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_AWREADY  | out |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_AWADDR   |  in |   14|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_WVALID   |  in |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_WREADY   | out |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_WDATA    |  in |   32|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_WSTRB    |  in |    4|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_ARVALID  |  in |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_ARREADY  | out |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_ARADDR   |  in |   14|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_RVALID   | out |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_RREADY   |  in |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_RDATA    | out |   32|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_RRESP    | out |    2|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_BVALID   | out |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_BREADY   |  in |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_BRESP    | out |    2|    s_axi   |    digrec_io    |     array    |
+|ap_clk                   |  in |    1| ap_ctrl_hs | digitRecognizer | return value |
+|ap_rst_n                 |  in |    1| ap_ctrl_hs | digitRecognizer | return value |
+|interrupt                | out |    1| ap_ctrl_hs | digitRecognizer | return value |
++-------------------------+-----+-----+------------+-----------------+--------------+
+

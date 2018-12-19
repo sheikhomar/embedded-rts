@@ -1,0 +1,152 @@
+
+
+================================================================
+== Vivado HLS Report for 'digitRecognizer'
+================================================================
+* Date:           Mon Dec 17 16:48:52 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        layer_hls
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      5.58|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   21|   21|   22|   22|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+-----+-----+----------+-----------+-----------+------+----------+
+        |           |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- ho_loop  |   20|   20|         2|          -|          -|    10|    no    |
+        +-----------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|DSP              |        -|      -|      -|      -|
+|Expression       |        -|      -|     52|     26|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |        -|      -|      -|      -|
+|Memory           |        0|      -|      2|     11|
+|Multiplexer      |        -|      -|      -|     30|
+|Register         |        -|      -|     11|      -|
++-----------------+---------+-------+-------+-------+
+|Total            |        0|      0|     65|     67|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |        0|      0|   ~0  |   ~0  |
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +------------------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |         Memory         |        Module        | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
+    +------------------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |hiddenToOutputWeight_U  |digitRecognizer_hbkb  |        0|  2|  11|   330|    2|     1|          660|
+    +------------------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |Total                   |                      |        0|  2|  11|   330|    2|     1|          660|
+    +------------------------+----------------------+---------+---+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------+----------+-------+----+----+------------+------------+
+    |    Variable Name   | Operation| DSP48E| FF | LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------+----------+-------+----+----+------------+------------+
+    |o_fu_74_p2          |     +    |      0|  17|   9|           4|           1|
+    |tmp_2_fu_96_p2      |     +    |      0|  35|  15|          10|          10|
+    |exitcond1_fu_68_p2  |   icmp   |      0|   0|   2|           4|           4|
+    +--------------------+----------+-------+----+----+------------+------------+
+    |Total               |          |      0|  52|  26|          18|          15|
+    +--------------------+----------+-------+----+----+------------+------------+
+
+    * Multiplexer: 
+    +------------+----+-----------+-----+-----------+
+    |    Name    | LUT| Input Size| Bits| Total Bits|
+    +------------+----+-----------+-----+-----------+
+    |ap_NS_fsm   |  21|          4|    1|          4|
+    |o_1_reg_56  |   9|          2|    4|          8|
+    +------------+----+-----------+-----+-----------+
+    |Total       |  30|          6|    5|         12|
+    +------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------+---+----+-----+-----------+
+    |    Name    | FF| LUT| Bits| Const Bits|
+    +------------+---+----+-----+-----------+
+    |ap_CS_fsm   |  3|   0|    3|          0|
+    |o_1_reg_56  |  4|   0|    4|          0|
+    |o_reg_120   |  4|   0|    4|          0|
+    +------------+---+----+-----+-----------+
+    |Total       | 11|   0|   11|          0|
+    +------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+-----------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++--------------------+-----+-----+------------+-----------------+--------------+
+|ap_clk              |  in |    1| ap_ctrl_hs | digitRecognizer | return value |
+|ap_rst              |  in |    1| ap_ctrl_hs | digitRecognizer | return value |
+|ap_start            |  in |    1| ap_ctrl_hs | digitRecognizer | return value |
+|ap_done             | out |    1| ap_ctrl_hs | digitRecognizer | return value |
+|ap_idle             | out |    1| ap_ctrl_hs | digitRecognizer | return value |
+|ap_ready            | out |    1| ap_ctrl_hs | digitRecognizer | return value |
+|inputData_address0  | out |   10|  ap_memory |    inputData    |     array    |
+|inputData_ce0       | out |    1|  ap_memory |    inputData    |     array    |
+|inputData_we0       | out |    1|  ap_memory |    inputData    |     array    |
+|inputData_d0        | out |   64|  ap_memory |    inputData    |     array    |
+|inputData_q0        |  in |   64|  ap_memory |    inputData    |     array    |
+|inputData_address1  | out |   10|  ap_memory |    inputData    |     array    |
+|inputData_ce1       | out |    1|  ap_memory |    inputData    |     array    |
+|inputData_we1       | out |    1|  ap_memory |    inputData    |     array    |
+|inputData_d1        | out |   64|  ap_memory |    inputData    |     array    |
+|inputData_q1        |  in |   64|  ap_memory |    inputData    |     array    |
+|output_r_address0   | out |    4|  ap_memory |     output_r    |     array    |
+|output_r_ce0        | out |    1|  ap_memory |     output_r    |     array    |
+|output_r_we0        | out |    1|  ap_memory |     output_r    |     array    |
+|output_r_d0         | out |   64|  ap_memory |     output_r    |     array    |
++--------------------+-----+-----+------------+-----------------+--------------+
+

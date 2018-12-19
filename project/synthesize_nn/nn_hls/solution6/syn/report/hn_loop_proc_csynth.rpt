@@ -1,0 +1,208 @@
+
+
+================================================================
+== Vivado HLS Report for 'hn_loop_proc'
+================================================================
+* Date:           Tue Dec 18 11:03:27 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        nn_hls
+* Solution:       solution6
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      6.46|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  5495|  5495|  5495|  5495|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+------+------+----------+-----------+-----------+------+----------+
+        |           |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name |  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+------+------+----------+-----------+-----------+------+----------+
+        |- hn_loop  |  5493|  5493|        13|          7|          1|   784|    yes   |
+        +-----------+------+------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|DSP              |        -|      -|      -|      -|
+|Expression       |        -|      -|     70|     41|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |        -|      5|    631|    794|
+|Memory           |       64|      -|      0|      0|
+|Multiplexer      |        -|      -|      -|    124|
+|Register         |        -|      -|    167|      -|
++-----------------+---------+-------+-------+-------+
+|Total            |       64|      5|    868|    959|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |       53|      6|      2|      5|
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+-----+-----+
+    |         Instance        |        Module        | BRAM_18K| DSP48E|  FF | LUT |
+    +-------------------------+----------------------+---------+-------+-----+-----+
+    |digitRecognizer_fHfu_U3  |digitRecognizer_fHfu  |        0|      2|  306|  418|
+    |digitRecognizer_fIfE_U4  |digitRecognizer_fIfE  |        0|      3|  143|  321|
+    |digitRecognizer_mJfO_U5  |digitRecognizer_mJfO  |        0|      0|  182|   55|
+    +-------------------------+----------------------+---------+-------+-----+-----+
+    |Total                    |                      |        0|      5|  631|  794|
+    +-------------------------+----------------------+---------+-------+-----+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +---------------------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |           Memory          |        Module        | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
+    +---------------------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |inputToHiddenWeights_43_U  |hn_loop_proc_inpuAem  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_26_U  |hn_loop_proc_inpuBew  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_46_U  |hn_loop_proc_inpuCeG  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_28_U  |hn_loop_proc_inpuDeQ  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_49_U  |hn_loop_proc_inpuEe0  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_52_U  |hn_loop_proc_inpuFfa  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_31_U  |hn_loop_proc_inpuGfk  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_2_U   |hn_loop_proc_inpubkb  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_1_U   |hn_loop_proc_inpucud  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_34_U  |hn_loop_proc_inpudEe  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_3_U   |hn_loop_proc_inpueOg  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_55_U  |hn_loop_proc_inpufYi  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_5_U   |hn_loop_proc_inpug8j  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_58_U  |hn_loop_proc_inpuhbi  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_7_U   |hn_loop_proc_inpuibs  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_61_U  |hn_loop_proc_inpujbC  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_9_U   |hn_loop_proc_inpukbM  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_6_U   |hn_loop_proc_inpulbW  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_11_U  |hn_loop_proc_inpumb6  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_12_U  |hn_loop_proc_inpuncg  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_13_U  |hn_loop_proc_inpuocq  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_18_U  |hn_loop_proc_inpupcA  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_15_U  |hn_loop_proc_inpuqcK  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_25_U  |hn_loop_proc_inpurcU  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_17_U  |hn_loop_proc_inpusc4  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_30_U  |hn_loop_proc_inputde  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_19_U  |hn_loop_proc_inpuudo  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_20_U  |hn_loop_proc_inpuvdy  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_37_U  |hn_loop_proc_inpuwdI  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_22_U  |hn_loop_proc_inpuxdS  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_40_U  |hn_loop_proc_inpuyd2  |        2|  0|   0|   785|   32|     1|        25120|
+    |inputToHiddenWeights_24_U  |hn_loop_proc_inpuzec  |        2|  0|   0|   785|   32|     1|        25120|
+    +---------------------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |Total                      |                      |       64|  0|   0| 25120| 1024|    32|       803840|
+    +---------------------------+----------------------+---------+---+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------+----------+-------+----+----+------------+------------+
+    |        Variable Name        | Operation| DSP48E| FF | LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------+----------+-------+----+----+------------+------------+
+    |i_fu_649_p2                  |     +    |      0|  35|  15|          10|           1|
+    |sum_i_i_fu_638_p2            |     +    |      0|  35|  15|          10|           2|
+    |exitcond2_i_i_i_i_fu_596_p2  |   icmp   |      0|   0|   5|          10|           9|
+    |ap_block_state1              |    or    |      0|   0|   2|           1|           1|
+    |ap_enable_pp0                |    xor   |      0|   0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1      |    xor   |      0|   0|   2|           1|           2|
+    +-----------------------------+----------+-------+----+----+------------+------------+
+    |Total                        |          |      0|  70|  41|          33|          17|
+    +-----------------------------+----------+-------+----+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------+----+-----------+-----+-----------+
+    |            Name           | LUT| Input Size| Bits| Total Bits|
+    +---------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                  |  55|         10|    1|         10|
+    |ap_done                    |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1    |  15|          3|    1|          3|
+    |i_0_i_i_i_i_phi_fu_566_p4  |   9|          2|   10|         20|
+    |i_0_i_i_i_i_reg_562        |   9|          2|   10|         20|
+    |o_0_i_i_blk_n              |   9|          2|    1|          2|
+    |o_0_i_i_out_blk_n          |   9|          2|    1|          2|
+    |sum_0_i_i_loc1_reg_573     |   9|          2|   32|         64|
+    +---------------------------+----+-----------+-----+-----------+
+    |Total                      | 124|         25|   57|        123|
+    +---------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------+----+----+-----+-----------+
+    |                    Name                    | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                   |   9|   0|    9|          0|
+    |ap_done_reg                                 |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0                     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                     |   1|   0|    1|          0|
+    |ap_reg_pp0_iter1_exitcond2_i_i_i_i_reg_734  |   1|   0|    1|          0|
+    |exitcond2_i_i_i_i_reg_734                   |   1|   0|    1|          0|
+    |i_0_i_i_i_i_reg_562                         |  10|   0|   10|          0|
+    |i_reg_903                                   |  10|   0|   10|          0|
+    |inputData_load_reg_913                      |  32|   0|   32|          0|
+    |sum_0_i_i_loc1_reg_573                      |  32|   0|   32|          0|
+    |tmp_1_reg_729                               |   5|   0|    5|          0|
+    |tmp_7_i_i_i_reg_918                         |  32|   0|   32|          0|
+    |tmp_reg_908                                 |  32|   0|   32|          0|
+    +--------------------------------------------+----+----+-----+-----------+
+    |Total                                       | 167|   0|  167|          0|
+    +--------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+--------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
++--------------------+-----+-----+------------+--------------+--------------+
+|ap_clk              |  in |    1| ap_ctrl_hs | hn_loop_proc | return value |
+|ap_rst              |  in |    1| ap_ctrl_hs | hn_loop_proc | return value |
+|ap_start            |  in |    1| ap_ctrl_hs | hn_loop_proc | return value |
+|ap_done             | out |    1| ap_ctrl_hs | hn_loop_proc | return value |
+|ap_continue         |  in |    1| ap_ctrl_hs | hn_loop_proc | return value |
+|ap_idle             | out |    1| ap_ctrl_hs | hn_loop_proc | return value |
+|ap_ready            | out |    1| ap_ctrl_hs | hn_loop_proc | return value |
+|ap_return           | out |   32| ap_ctrl_hs | hn_loop_proc | return value |
+|empty               |  in |   32|   ap_none  |     empty    |    pointer   |
+|o_0_i_i_dout        |  in |    6|   ap_fifo  |    o_0_i_i   |    pointer   |
+|o_0_i_i_empty_n     |  in |    1|   ap_fifo  |    o_0_i_i   |    pointer   |
+|o_0_i_i_read        | out |    1|   ap_fifo  |    o_0_i_i   |    pointer   |
+|inputData_address0  | out |   10|  ap_memory |   inputData  |     array    |
+|inputData_ce0       | out |    1|  ap_memory |   inputData  |     array    |
+|inputData_q0        |  in |   32|  ap_memory |   inputData  |     array    |
+|o_0_i_i_out_din     | out |    6|   ap_fifo  |  o_0_i_i_out |    pointer   |
+|o_0_i_i_out_full_n  |  in |    1|   ap_fifo  |  o_0_i_i_out |    pointer   |
+|o_0_i_i_out_write   | out |    1|   ap_fifo  |  o_0_i_i_out |    pointer   |
++--------------------+-----+-----+------------+--------------+--------------+
+

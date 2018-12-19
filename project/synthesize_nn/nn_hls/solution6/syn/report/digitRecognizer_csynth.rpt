@@ -1,0 +1,144 @@
+
+
+================================================================
+== Vivado HLS Report for 'digitRecognizer'
+================================================================
+* Date:           Tue Dec 18 11:03:30 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        nn_hls
+* Solution:       solution6
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      7.39|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+----------+
+    |     Latency     |     Interval    | Pipeline |
+    |   min  |   max  |   min  |   max  |   Type   |
+    +--------+--------+--------+--------+----------+
+    |  176474|  176474|  176098|  176098| dataflow |
+    +--------+--------+--------+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------+--------------+--------+--------+--------+--------+---------+
+        |                 |              |     Latency     |     Interval    | Pipeline|
+        |     Instance    |    Module    |   min  |   max  |   min  |   max  |   Type  |
+        +-----------------+--------------+--------+--------+--------+--------+---------+
+        |ho_loop_proc_U0  |ho_loop_proc  |     376|     376|     376|     376|   none  |
+        |ih_loop_proc_U0  |ih_loop_proc  |  176097|  176097|  176097|  176097|   none  |
+        +-----------------+--------------+--------+--------+--------+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|DSP              |        -|      -|      -|      -|
+|Expression       |        -|      -|      0|      2|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |       68|     15|  13138|   7815|
+|Memory           |        4|      -|      0|      0|
+|Multiplexer      |        -|      -|      -|      -|
+|Register         |        -|      -|      -|      -|
++-----------------+---------+-------+-------+-------+
+|Total            |       72|     15|  13138|   7817|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |       60|     18|     37|     44|
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------+---------------------------------+---------+-------+-------+------+
+    |              Instance             |              Module             | BRAM_18K| DSP48E|   FF  |  LUT |
+    +-----------------------------------+---------------------------------+---------+-------+-------+------+
+    |digitRecognizer_digrec_io_s_axi_U  |digitRecognizer_digrec_io_s_axi  |        4|      0|    196|   180|
+    |ho_loop_proc_U0                    |ho_loop_proc                     |        0|     10|  11764|  5060|
+    |ih_loop_proc_U0                    |ih_loop_proc                     |       64|      5|   1178|  2575|
+    +-----------------------------------+---------------------------------+---------+-------+-------+------+
+    |Total                              |                                 |       68|     15|  13138|  7815|
+    +-----------------------------------+---------------------------------+---------+-------+-------+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +-------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |    Memory   |        Module        | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
+    +-------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |hiddenOut_U  |digitRecognizer_hMgi  |        4|  0|   0|    32|   32|     2|         2048|
+    +-------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |Total        |                      |        4|  0|   0|    32|   32|     2|         2048|
+    +-------------+----------------------+---------+---+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------+----------+-------+---+----+------------+------------+
+    | Variable Name| Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------+----------+-------+---+----+------------+------------+
+    |ap_idle       |    and   |      0|  0|   2|           1|           1|
+    +--------------+----------+-------+---+----+------------+------------+
+    |Total         |          |      0|  0|   2|           1|           1|
+    +--------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+-----------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++-------------------------+-----+-----+------------+-----------------+--------------+
+|s_axi_digrec_io_AWVALID  |  in |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_AWREADY  | out |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_AWADDR   |  in |   14|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_WVALID   |  in |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_WREADY   | out |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_WDATA    |  in |   32|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_WSTRB    |  in |    4|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_ARVALID  |  in |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_ARREADY  | out |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_ARADDR   |  in |   14|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_RVALID   | out |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_RREADY   |  in |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_RDATA    | out |   32|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_RRESP    | out |    2|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_BVALID   | out |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_BREADY   |  in |    1|    s_axi   |    digrec_io    |     array    |
+|s_axi_digrec_io_BRESP    | out |    2|    s_axi   |    digrec_io    |     array    |
+|ap_clk                   |  in |    1| ap_ctrl_hs | digitRecognizer | return value |
+|ap_rst_n                 |  in |    1| ap_ctrl_hs | digitRecognizer | return value |
+|interrupt                | out |    1| ap_ctrl_hs | digitRecognizer | return value |
++-------------------------+-----+-----+------------+-----------------+--------------+
+

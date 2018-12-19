@@ -1,0 +1,689 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Dec 18 12:49:42 2018
+# Process ID: 7712
+# Current directory: C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.runs/synth_1
+# Command line: vivado.exe -log digitRecognizer.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source digitRecognizer.tcl
+# Log file: C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.runs/synth_1/digitRecognizer.vds
+# Journal file: C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source digitRecognizer.tcl -notrace
+Command: synth_design -top digitRecognizer -part xc7z010clg400-1 -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16112 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 308.207 ; gain = 79.246
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'digitRecognizer' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer.vhd:40]
+INFO: [Synth 8-3491] module 'digitRecognizer_digrec_io_s_axi' declared at 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_digrec_io_s_axi.vhd:12' bound to instance 'digitRecognizer_digrec_io_s_axi_U' of component 'digitRecognizer_digrec_io_s_axi' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer.vhd:200]
+INFO: [Synth 8-638] synthesizing module 'digitRecognizer_digrec_io_s_axi' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_digrec_io_s_axi.vhd:81]
+INFO: [Synth 8-3491] module 'digitRecognizer_digrec_io_s_axi_ram' declared at 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_digrec_io_s_axi.vhd:551' bound to instance 'int_inputData' of component 'digitRecognizer_digrec_io_s_axi_ram' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_digrec_io_s_axi.vhd:183]
+INFO: [Synth 8-638] synthesizing module 'digitRecognizer_digrec_io_s_axi_ram' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_digrec_io_s_axi.vhd:574]
+WARNING: [Synth 8-6014] Unused sequential element gen_write[0].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[0].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[2].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[2].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[3].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[3].mem_reg was removed. 
+INFO: [Synth 8-256] done synthesizing module 'digitRecognizer_digrec_io_s_axi_ram' (1#1) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_digrec_io_s_axi.vhd:574]
+INFO: [Synth 8-3491] module 'digitRecognizer_digrec_io_s_axi_ram' declared at 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_digrec_io_s_axi.vhd:551' bound to instance 'int_output_r' of component 'digitRecognizer_digrec_io_s_axi_ram' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_digrec_io_s_axi.vhd:204]
+INFO: [Synth 8-638] synthesizing module 'digitRecognizer_digrec_io_s_axi_ram__parameterized1' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_digrec_io_s_axi.vhd:574]
+WARNING: [Synth 8-6014] Unused sequential element gen_write[0].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[0].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[2].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[2].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[3].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[3].mem_reg was removed. 
+INFO: [Synth 8-256] done synthesizing module 'digitRecognizer_digrec_io_s_axi_ram__parameterized1' (1#1) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_digrec_io_s_axi.vhd:574]
+WARNING: [Synth 8-6014] Unused sequential element int_isr_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_digrec_io_s_axi.vhd:340]
+WARNING: [Synth 8-6014] Unused sequential element int_isr_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_digrec_io_s_axi.vhd:447]
+INFO: [Synth 8-256] done synthesizing module 'digitRecognizer_digrec_io_s_axi' (2#1) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_digrec_io_s_axi.vhd:81]
+INFO: [Synth 8-3491] module 'digitRecognizer_hg8j' declared at 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_hg8j.vhd:12' bound to instance 'hiddenOut_U' of component 'digitRecognizer_hg8j' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer.vhd:238]
+INFO: [Synth 8-638] synthesizing module 'digitRecognizer_hg8j' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_hg8j.vhd:45]
+INFO: [Synth 8-3491] module 'digitRecognizer_hg8j_memcore' declared at 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_hg8j_memcore.vhd:107' bound to instance 'digitRecognizer_hg8j_memcore_U' of component 'digitRecognizer_hg8j_memcore' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_hg8j.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'digitRecognizer_hg8j_memcore' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_hg8j_memcore.vhd:127]
+INFO: [Synth 8-3491] module 'digitRecognizer_hg8j_memcore_ram' declared at 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_hg8j_memcore.vhd:13' bound to instance 'digitRecognizer_hg8j_memcore_ram_U' of component 'digitRecognizer_hg8j_memcore_ram' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_hg8j_memcore.vhd:146]
+INFO: [Synth 8-638] synthesizing module 'digitRecognizer_hg8j_memcore_ram' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_hg8j_memcore.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'digitRecognizer_hg8j_memcore_ram' (3#1) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_hg8j_memcore.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'digitRecognizer_hg8j_memcore' (4#1) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_hg8j_memcore.vhd:127]
+INFO: [Synth 8-256] done synthesizing module 'digitRecognizer_hg8j' (5#1) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_hg8j.vhd:45]
+INFO: [Synth 8-3491] module 'Loop_ih_loop_proc' declared at 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:12' bound to instance 'Loop_ih_loop_proc_U0' of component 'Loop_ih_loop_proc' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer.vhd:263]
+INFO: [Synth 8-638] synthesizing module 'Loop_ih_loop_proc' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:31]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:75]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:78]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:87]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:94]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:98]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:108]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:116]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:125]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:135]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:140]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:149]
+INFO: [Synth 8-3491] module 'Loop_ih_loop_procbkb' declared at 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_procbkb.vhd:25185' bound to instance 'inputToHiddenWeights_U' of component 'Loop_ih_loop_procbkb' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:239]
+INFO: [Synth 8-638] synthesizing module 'Loop_ih_loop_procbkb' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_procbkb.vhd:25198]
+INFO: [Synth 8-3491] module 'Loop_ih_loop_procbkb_rom' declared at 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_procbkb.vhd:12' bound to instance 'Loop_ih_loop_procbkb_rom_U' of component 'Loop_ih_loop_procbkb_rom' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_procbkb.vhd:25210]
+INFO: [Synth 8-638] synthesizing module 'Loop_ih_loop_procbkb_rom' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_procbkb.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'Loop_ih_loop_procbkb_rom' (6#1) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_procbkb.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'Loop_ih_loop_procbkb' (7#1) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_procbkb.vhd:25198]
+INFO: [Synth 8-3491] module 'digitRecognizer_fcud' declared at 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_fcud.vhd:11' bound to instance 'digitRecognizer_fcud_U0' of component 'digitRecognizer_fcud' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:251]
+INFO: [Synth 8-638] synthesizing module 'digitRecognizer_fcud' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_fcud.vhd:29]
+INFO: [Synth 8-3491] module 'digitRecognizer_ap_fadd_5_full_dsp_32' declared at 'c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.srcs/sources_1/ip/digitRecognizer_ap_fadd_5_full_dsp_32/synth/digitRecognizer_ap_fadd_5_full_dsp_32.vhd:59' bound to instance 'digitRecognizer_ap_fadd_5_full_dsp_32_u' of component 'digitRecognizer_ap_fadd_5_full_dsp_32' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_fcud.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'digitRecognizer_ap_fadd_5_full_dsp_32' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.srcs/sources_1/ip/digitRecognizer_ap_fadd_5_full_dsp_32/synth/digitRecognizer_ap_fadd_5_full_dsp_32.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_4' declared at 'c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.srcs/sources_1/ip/digitRecognizer_ap_fmul_2_max_dsp_32/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_4' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.srcs/sources_1/ip/digitRecognizer_ap_fadd_5_full_dsp_32/synth/digitRecognizer_ap_fadd_5_full_dsp_32.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'digitRecognizer_ap_fadd_5_full_dsp_32' (25#1) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.srcs/sources_1/ip/digitRecognizer_ap_fadd_5_full_dsp_32/synth/digitRecognizer_ap_fadd_5_full_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'digitRecognizer_fcud' (26#1) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_fcud.vhd:29]
+INFO: [Synth 8-3491] module 'digitRecognizer_fdEe' declared at 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_fdEe.vhd:11' bound to instance 'digitRecognizer_fdEe_U1' of component 'digitRecognizer_fdEe' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:266]
+INFO: [Synth 8-638] synthesizing module 'digitRecognizer_fdEe' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_fdEe.vhd:29]
+INFO: [Synth 8-3491] module 'digitRecognizer_ap_fmul_2_max_dsp_32' declared at 'c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.srcs/sources_1/ip/digitRecognizer_ap_fmul_2_max_dsp_32/synth/digitRecognizer_ap_fmul_2_max_dsp_32.vhd:59' bound to instance 'digitRecognizer_ap_fmul_2_max_dsp_32_u' of component 'digitRecognizer_ap_fmul_2_max_dsp_32' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_fdEe.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'digitRecognizer_ap_fmul_2_max_dsp_32' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.srcs/sources_1/ip/digitRecognizer_ap_fmul_2_max_dsp_32/synth/digitRecognizer_ap_fmul_2_max_dsp_32.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_4' declared at 'c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.srcs/sources_1/ip/digitRecognizer_ap_fmul_2_max_dsp_32/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_4' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.srcs/sources_1/ip/digitRecognizer_ap_fmul_2_max_dsp_32/synth/digitRecognizer_ap_fmul_2_max_dsp_32.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'digitRecognizer_ap_fmul_2_max_dsp_32' (34#1) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.srcs/sources_1/ip/digitRecognizer_ap_fmul_2_max_dsp_32/synth/digitRecognizer_ap_fmul_2_max_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'digitRecognizer_fdEe' (35#1) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_fdEe.vhd:29]
+INFO: [Synth 8-3491] module 'digitRecognizer_feOg' declared at 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_feOg.vhd:11' bound to instance 'digitRecognizer_feOg_U2' of component 'digitRecognizer_feOg' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:281]
+INFO: [Synth 8-638] synthesizing module 'digitRecognizer_feOg' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_feOg.vhd:27]
+INFO: [Synth 8-3491] module 'digitRecognizer_ap_fcmp_0_no_dsp_32' declared at 'c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.srcs/sources_1/ip/digitRecognizer_ap_fcmp_0_no_dsp_32/synth/digitRecognizer_ap_fcmp_0_no_dsp_32.vhd:59' bound to instance 'digitRecognizer_ap_fcmp_0_no_dsp_32_u' of component 'digitRecognizer_ap_fcmp_0_no_dsp_32' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_feOg.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'digitRecognizer_ap_fcmp_0_no_dsp_32' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.srcs/sources_1/ip/digitRecognizer_ap_fcmp_0_no_dsp_32/synth/digitRecognizer_ap_fcmp_0_no_dsp_32.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_4' declared at 'c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.srcs/sources_1/ip/digitRecognizer_ap_fmul_2_max_dsp_32/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_4' [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.srcs/sources_1/ip/digitRecognizer_ap_fcmp_0_no_dsp_32/synth/digitRecognizer_ap_fcmp_0_no_dsp_32.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'digitRecognizer_ap_fcmp_0_no_dsp_32' (39#1) [c:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.srcs/sources_1/ip/digitRecognizer_ap_fcmp_0_no_dsp_32/synth/digitRecognizer_ap_fcmp_0_no_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'digitRecognizer_feOg' (40#1) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_feOg.vhd:27]
+WARNING: [Synth 8-6014] Unused sequential element ap_block_state1_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:570]
+WARNING: [Synth 8-6014] Unused sequential element ap_idle_pp0_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:606]
+WARNING: [Synth 8-6014] Unused sequential element hiddenOut_we0_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:657]
+INFO: [Synth 8-256] done synthesizing module 'Loop_ih_loop_proc' (41#1) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:31]
+INFO: [Synth 8-3491] module 'Loop_ho_loop_proc' declared at 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:12' bound to instance 'Loop_ho_loop_proc_U0' of component 'Loop_ho_loop_proc' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer.vhd:280]
+INFO: [Synth 8-638] synthesizing module 'Loop_ho_loop_proc' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:31]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:67]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:70]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:79]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:86]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:90]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:100]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:108]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:119]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:123]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:132]
+INFO: [Synth 8-3491] module 'Loop_ho_loop_procfYi' declared at 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_procfYi.vhd:395' bound to instance 'hiddenToOutputWeight_U' of component 'Loop_ho_loop_procfYi' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:205]
+INFO: [Synth 8-638] synthesizing module 'Loop_ho_loop_procfYi' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_procfYi.vhd:408]
+INFO: [Synth 8-3491] module 'Loop_ho_loop_procfYi_rom' declared at 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_procfYi.vhd:12' bound to instance 'Loop_ho_loop_procfYi_rom_U' of component 'Loop_ho_loop_procfYi_rom' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_procfYi.vhd:420]
+INFO: [Synth 8-638] synthesizing module 'Loop_ho_loop_procfYi_rom' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_procfYi.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'Loop_ho_loop_procfYi_rom' (42#1) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_procfYi.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'Loop_ho_loop_procfYi' (43#1) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_procfYi.vhd:408]
+INFO: [Synth 8-3491] module 'digitRecognizer_fcud' declared at 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_fcud.vhd:11' bound to instance 'digitRecognizer_fcud_x_U6' of component 'digitRecognizer_fcud' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:217]
+INFO: [Synth 8-3491] module 'digitRecognizer_fdEe' declared at 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_fdEe.vhd:11' bound to instance 'digitRecognizer_fdEe_x_U7' of component 'digitRecognizer_fdEe' [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:232]
+WARNING: [Synth 8-6014] Unused sequential element ap_block_state1_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:506]
+WARNING: [Synth 8-6014] Unused sequential element ap_idle_pp0_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:542]
+WARNING: [Synth 8-6014] Unused sequential element output_r_we0_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:636]
+INFO: [Synth 8-256] done synthesizing module 'Loop_ho_loop_proc' (44#1) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'digitRecognizer' (45#1) [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer.vhd:40]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[11]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[10]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[9]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[8]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DIVIDE_BY_ZERO_IN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized33 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized33 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized33 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized33 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized33 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized78 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized78 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized78 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized78 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized78 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized76 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized76 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized76 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized76 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized76 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized15 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized15 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized15 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized15 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized15 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized3 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized3 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized3 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized3 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized13 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized13 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized13 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized13 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized13 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized7 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized7 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized7 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized7 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized7 has unconnected port SINIT
+WARNING: [Synth 8-3331] design dsp48e1_wrapper__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design flt_round_dsp_opt_full has unconnected port SIGN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized66 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized66 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized66 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized66 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized66 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized74 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized74 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized74 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized74 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized74 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized55 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized55 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized55 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized55 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized55 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized53 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized53 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized53 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized53 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized53 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized72 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized72 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized72 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized72 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized72 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized37 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized37 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized37 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized70 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized70 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized70 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized35 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized35 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized35 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized68 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized68 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized68 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized11 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized11 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized11 has unconnected port SINIT
+WARNING: [Synth 8-3331] design compare_eq_im__parameterized1 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design special_detect__parameterized0 has unconnected port A[31]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized61 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized61 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized61 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized61 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized61 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized17 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized17 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized17 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized17 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized17 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized64 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized64 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized64 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized64 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized64 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized9 has unconnected port CLK
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 431.641 ; gain = 202.680
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 431.641 ; gain = 202.680
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 262 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer.xdc]
+Finished Parsing XDC File [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer.xdc]
+Parsing XDC File [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  FDE => FDRE: 6 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.239 . Memory (MB): peak = 667.402 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 667.402 ; gain = 438.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 667.402 ; gain = 438.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for Loop_ho_loop_proc_U0/digitRecognizer_fcud_x_U6/digitRecognizer_ap_fadd_5_full_dsp_32_u. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Loop_ho_loop_proc_U0/digitRecognizer_fdEe_x_U7/digitRecognizer_ap_fmul_2_max_dsp_32_u. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Loop_ih_loop_proc_U0/digitRecognizer_fcud_U0/digitRecognizer_ap_fadd_5_full_dsp_32_u. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Loop_ih_loop_proc_U0/digitRecognizer_fdEe_U1/digitRecognizer_ap_fmul_2_max_dsp_32_u. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Loop_ih_loop_proc_U0/digitRecognizer_feOg_U2/digitRecognizer_ap_fcmp_0_no_dsp_32_u. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 667.402 ; gain = 438.441
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'digitRecognizer_digrec_io_s_axi'
+WARNING: [Synth 8-6014] Unused sequential element wstate_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_digrec_io_s_axi.vhd:241]
+INFO: [Synth 8-5544] ROM "ARREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BVALID" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "WREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "AWREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element q0_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_procbkb.vhd:25174]
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "det_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_int_up" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "op_tdata" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond3_i_i_fu_181_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond2_i_i_fu_197_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notlhs_fu_253_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notrhs_fu_259_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element i_reg_325_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:364]
+WARNING: [Synth 8-6014] Unused sequential element q0_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_procfYi.vhd:384]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_9_reg_229_reg' and it is trimmed from '10' to '9' bits. [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:406]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "exitcond1_fu_141_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exitcond_fu_184_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element i_reg_263_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:317]
+INFO: [Synth 8-3971] The signal gen_write[1].mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal gen_write[1].mem_reg was recognized as a true dual port RAM template.
+WARNING: [Synth 8-6014] Unused sequential element wstate_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_digrec_io_s_axi.vhd:241]
+WARNING: [Synth 8-6014] Unused sequential element wstate_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_digrec_io_s_axi.vhd:241]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                              011
+*
+                  wridle |                             0010 |                              000
+                  wrdata |                             0100 |                              001
+                  wrresp |                             1000 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'digitRecognizer_digrec_io_s_axi'
+WARNING: [Synth 8-6014] Unused sequential element wstate_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_digrec_io_s_axi.vhd:241]
+INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:46 ; elapsed = 00:00:53 . Memory (MB): peak = 667.402 ; gain = 438.441
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'digitRecognizer_ap_fadd_5_full_dsp_32:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'digitRecognizer_ap_fadd_5_full_dsp_32:/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'digitRecognizer_ap_fadd_5_full_dsp_32:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'digitRecognizer_ap_fadd_5_full_dsp_32:/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'digitRecognizer_ap_fmul_2_max_dsp_32:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'digitRecognizer_ap_fmul_2_max_dsp_32:/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'digitRecognizer_ap_fmul_2_max_dsp_32:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'digitRecognizer_ap_fmul_2_max_dsp_32:/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'Loop_ih_loop_proc_U0/digitRecognizer_feOg_U2/digitRecognizer_ap_fcmp_0_no_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'Loop_ih_loop_proc_U0/digitRecognizer_feOg_U2/digitRecognizer_ap_fcmp_0_no_dsp_32_u/U0/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'Loop_ih_loop_proc_U0/digitRecognizer_feOg_U2/digitRecognizer_ap_fcmp_0_no_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'Loop_ih_loop_proc_U0/digitRecognizer_feOg_U2/digitRecognizer_ap_fcmp_0_no_dsp_32_u/U0/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'Loop_ih_loop_proc_U0/digitRecognizer_feOg_U2/digitRecognizer_ap_fcmp_0_no_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'Loop_ih_loop_proc_U0/digitRecognizer_feOg_U2/digitRecognizer_ap_fcmp_0_no_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'Loop_ih_loop_proc_U0/digitRecognizer_feOg_U2/digitRecognizer_ap_fcmp_0_no_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'Loop_ih_loop_proc_U0/digitRecognizer_feOg_U2/digitRecognizer_ap_fcmp_0_no_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "Loop_ih_loop_proc_U0/" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Loop_ih_loop_proc_U0/" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Loop_ho_loop_proc_U0/" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Loop_ho_loop_proc_U0/" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "Loop_ih_loop_proc_U0/exitcond2_i_i_fu_197_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Loop_ih_loop_proc_U0/notlhs_fu_253_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Loop_ih_loop_proc_U0/notrhs_fu_259_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_procbkb.vhd:25174]
+WARNING: [Synth 8-6014] Unused sequential element Loop_ho_loop_proc_U0/hiddenToOutputWeight_U/Loop_ho_loop_procfYi_rom_U/q0_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_procfYi.vhd:384]
+WARNING: [Synth 8-6014] Unused sequential element Loop_ih_loop_proc_U0/i_reg_325_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ih_loop_proc.vhd:364]
+WARNING: [Synth 8-6014] Unused sequential element Loop_ho_loop_proc_U0/i_reg_263_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/Loop_ho_loop_proc.vhd:317]
+WARNING: [Synth 8-3917] design digitRecognizer has port s_axi_digrec_io_RRESP[1] driven by constant 0
+WARNING: [Synth 8-3917] design digitRecognizer has port s_axi_digrec_io_RRESP[0] driven by constant 0
+WARNING: [Synth 8-3917] design digitRecognizer has port s_axi_digrec_io_BRESP[1] driven by constant 0
+WARNING: [Synth 8-3917] design digitRecognizer has port s_axi_digrec_io_BRESP[0] driven by constant 0
+INFO: [Synth 8-3971] The signal digitRecognizer_digrec_io_s_axi_U/int_inputData/gen_write[1].mem_reg was recognized as a true dual port RAM template.
+WARNING: [Synth 8-6014] Unused sequential element digitRecognizer_digrec_io_s_axi_U/int_output_r/q0_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_digrec_io_s_axi.vhd:609]
+INFO: [Synth 8-3971] The signal digitRecognizer_digrec_io_s_axi_U/int_output_r/gen_write[1].mem_reg was recognized as a true dual port RAM template.
+WARNING: [Synth 8-6014] Unused sequential element hiddenOut_U/digitRecognizer_hg8j_memcore_U/digitRecognizer_hg8j_memcore_ram_U/q0_reg was removed.  [C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/digitRecognizer_hg8j_memcore.vhd:71]
+WARNING: [Synth 8-6014] Unused sequential element hiddenOut_U/digitRecognizer_hg8j_memcore_U/digitRecognizer_hg8j_memcore_ram_U/ram_reg was removed. 
+INFO: [Synth 8-3886] merging instance 'Loop_ho_loop_proc_U0/tmp_9_reg_229_reg[0]' (FDE) to 'Loop_ho_loop_proc_U0/tmp_9_reg_229_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Loop_ho_loop_proc_U0/tmp_9_reg_229_reg[1]' (FDE) to 'Loop_ho_loop_proc_U0/tmp_9_reg_229_reg[6]'
+INFO: [Synth 8-3886] merging instance 'Loop_ho_loop_proc_U0/tmp_9_reg_229_reg[2]' (FDE) to 'Loop_ho_loop_proc_U0/tmp_9_reg_229_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Loop_ho_loop_proc_U0/tmp_9_reg_229_reg[3]' (FDE) to 'Loop_ho_loop_proc_U0/tmp_9_reg_229_reg[8]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Loop_ho_loop_proc_U0/tmp_9_reg_229_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Loop_ho_loop_proc_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\digitRecognizer_digrec_io_s_axi_U/rstate_reg[2] )
+WARNING: [Synth 8-3332] Sequential element (i_2_0) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_2) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_4) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_6) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_8) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_10) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_12) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_14) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_16) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_18) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_20) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_22) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_24) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_26) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_28) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_30) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_32) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_34) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_36) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_38) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_40) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_42) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_44) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_46) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_48) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_50) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_52) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_54) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_56) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_58) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_60) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_62) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (i_2_64) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (Loop_ih_loop_proc_U0/tmp_i_reg_301_reg[5]) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (Loop_ho_loop_proc_U0/tmp_9_reg_229_reg[4]) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (digitRecognizer_digrec_io_s_axi_U/rstate_reg[2]) is unused and will be removed from module digitRecognizer.
+WARNING: [Synth 8-3332] Sequential element (Loop_ho_loop_proc_U0/ap_done_reg_reg) is unused and will be removed from module digitRecognizer.
+INFO: [Synth 8-3886] merging instance 'digitRecognizer_ap_fadd_5_full_dsp_32:/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'digitRecognizer_ap_fadd_5_full_dsp_32:/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:48 ; elapsed = 00:05:05 . Memory (MB): peak = 667.402 ; gain = 438.441
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM digitRecognizer_digrec_io_s_axi_U/int_output_r/gen_write[1].mem_reg to conserve power
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:07 ; elapsed = 00:05:25 . Memory (MB): peak = 761.922 ; gain = 532.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:05:08 ; elapsed = 00:05:26 . Memory (MB): peak = 778.082 ; gain = 549.121
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance digitRecognizer_digrec_io_s_axi_U/int_inputData/gen_write[1].mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance digitRecognizer_digrec_io_s_axi_U/int_inputData/gen_write[1].mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance digitRecognizer_digrec_io_s_axi_U/int_output_r/gen_write[1].mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ho_loop_proc_U0/hiddenToOutputWeight_U/Loop_ho_loop_procfYi_rom_U/q0_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ho_loop_proc_U0/hiddenToOutputWeight_U/Loop_ho_loop_procfYi_rom_U/q0_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_4 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_5 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_6 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_7 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_8 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_9 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_10 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_11 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_12 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_13 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_14 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_15 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_16 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_17 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_18 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_19 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_20 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_21 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_22 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_23 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_24 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_25 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_26 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_27 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_28 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_29 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_30 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance Loop_ih_loop_proc_U0/inputToHiddenWeights_U/Loop_ih_loop_procbkb_rom_U/q0_reg_0_31 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:05:10 ; elapsed = 00:05:28 . Memory (MB): peak = 790.227 ; gain = 561.266
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:05:11 ; elapsed = 00:05:29 . Memory (MB): peak = 790.227 ; gain = 561.266
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:11 ; elapsed = 00:05:29 . Memory (MB): peak = 790.227 ; gain = 561.266
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:12 ; elapsed = 00:05:30 . Memory (MB): peak = 790.227 ; gain = 561.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:12 ; elapsed = 00:05:30 . Memory (MB): peak = 790.227 ; gain = 561.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:12 ; elapsed = 00:05:30 . Memory (MB): peak = 790.227 ; gain = 561.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:12 ; elapsed = 00:05:30 . Memory (MB): peak = 790.227 ; gain = 561.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |CARRY4      |    17|
+|2     |DSP48E1     |     2|
+|3     |DSP48E1_1   |     2|
+|4     |DSP48E1_2   |     2|
+|5     |DSP48E1_3   |     2|
+|6     |DSP48E1_4   |     2|
+|7     |LUT1        |    34|
+|8     |LUT2        |   108|
+|9     |LUT3        |   234|
+|10    |LUT4        |   221|
+|11    |LUT5        |   303|
+|12    |LUT6        |   296|
+|13    |MUXCY       |   190|
+|14    |RAMB18E1    |     1|
+|15    |RAMB18E1_1  |     1|
+|16    |RAMB36E1    |     2|
+|17    |RAMB36E1_1  |     1|
+|18    |RAMB36E1_10 |     1|
+|19    |RAMB36E1_11 |     1|
+|20    |RAMB36E1_12 |     1|
+|21    |RAMB36E1_13 |     1|
+|22    |RAMB36E1_14 |     1|
+|23    |RAMB36E1_15 |     1|
+|24    |RAMB36E1_16 |     1|
+|25    |RAMB36E1_17 |     1|
+|26    |RAMB36E1_18 |     1|
+|27    |RAMB36E1_19 |     1|
+|28    |RAMB36E1_2  |     1|
+|29    |RAMB36E1_20 |     1|
+|30    |RAMB36E1_21 |     1|
+|31    |RAMB36E1_22 |     1|
+|32    |RAMB36E1_23 |     1|
+|33    |RAMB36E1_24 |     1|
+|34    |RAMB36E1_25 |     1|
+|35    |RAMB36E1_26 |     1|
+|36    |RAMB36E1_27 |     1|
+|37    |RAMB36E1_28 |     1|
+|38    |RAMB36E1_29 |     2|
+|39    |RAMB36E1_3  |     1|
+|40    |RAMB36E1_30 |     1|
+|41    |RAMB36E1_31 |     1|
+|42    |RAMB36E1_4  |     1|
+|43    |RAMB36E1_5  |     1|
+|44    |RAMB36E1_6  |     1|
+|45    |RAMB36E1_7  |     1|
+|46    |RAMB36E1_8  |     1|
+|47    |RAMB36E1_9  |     1|
+|48    |SRL16E      |     2|
+|49    |XORCY       |    50|
+|50    |FDE         |     6|
+|51    |FDRE        |  1316|
+|52    |FDSE        |     7|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:12 ; elapsed = 00:05:30 . Memory (MB): peak = 790.227 ; gain = 561.266
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 211 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:38 ; elapsed = 00:05:13 . Memory (MB): peak = 790.227 ; gain = 325.504
+Synthesis Optimization Complete : Time (s): cpu = 00:05:12 ; elapsed = 00:05:30 . Memory (MB): peak = 790.227 ; gain = 561.266
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 309 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 58 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 52 instances
+  FDE => FDRE: 6 instances
+
+220 Infos, 177 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:05:16 ; elapsed = 00:05:37 . Memory (MB): peak = 790.227 ; gain = 562.891
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Lukas/Desktop/embedded-rts/project/synthesize_nn/nn_hls/solution5/impl/vhdl/project.runs/synth_1/digitRecognizer.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 790.227 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 18 12:55:26 2018...

@@ -1,0 +1,172 @@
+
+
+================================================================
+== Vivado HLS Report for 'digitRecognizer'
+================================================================
+* Date:           Tue Dec 18 11:03:24 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        nn_hls
+* Solution:       solution6
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      7.39|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+----------+
+    |     Latency     |     Interval    | Pipeline |
+    |   min  |   max  |   min  |   max  |   Type   |
+    +--------+--------+--------+--------+----------+
+    |  176474|  176474|  176098|  176098| dataflow |
+    +--------+--------+--------+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 4
+* Pipeline: 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 4, States = { 1 2 3 4 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+* FSM state operations: 
+
+ <State 1>: 0.00ns
+ST_1: hiddenOut (39)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:6
+codeRepl:4  %hiddenOut = alloca [32 x float], align 4
+
+ST_1: StgValue_6 (45)  [2/2] 0.00ns
+codeRepl:10  call fastcc void @ih_loop_proc([32 x float]* %hiddenOut, [784 x float]* %inputData)
+
+
+ <State 2>: 0.00ns
+ST_2: StgValue_7 (45)  [1/2] 0.00ns
+codeRepl:10  call fastcc void @ih_loop_proc([32 x float]* %hiddenOut, [784 x float]* %inputData)
+
+
+ <State 3>: 0.00ns
+ST_3: StgValue_8 (46)  [2/2] 0.00ns
+codeRepl:11  call fastcc void @ho_loop_proc([32 x float]* %hiddenOut, [10 x float]* %output_r)
+
+
+ <State 4>: 0.00ns
+ST_4: StgValue_9 (35)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:4
+codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str1) nounwind
+
+ST_4: StgValue_10 (36)  [1/1] 0.00ns
+codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap([784 x float]* %inputData) nounwind, !map !20
+
+ST_4: StgValue_11 (37)  [1/1] 0.00ns
+codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap([10 x float]* %output_r) nounwind, !map !26
+
+ST_4: StgValue_12 (38)  [1/1] 0.00ns
+codeRepl:3  call void (...)* @_ssdm_op_SpecTopModule([16 x i8]* @digitRecognizer_str) nounwind
+
+ST_4: empty (40)  [1/1] 0.00ns
+codeRepl:5  %empty = call i32 (...)* @_ssdm_op_SpecMemCore([10 x float]* %output_r, [1 x i8]* @p_str8, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str8, i32 -1, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8, [1 x i8]* @p_str8) nounwind
+
+ST_4: StgValue_14 (41)  [1/1] 0.00ns
+codeRepl:6  call void (...)* @_ssdm_op_SpecInterface([10 x float]* %output_r, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [10 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_4: empty_12 (42)  [1/1] 0.00ns
+codeRepl:7  %empty_12 = call i32 (...)* @_ssdm_op_SpecMemCore([784 x float]* %inputData, [1 x i8]* @p_str7, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str7, i32 -1, [1 x i8]* @p_str7, [1 x i8]* @p_str7, [1 x i8]* @p_str7, [1 x i8]* @p_str7, [1 x i8]* @p_str7) nounwind
+
+ST_4: StgValue_16 (43)  [1/1] 0.00ns
+codeRepl:8  call void (...)* @_ssdm_op_SpecInterface([784 x float]* %inputData, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [10 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_4: StgValue_17 (44)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:4
+codeRepl:9  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [10 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_4: StgValue_18 (46)  [1/2] 0.00ns
+codeRepl:11  call fastcc void @ho_loop_proc([32 x float]* %hiddenOut, [10 x float]* %output_r)
+
+ST_4: StgValue_19 (47)  [1/1] 0.00ns  loc: nn_hls/src/digitRecognizer.cpp:37
+codeRepl:12  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,417 @@
+
+
+================================================================
+== Vivado HLS Report for 'aesl_mux_load_32_785'
+================================================================
+* Date:           Tue Dec 18 11:03:20 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        nn_hls
+* Solution:       solution6
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      6.21|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    5|    5|    5|    5|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 6
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+* FSM state operations: 
+
+ <State 1>: 3.31ns
+ST_1: o_0_i_i_read (4)  [1/1] 0.00ns
+entry:0  %o_0_i_i_read = call i6 @_ssdm_op_Read.ap_auto.i6(i6 %o_0_i_i)
+
+ST_1: tmp (5)  [1/1] 0.00ns
+entry:1  %tmp = trunc i6 %o_0_i_i_read to i5
+
+ST_1: tmp_i (9)  [1/1] 3.31ns
+entry:5  %tmp_i = icmp eq i5 %tmp, 0
+
+ST_1: tmp_34_i (11)  [1/1] 3.31ns
+entry:7  %tmp_34_i = icmp eq i5 %tmp, 1
+
+ST_1: tmp_35_i (12)  [1/1] 3.31ns
+entry:8  %tmp_35_i = icmp eq i5 %tmp, 2
+
+ST_1: tmp_39_i (16)  [1/1] 3.31ns
+entry:12  %tmp_39_i = icmp eq i5 %tmp, 3
+
+ST_1: tmp_40_i (17)  [1/1] 3.31ns
+entry:13  %tmp_40_i = icmp eq i5 %tmp, 4
+
+
+ <State 2>: 6.21ns
+ST_2: tmp_i_15 (10)  [1/1] 0.00ns (grouped into LUT with out node tmp_38_i)
+entry:6  %tmp_i_15 = select i1 %tmp_i, float 0xBF92EE7440000000, float 0xBF6138C380000000
+
+ST_2: tmp_36_i (13)  [1/1] 0.00ns (grouped into LUT with out node tmp_38_i)
+entry:9  %tmp_36_i = select i1 %tmp_35_i, float 0xBF83C7D160000000, float 0x3F9B1F2DE0000000
+
+ST_2: tmp_37_i (14)  [1/1] 0.00ns (grouped into LUT with out node tmp_38_i)
+entry:10  %tmp_37_i = or i1 %tmp_35_i, %tmp_34_i
+
+ST_2: tmp_38_i (15)  [1/1] 2.07ns (out node of the LUT)
+entry:11  %tmp_38_i = select i1 %tmp_37_i, float %tmp_36_i, float %tmp_i_15
+
+ST_2: tmp_41_i (18)  [1/1] 0.00ns (grouped into LUT with out node tmp_43_i)
+entry:14  %tmp_41_i = select i1 %tmp_40_i, float 0xBF80A9CB60000000, float 0xBFA3B1CDC0000000
+
+ST_2: tmp_42_i (19)  [1/1] 0.00ns (grouped into LUT with out node tmp_43_i)
+entry:15  %tmp_42_i = or i1 %tmp_40_i, %tmp_39_i
+
+ST_2: tmp_43_i (20)  [1/1] 2.07ns (out node of the LUT)
+entry:16  %tmp_43_i = select i1 %tmp_42_i, float %tmp_41_i, float %tmp_38_i
+
+ST_2: tmp_44_i (21)  [1/1] 3.31ns
+entry:17  %tmp_44_i = icmp eq i5 %tmp, 5
+
+ST_2: tmp_45_i (22)  [1/1] 3.31ns
+entry:18  %tmp_45_i = icmp eq i5 %tmp, 6
+
+ST_2: tmp_46_i (23)  [1/1] 0.00ns (grouped into LUT with out node tmp_48_i)
+entry:19  %tmp_46_i = select i1 %tmp_45_i, float 0xBFA315FD40000000, float 0x3F87AE0BC0000000
+
+ST_2: tmp_47_i (24)  [1/1] 0.00ns (grouped into LUT with out node tmp_48_i)
+entry:20  %tmp_47_i = or i1 %tmp_45_i, %tmp_44_i
+
+ST_2: tmp_48_i (25)  [1/1] 2.07ns (out node of the LUT)
+entry:21  %tmp_48_i = select i1 %tmp_47_i, float %tmp_46_i, float %tmp_43_i
+
+ST_2: tmp_49_i (26)  [1/1] 3.31ns
+entry:22  %tmp_49_i = icmp eq i5 %tmp, 7
+
+ST_2: tmp_50_i (27)  [1/1] 3.31ns
+entry:23  %tmp_50_i = icmp eq i5 %tmp, 8
+
+ST_2: tmp_54_i (31)  [1/1] 3.31ns
+entry:27  %tmp_54_i = icmp eq i5 %tmp, 9
+
+ST_2: tmp_55_i (32)  [1/1] 3.31ns
+entry:28  %tmp_55_i = icmp eq i5 %tmp, 10
+
+
+ <State 3>: 6.21ns
+ST_3: tmp_51_i (28)  [1/1] 0.00ns (grouped into LUT with out node tmp_53_i)
+entry:24  %tmp_51_i = select i1 %tmp_50_i, float 0xBF9E8CD4E0000000, float 0xBF87A163A0000000
+
+ST_3: tmp_52_i (29)  [1/1] 0.00ns (grouped into LUT with out node tmp_53_i)
+entry:25  %tmp_52_i = or i1 %tmp_50_i, %tmp_49_i
+
+ST_3: tmp_53_i (30)  [1/1] 2.07ns (out node of the LUT)
+entry:26  %tmp_53_i = select i1 %tmp_52_i, float %tmp_51_i, float %tmp_48_i
+
+ST_3: tmp_56_i (33)  [1/1] 0.00ns (grouped into LUT with out node tmp_58_i)
+entry:29  %tmp_56_i = select i1 %tmp_55_i, float 0x3F7E022C40000000, float 0x3F8683CC80000000
+
+ST_3: tmp_57_i (34)  [1/1] 0.00ns (grouped into LUT with out node tmp_58_i)
+entry:30  %tmp_57_i = or i1 %tmp_55_i, %tmp_54_i
+
+ST_3: tmp_58_i (35)  [1/1] 2.07ns (out node of the LUT)
+entry:31  %tmp_58_i = select i1 %tmp_57_i, float %tmp_56_i, float %tmp_53_i
+
+ST_3: tmp_59_i (36)  [1/1] 3.31ns
+entry:32  %tmp_59_i = icmp eq i5 %tmp, 11
+
+ST_3: tmp_60_i (37)  [1/1] 3.31ns
+entry:33  %tmp_60_i = icmp eq i5 %tmp, 12
+
+ST_3: tmp_61_i (38)  [1/1] 0.00ns (grouped into LUT with out node tmp_63_i)
+entry:34  %tmp_61_i = select i1 %tmp_60_i, float 0xBF38E562A0000000, float 0xBF8BD26800000000
+
+ST_3: tmp_62_i (39)  [1/1] 0.00ns (grouped into LUT with out node tmp_63_i)
+entry:35  %tmp_62_i = or i1 %tmp_60_i, %tmp_59_i
+
+ST_3: tmp_63_i (40)  [1/1] 2.07ns (out node of the LUT)
+entry:36  %tmp_63_i = select i1 %tmp_62_i, float %tmp_61_i, float %tmp_58_i
+
+ST_3: tmp_64_i (41)  [1/1] 3.31ns
+entry:37  %tmp_64_i = icmp eq i5 %tmp, 13
+
+ST_3: tmp_65_i (42)  [1/1] 3.31ns
+entry:38  %tmp_65_i = icmp eq i5 %tmp, 14
+
+ST_3: tmp_69_i (46)  [1/1] 3.31ns
+entry:42  %tmp_69_i = icmp eq i5 %tmp, 15
+
+ST_3: tmp_70_i (47)  [1/1] 3.31ns
+entry:43  %tmp_70_i = icmp eq i5 %tmp, -16
+
+
+ <State 4>: 6.21ns
+ST_4: tmp_66_i (43)  [1/1] 0.00ns (grouped into LUT with out node tmp_68_i)
+entry:39  %tmp_66_i = select i1 %tmp_65_i, float 0xBF89FC9E80000000, float 0xBF8A1F6A40000000
+
+ST_4: tmp_67_i (44)  [1/1] 0.00ns (grouped into LUT with out node tmp_68_i)
+entry:40  %tmp_67_i = or i1 %tmp_65_i, %tmp_64_i
+
+ST_4: tmp_68_i (45)  [1/1] 2.07ns (out node of the LUT)
+entry:41  %tmp_68_i = select i1 %tmp_67_i, float %tmp_66_i, float %tmp_63_i
+
+ST_4: tmp_71_i (48)  [1/1] 0.00ns (grouped into LUT with out node tmp_73_i)
+entry:44  %tmp_71_i = select i1 %tmp_70_i, float 0x3F805B38C0000000, float 0xBF6079D2E0000000
+
+ST_4: tmp_72_i (49)  [1/1] 0.00ns (grouped into LUT with out node tmp_73_i)
+entry:45  %tmp_72_i = or i1 %tmp_70_i, %tmp_69_i
+
+ST_4: tmp_73_i (50)  [1/1] 2.07ns (out node of the LUT)
+entry:46  %tmp_73_i = select i1 %tmp_72_i, float %tmp_71_i, float %tmp_68_i
+
+ST_4: tmp_74_i (51)  [1/1] 3.31ns
+entry:47  %tmp_74_i = icmp eq i5 %tmp, -15
+
+ST_4: tmp_75_i (52)  [1/1] 3.31ns
+entry:48  %tmp_75_i = icmp eq i5 %tmp, -14
+
+ST_4: tmp_76_i (53)  [1/1] 0.00ns (grouped into LUT with out node tmp_78_i)
+entry:49  %tmp_76_i = select i1 %tmp_75_i, float 0x3F83725DE0000000, float 0xBF93C1CF20000000
+
+ST_4: tmp_77_i (54)  [1/1] 0.00ns (grouped into LUT with out node tmp_78_i)
+entry:50  %tmp_77_i = or i1 %tmp_75_i, %tmp_74_i
+
+ST_4: tmp_78_i (55)  [1/1] 2.07ns (out node of the LUT)
+entry:51  %tmp_78_i = select i1 %tmp_77_i, float %tmp_76_i, float %tmp_73_i
+
+ST_4: tmp_79_i (56)  [1/1] 3.31ns
+entry:52  %tmp_79_i = icmp eq i5 %tmp, -13
+
+ST_4: tmp_80_i (57)  [1/1] 3.31ns
+entry:53  %tmp_80_i = icmp eq i5 %tmp, -12
+
+ST_4: tmp_84_i (61)  [1/1] 3.31ns
+entry:57  %tmp_84_i = icmp eq i5 %tmp, -11
+
+ST_4: tmp_85_i (62)  [1/1] 3.31ns
+entry:58  %tmp_85_i = icmp eq i5 %tmp, -10
+
+
+ <State 5>: 6.21ns
+ST_5: o_0_i_i_cast_i (6)  [1/1] 0.00ns
+entry:2  %o_0_i_i_cast_i = zext i5 %tmp to i6
+
+ST_5: StgValue_61 (8)  [1/1] 2.32ns
+entry:4  call void @_ssdm_op_Write.ap_fifo.i6P(i6* %o_0_i_i_channel, i6 %o_0_i_i_cast_i)
+
+ST_5: tmp_81_i (58)  [1/1] 0.00ns (grouped into LUT with out node tmp_83_i)
+entry:54  %tmp_81_i = select i1 %tmp_80_i, float 0xBF6B93ED40000000, float 0xBF3728E9E0000000
+
+ST_5: tmp_82_i (59)  [1/1] 0.00ns (grouped into LUT with out node tmp_83_i)
+entry:55  %tmp_82_i = or i1 %tmp_80_i, %tmp_79_i
+
+ST_5: tmp_83_i (60)  [1/1] 2.07ns (out node of the LUT)
+entry:56  %tmp_83_i = select i1 %tmp_82_i, float %tmp_81_i, float %tmp_78_i
+
+ST_5: tmp_86_i (63)  [1/1] 0.00ns (grouped into LUT with out node tmp_88_i)
+entry:59  %tmp_86_i = select i1 %tmp_85_i, float 0xBF7C320D80000000, float 0x3F7FF601A0000000
+
+ST_5: tmp_87_i (64)  [1/1] 0.00ns (grouped into LUT with out node tmp_88_i)
+entry:60  %tmp_87_i = or i1 %tmp_85_i, %tmp_84_i
+
+ST_5: tmp_88_i (65)  [1/1] 2.07ns (out node of the LUT)
+entry:61  %tmp_88_i = select i1 %tmp_87_i, float %tmp_86_i, float %tmp_83_i
+
+ST_5: tmp_89_i (66)  [1/1] 3.31ns
+entry:62  %tmp_89_i = icmp eq i5 %tmp, -9
+
+ST_5: tmp_90_i (67)  [1/1] 3.31ns
+entry:63  %tmp_90_i = icmp eq i5 %tmp, -8
+
+ST_5: tmp_91_i (68)  [1/1] 0.00ns (grouped into LUT with out node tmp_93_i)
+entry:64  %tmp_91_i = select i1 %tmp_90_i, float 0x3F893447E0000000, float 0xBF826016A0000000
+
+ST_5: tmp_92_i (69)  [1/1] 0.00ns (grouped into LUT with out node tmp_93_i)
+entry:65  %tmp_92_i = or i1 %tmp_90_i, %tmp_89_i
+
+ST_5: tmp_93_i (70)  [1/1] 2.07ns (out node of the LUT)
+entry:66  %tmp_93_i = select i1 %tmp_92_i, float %tmp_91_i, float %tmp_88_i
+
+ST_5: tmp_94_i (71)  [1/1] 3.31ns
+entry:67  %tmp_94_i = icmp eq i5 %tmp, -7
+
+ST_5: tmp_95_i (72)  [1/1] 3.31ns
+entry:68  %tmp_95_i = icmp eq i5 %tmp, -6
+
+ST_5: tmp_99_i (76)  [1/1] 3.31ns
+entry:72  %tmp_99_i = icmp eq i5 %tmp, -5
+
+ST_5: tmp_100_i (77)  [1/1] 3.31ns
+entry:73  %tmp_100_i = icmp eq i5 %tmp, -4
+
+ST_5: tmp_104_i (81)  [1/1] 3.31ns
+entry:77  %tmp_104_i = icmp eq i5 %tmp, -3
+
+ST_5: tmp_105_i (82)  [1/1] 3.31ns
+entry:78  %tmp_105_i = icmp eq i5 %tmp, -2
+
+
+ <State 6>: 6.21ns
+ST_6: StgValue_79 (7)  [1/1] 0.00ns
+entry:3  call void (...)* @_ssdm_op_SpecInterface(i6* %o_0_i_i_channel, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str87, i32 0, i32 0, [1 x i8]* @p_str88, [1 x i8]* @p_str89, [1 x i8]* @p_str90, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str91, [1 x i8]* @p_str92)
+
+ST_6: tmp_96_i (73)  [1/1] 0.00ns (grouped into LUT with out node tmp_98_i)
+entry:69  %tmp_96_i = select i1 %tmp_95_i, float 0xBF753385E0000000, float 0xBF2F839380000000
+
+ST_6: tmp_97_i (74)  [1/1] 0.00ns (grouped into LUT with out node tmp_98_i)
+entry:70  %tmp_97_i = or i1 %tmp_95_i, %tmp_94_i
+
+ST_6: tmp_98_i (75)  [1/1] 2.07ns (out node of the LUT)
+entry:71  %tmp_98_i = select i1 %tmp_97_i, float %tmp_96_i, float %tmp_93_i
+
+ST_6: tmp_101_i (78)  [1/1] 0.00ns (grouped into LUT with out node tmp_103_i)
+entry:74  %tmp_101_i = select i1 %tmp_100_i, float 0x3F88ABA300000000, float 0x3FA163E100000000
+
+ST_6: tmp_102_i (79)  [1/1] 0.00ns (grouped into LUT with out node tmp_103_i)
+entry:75  %tmp_102_i = or i1 %tmp_100_i, %tmp_99_i
+
+ST_6: tmp_103_i (80)  [1/1] 2.07ns (out node of the LUT)
+entry:76  %tmp_103_i = select i1 %tmp_102_i, float %tmp_101_i, float %tmp_98_i
+
+ST_6: tmp_106_i (83)  [1/1] 0.00ns (grouped into LUT with out node UnifiedRetVal_i_i_i_s)
+entry:79  %tmp_106_i = select i1 %tmp_105_i, float 0xBF7B9F8400000000, float 0xBF51315900000000
+
+ST_6: tmp_107_i (84)  [1/1] 0.00ns (grouped into LUT with out node UnifiedRetVal_i_i_i_s)
+entry:80  %tmp_107_i = or i1 %tmp_105_i, %tmp_104_i
+
+ST_6: UnifiedRetVal_i_i_i_s (85)  [1/1] 2.07ns (out node of the LUT)
+entry:81  %UnifiedRetVal_i_i_i_s = select i1 %tmp_107_i, float %tmp_106_i, float %tmp_103_i
+
+ST_6: StgValue_89 (86)  [1/1] 0.00ns
+entry:82  call void @_ssdm_op_Write.ap_auto.volatile.floatP(float* %p_channel, float %UnifiedRetVal_i_i_i_s)
+
+ST_6: StgValue_90 (87)  [1/1] 0.00ns
+entry:83  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 3.31ns
+The critical path consists of the following:
+	wire read on port 'o_0_i_i' [4]  (0 ns)
+	'icmp' operation ('tmp_34_i') [11]  (3.31 ns)
+
+ <State 2>: 6.21ns
+The critical path consists of the following:
+	'select' operation ('tmp_i_15') [10]  (0 ns)
+	'select' operation ('tmp_38_i') [15]  (2.07 ns)
+	'select' operation ('tmp_43_i') [20]  (2.07 ns)
+	'select' operation ('tmp_48_i') [25]  (2.07 ns)
+
+ <State 3>: 6.21ns
+The critical path consists of the following:
+	'select' operation ('tmp_51_i') [28]  (0 ns)
+	'select' operation ('tmp_53_i') [30]  (2.07 ns)
+	'select' operation ('tmp_58_i') [35]  (2.07 ns)
+	'select' operation ('tmp_63_i') [40]  (2.07 ns)
+
+ <State 4>: 6.21ns
+The critical path consists of the following:
+	'select' operation ('tmp_66_i') [43]  (0 ns)
+	'select' operation ('tmp_68_i') [45]  (2.07 ns)
+	'select' operation ('tmp_73_i') [50]  (2.07 ns)
+	'select' operation ('tmp_78_i') [55]  (2.07 ns)
+
+ <State 5>: 6.21ns
+The critical path consists of the following:
+	'select' operation ('tmp_81_i') [58]  (0 ns)
+	'select' operation ('tmp_83_i') [60]  (2.07 ns)
+	'select' operation ('tmp_88_i') [65]  (2.07 ns)
+	'select' operation ('tmp_93_i') [70]  (2.07 ns)
+
+ <State 6>: 6.21ns
+The critical path consists of the following:
+	'select' operation ('tmp_96_i') [73]  (0 ns)
+	'select' operation ('tmp_98_i') [75]  (2.07 ns)
+	'select' operation ('tmp_103_i') [80]  (2.07 ns)
+	'select' operation ('UnifiedRetVal_i_i_i_s') [85]  (2.07 ns)
+	wire write on port 'p_channel' [86]  (0 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
