@@ -1,3 +1,5 @@
+# Embedded Real-Time Systems, Spring 2018
+
 This repository contains source files used in the Embedded Real-Time Systems course at Aarhus University during the spring semester 2018. The repository is organised as follows:
 
 ```
